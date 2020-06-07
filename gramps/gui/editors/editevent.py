@@ -74,7 +74,7 @@ class EditEvent(EditPrimary):
 
         EditPrimary.__init__(self, dbstate, uistate, track,
                              event, dbstate.db.get_event_from_handle,
-                             dbstate.db.get_event_from_gramps_id, callback)
+                             dbstate.db.get_event_from_gramps_id)
 
         self._init_event()
 
@@ -278,9 +278,9 @@ class EditEvent(EditPrimary):
                         self.obj.set_gramps_id(self.db.find_next_event_gramps_id())
                     self.db.commit_event(self.obj, trans)
 
-        self._do_close()
         if self.callback:
             self.callback(self.obj)
+        self._do_close()
 
     def data_has_changed(self):
         """

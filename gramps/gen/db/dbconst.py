@@ -34,7 +34,7 @@ __all__ = ( 'DBPAGE', 'DBMODE', 'DBCACHE', 'DBLOCKS', 'DBOBJECTS', 'DBUNDO',
             'DBBACKEND',
             'PERSON_KEY', 'FAMILY_KEY', 'SOURCE_KEY', 'CITATION_KEY',
             'EVENT_KEY', 'MEDIA_KEY', 'PLACE_KEY', 'REPOSITORY_KEY',
-            'NOTE_KEY', 'REFERENCE_KEY', 'TAG_KEY',
+            'NOTE_KEY', 'REFERENCE_KEY', 'TAG_KEY', 'PLACETYPE_KEY',
             'TXNADD', 'TXNUPD', 'TXNDEL',
             "CLASS_TO_KEY_MAP", "KEY_TO_CLASS_MAP", "KEY_TO_NAME_MAP"
         )
@@ -69,6 +69,7 @@ REFERENCE_KEY = 7
 NOTE_KEY = 8
 TAG_KEY = 9
 CITATION_KEY = 10
+PLACETYPE_KEY = 11
 
 TXNADD, TXNUPD, TXNDEL = 0, 1, 2
 
@@ -81,7 +82,8 @@ CLASS_TO_KEY_MAP = {"Person": PERSON_KEY,
                     "Place": PLACE_KEY,
                     "Repository": REPOSITORY_KEY,
                     "Note" : NOTE_KEY,
-                    "Tag": TAG_KEY}
+                    "Tag": TAG_KEY,
+                    "Placetype": PLACETYPE_KEY}
 
 KEY_TO_CLASS_MAP = {PERSON_KEY: "Person",
                     FAMILY_KEY: "Family",
@@ -92,7 +94,8 @@ KEY_TO_CLASS_MAP = {PERSON_KEY: "Person",
                     PLACE_KEY: "Place",
                     REPOSITORY_KEY: "Repository",
                     NOTE_KEY: "Note",
-                    TAG_KEY: "Tag"}
+                    TAG_KEY: "Tag",
+                    PLACETYPE_KEY: "Placetype"}
 
 KEY_TO_NAME_MAP = {PERSON_KEY: 'person',
                    FAMILY_KEY: 'family',
@@ -104,4 +107,5 @@ KEY_TO_NAME_MAP = {PERSON_KEY: 'person',
                    REPOSITORY_KEY: 'repository',
                    #REFERENCE_KEY: 'reference',
                    NOTE_KEY: 'note',
-                   TAG_KEY: 'tag'}
+                   TAG_KEY: 'tag',
+                   PLACETYPE_KEY: 'placetype'}

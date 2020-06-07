@@ -37,7 +37,7 @@ import types
 #-------------------------------------------------------------------------
 from ..db.base import DbReadBase, DbWriteBase
 from ..lib import (Citation, Event, Family, Media, Note, Person, Place,
-                   Repository, Source, Tag)
+                   Repository, Source, Tag, PlaceType)
 from ..const import GRAMPS_LOCALE as glocale
 
 class ProxyCursor:
@@ -158,6 +158,7 @@ class ProxyDbBase(DbReadBase):
     include_repository = \
     include_note = \
     include_tag = \
+    include_placetype = \
         None
 
     def get_person_cursor(self):
@@ -199,6 +200,10 @@ class ProxyDbBase(DbReadBase):
     def get_tag_cursor(self):
         return ProxyCursor(self.get_raw_tag_data,
                            self.get_tag_handles)
+
+    def get_placetype_cursor(self):
+        return ProxyCursor(self.get_raw_placetype_data,
+                           self.get_placetype_handles)
 
     def get_person_handles(self, sort_handles=False, locale=glocale):
         """
@@ -306,6 +311,16 @@ class ProxyDbBase(DbReadBase):
         else:
             return []
 
+    def get_placetype_handles(self, sort_handles=False, locale=glocale):
+        """
+        Return a list of database handles, one handle for each placetype in
+        the database.
+        """
+        if (self.db is not None) and self.db.is_open():
+            return list(self.iter_placetype_handles())
+        else:
+            return []
+
     def get_default_person(self):
         """returns the default Person of the database"""
         return self.db.get_default_person()
@@ -385,6 +400,13 @@ class ProxyDbBase(DbReadBase):
         """
         return filter(self.include_tag, self.db.iter_tag_handles())
 
+    def iter_placetype_handles(self):
+        """
+        Return an iterator over database handles, one handle for each placetype in
+        the database.
+        """
+        return filter(self.include_placetype, self.db.iter_placetype_handles())
+
     def __iter_object(self, selector, method):
         """ Helper function to return an iterator over an object class """
         retval = filter(lambda obj:
@@ -461,6 +483,13 @@ class ProxyDbBase(DbReadBase):
         """
         return self.__iter_object(self.include_tag,
                                   self.db.iter_tags)
+
+    def iter_placetypes(self):
+        """
+        Return an iterator over placetype objects in the database
+        """
+        return self.__iter_object(self.include_placetype,
+                                  self.db.iter_placetypes)
 
     @staticmethod
     def gfilter(predicate, obj):
@@ -574,6 +603,14 @@ class ProxyDbBase(DbReadBase):
         """
         return self.gfilter(self.include_tag,
                             self.db.get_tag_from_handle(handle))
+
+    def get_placetype_from_handle(self, handle):
+        """
+        Finds a placetype in the database from the passed gramps handle.
+        If no such placetype exists, None is returned.
+        """
+        return self.gfilter(self.include_placetype,
+                            self.db.get_placetype_from_handle(handle))
 
     def get_person_from_gramps_id(self, val):
         """
@@ -733,6 +770,12 @@ class ProxyDbBase(DbReadBase):
         """
         return len(self.get_tag_handles())
 
+    def get_number_of_placetypes(self):
+        """
+        Return the number of placetypes currently in the database.
+        """
+        return len(self.get_placetype_handles())
+
     def get_save_path(self):
         """returns the save path of the file, or "" if one does not exist"""
         return self.db.get_save_path()
@@ -797,6 +840,27 @@ class ProxyDbBase(DbReadBase):
         """
         return self.db.get_origin_types()
 
+    def get_placehier_types(self):
+        """
+        Return a list of all custom place hierarchy types assocated with Place
+        instances in the database.
+        """
+        return self.db.get_placehier_types()
+
+    def get_placeabbr_types(self):
+        """
+        Return a list of all custom place name types assocated with Place
+        instances in the database.
+        """
+        return self.db.get_placeabbr_types()
+
+    def get_place_attribute_types(self):
+        """
+        Return a list of all custom place name types assocated with Place
+        instances in the database.
+        """
+        return self.db.get_place_attribute_types()
+
     def get_repository_types(self):
         """returns a list of all custom repository types associated with
         Repository instances in the database"""
@@ -851,6 +915,9 @@ class ProxyDbBase(DbReadBase):
 
     def get_raw_tag_data(self, handle):
         return self.get_tag_from_handle(handle).serialize()
+
+    def get_raw_placetype_data(self, handle):
+        return self.get_placetype_from_handle(handle).serialize()
 
     def has_person_handle(self, handle):
         """
@@ -930,6 +997,14 @@ class ProxyDbBase(DbReadBase):
         """
         return self.gfilter(self.include_tag,
                             self.db.get_tag_from_handle(handle)
+                           ) is not None
+
+    def has_placetype_handle(self, handle):
+        """
+        returns True if the handle exists in the current placetype database.
+        """
+        return self.gfilter(self.include_placetype,
+                            self.db.get_placetype_from_handle(handle)
                            ) is not None
 
     def get_mediapath(self):

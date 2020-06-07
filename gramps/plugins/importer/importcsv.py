@@ -147,17 +147,6 @@ class CSVParser:
         self.pref = {} # person ref, internal to this sheet
         self.fref = {} # family ref, internal to this sheet
         self.placeref = {}
-        self.place_types = {}
-        # Build reverse dictionary, name to type number
-        for items in PlaceType().get_map().items(): # (0, 'Custom')
-            self.place_types[items[1]] = items[0]
-            self.place_types[items[1].lower()] = items[0]
-            if _(items[1]) != items[1]:
-                self.place_types[_(items[1])] = items[0]
-        # Add custom types:
-        for custom_type in self.db.get_place_types():
-            self.place_types[custom_type] = 0
-            self.place_types[custom_type.lower()] = 0
         column2label = {
             "surname": ("lastname", "last_name", "surname", _("surname"),
                         _("Surname")),
@@ -386,7 +375,7 @@ class CSVParser:
         expl_note = create_explanation_note(self.db)
         for key in self.placeref:
             place = self.placeref[key]
-            if place.name.value == _("Unknown"):
+            if place.get_name().value == _("Unknown"):
                 txt = (', ' + key) if txt else key
                 place.add_note(expl_note.handle)
                 self.db.commit_place(place, self.trans)
@@ -888,21 +877,24 @@ class CSVParser:
         if place_title is not None:
             place.title = place_title
         if place_name is not None:
-            place.name = PlaceName(value=place_name)
+            place.add_name(PlaceName(value=place_name))
         if place_type_str is not None:
-            place.place_type = self.get_place_type(place_type_str)
+            place.add_type(self.get_place_type(place_type_str))
         if place_latitude is not None:
             place.lat = place_latitude
         if place_longitude is not None:
             place.long = place_longitude
         if place_code is not None:
-            place.code = place_code
+            attr = Attribute()
+            attr.set_type(AttributeType.POSTAL)
+            attr.set_value(place_code)
+            place.add_attribute(attr)
         if place_enclosed_by_id is not None:
             place_enclosed_by = self.lookup("place", place_enclosed_by_id)
             if place_enclosed_by is None:
                 # Not yet found in import, so store for later
                 place_enclosed_by = self.create_place()
-                place_enclosed_by.name.set_value(_('Unknown'))
+                place_enclosed_by.get_name().set_value(_('Unknown'))
                 if(place_enclosed_by_id.startswith("[") and
                    place_enclosed_by_id.endswith("]")):
                     place_enclosed_by.gramps_id = self.db.pid2user_format(
@@ -917,15 +909,14 @@ class CSVParser:
                 place.placeref_list.append(placeref)
             if place_date:
                 placeref.date = _dp.parse(place_date)
+                placeref.set_type_for_place(place_enclosed_by)
         #########################################################
         self.db.commit_place(place, self.trans)
 
     def get_place_type(self, place_type_str):
-        if place_type_str in self.place_types:
-            return PlaceType((self.place_types[place_type_str], place_type_str))
-        else:
-            # New custom type:
-            return PlaceType((0, place_type_str))
+        ptype = PlaceType()
+        ptype.set_from_xml_str(place_type_str)
+        return ptype
 
     def get_or_create_family(self, family_ref, husband, wife):
         "Return the family object for the give family ID."
@@ -1072,7 +1063,7 @@ class CSVParser:
                 return (0, place)
         place = Place()
         place.set_title(place_name)
-        place.name = PlaceName(value=place_name)
+        place.set_name(PlaceName(value=place_name))
         self.db.add_place(place, self.trans)
         self.place_count += 1
         return (1, place)

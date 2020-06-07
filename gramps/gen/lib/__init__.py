@@ -36,6 +36,8 @@ from .mediaref import MediaRef
 from .name import Name
 from .placename import PlaceName
 from .placeref import PlaceRef
+from .placetyperef import PlaceTypeRef
+from .placeabbrev import PlaceAbbrev
 from .reporef import RepoRef
 from .surname import Surname
 from .url import Url
@@ -78,6 +80,11 @@ from .nameorigintype import NameOriginType
 from .notetype import NoteType
 from .styledtexttagtype import StyledTextTagType
 from .placetype import PlaceType
+from .placeabbrevtype import PlaceAbbrevType
+from .placegrouptype import PlaceGroupType
+from .placehiertype import PlaceHierType
+from .namelang import NameLang
+
 
 # Text
 from .styledtexttag import StyledTextTag

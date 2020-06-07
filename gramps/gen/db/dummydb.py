@@ -773,6 +773,14 @@ class DummyDb(M_A_M_B("NewBaseClass", (DbReadBase, Callback, object,), {})):
             LOG.warning("database is closed")
         return 0
 
+    def get_number_of_placetypes(self):
+        """
+        Return the number of placetypes currently in the database.
+        """
+        if not self.db_is_open:
+            LOG.warning("database is closed")
+        return 0
+
     def get_media_from_gramps_id(self, val):
         """
         Find a Media in the database from the passed Gramps ID.
@@ -1001,6 +1009,15 @@ class DummyDb(M_A_M_B("NewBaseClass", (DbReadBase, Callback, object,), {})):
     def get_raw_tag_data(self, handle):
         """
         Return raw (serialized and pickled) Tag object from handle
+        """
+        if not self.db_is_open:
+            LOG.warning("database is closed")
+        LOG.warning("handle %s does not exist in the dummy database", handle)
+        raise HandleError('Handle %s not found' % handle)
+
+    def get_raw_placetype_data(self, handle):
+        """
+        Return raw (serialized and pickled) placetype object from handle
         """
         if not self.db_is_open:
             LOG.warning("database is closed")
@@ -1243,6 +1260,39 @@ class DummyDb(M_A_M_B("NewBaseClass", (DbReadBase, Callback, object,), {})):
             LOG.warning("database is closed")
         return []
 
+    def get_placetype_cursor(self):
+        """
+        Return a reference to a cursor over placetype objects
+        """
+        if not self.db_is_open:
+            LOG.warning("database is closed")
+        return []
+
+    def get_placetype_from_handle(self, handle):
+        """
+        Find a placetype in the database from the passed handle.
+
+        If no such placetype exists, a HandleError is raised.
+        """
+        if not self.db_is_open:
+            LOG.warning("database is closed")
+        LOG.warning("handle %s does not exist in the dummy database", handle)
+        raise HandleError('Handle %s not found' % handle)
+
+    def get_placetype_handles(self, sort_handles=False, locale=glocale):
+        """
+        Return a list of database handles, one handle for each placetype in
+        the database.
+
+        :param sort_handles: If True, the list is sorted by placetype name.
+        :type sort_handles: bool
+        :param locale: The locale to use for collation.
+        :type locale: A GrampsLocale object.
+        """
+        if not self.db_is_open:
+            LOG.warning("database is closed")
+        return []
+
     def get_url_types(self):
         """
         Return a list of all custom names types associated with Url instances
@@ -1336,6 +1386,14 @@ class DummyDb(M_A_M_B("NewBaseClass", (DbReadBase, Callback, object,), {})):
     def has_tag_handle(self, handle):
         """
         Return True if the handle exists in the current Tag database.
+        """
+        if not self.db_is_open:
+            LOG.warning("database is closed")
+        return False
+
+    def has_placetype_handle(self, handle):
+        """
+        Return True if the handle exists in the current placetype database.
         """
         if not self.db_is_open:
             LOG.warning("database is closed")
@@ -1499,6 +1557,22 @@ class DummyDb(M_A_M_B("NewBaseClass", (DbReadBase, Callback, object,), {})):
             LOG.warning("database is closed")
         return []
 
+    def iter_placetype_handles(self):
+        """
+        Return an iterator over handles for placetypes in the database
+        """
+        if not self.db_is_open:
+            LOG.warning("database is closed")
+        return []
+
+    def iter_placetypes(self):
+        """
+        Return an iterator over objects for placetypes in the database
+        """
+        if not self.db_is_open:
+            LOG.warning("database is closed")
+        return []
+
     def load(self, name, callback=None, mode=None, force_schema_upgrade=False,
              force_bsddb_upgrade=False,
              force_bsddb_downgrade=False,
@@ -1538,6 +1612,11 @@ class DummyDb(M_A_M_B("NewBaseClass", (DbReadBase, Callback, object,), {})):
         if not self.db_is_open:
             LOG.warning("database is closed")
         return True
+
+    def save_place_types(self):
+        """ save the custom place type data
+        """
+        LOG.warning("database is closed")
 
     def set_event_id_prefix(self, val):
         """

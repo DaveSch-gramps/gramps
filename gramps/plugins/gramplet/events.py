@@ -41,7 +41,6 @@ from gramps.gen.utils.db import (get_participant_from_event,
                                  get_marriage_or_fallback)
 from gramps.gen.errors import WindowActiveError
 from gramps.gen.config import config
-from gramps.gen.proxy.cache import CacheProxyDb
 from gramps.gen.const import GRAMPS_LOCALE as glocale
 _ = glocale.translation.gettext
 
@@ -52,10 +51,9 @@ class Events(Gramplet, DbGUIElement):
     def __init__(self, gui, nav_group=0):
         Gramplet.__init__(self, gui, nav_group)
         DbGUIElement.__init__(self, self.dbstate.db)
-        self.db = None
 
     """
-    Displays the events for a person or family.
+    Displays the events for a person, place, or family.
     """
     def init(self):
         self.gui.WIDGET = self.build_gui()
@@ -101,14 +99,14 @@ class Events(Gramplet, DbGUIElement):
         Add an event to the model.
         """
         self.callman.register_handles({'event': [event_ref.ref]})
-        event = self.db.get_event_from_handle(event_ref.ref)
+        event = self.dbstate.db.get_event_from_handle(event_ref.ref)
         event_date = get_date(event)
         event_sort = '%012d' % event.get_date_object().get_sort_value()
         person_age = self.column_age(event)
         person_age_sort = self.column_sort_age(event)
-        place = place_displayer.display_event(self.db, event)
+        place = place_displayer.display_event(self.dbstate.db, event)
 
-        participants = get_participant_from_event(self.db,
+        participants = get_participant_from_event(self.dbstate.db,
                                                   event_ref.ref)
 
         self.model.add((event.get_handle(),
@@ -193,26 +191,24 @@ class PersonEvents(Events):
     def main(self): # return false finishes
         active_handle = self.get_active('Person')
 
-        self.db = CacheProxyDb(self.dbstate.db)
         self.model.clear()
         self.callman.unregister_all()
         if active_handle:
             self.display_person(active_handle)
         else:
             self.set_has_data(False)
-        self.db = None
 
     def display_person(self, active_handle):
         """
         Display the events for the active person.
         """
-        active_person = self.db.get_person_from_handle(active_handle)
+        active_person = self.dbstate.db.get_person_from_handle(active_handle)
         if active_person:
             self.cached_start_date = self.get_start_date()
             for event_ref in active_person.get_event_ref_list():
                 self.add_event_ref(event_ref)
             for family_handle in active_person.get_family_handle_list():
-                family = self.db.get_family_from_handle(family_handle)
+                family = self.dbstate.db.get_family_from_handle(family_handle)
                 self.display_family(family, active_person)
         else:
             self.cached_start_date = None
@@ -224,7 +220,7 @@ class PersonEvents(Events):
         """
         spouse_handle = find_spouse(active_person, family)
         if spouse_handle:
-            spouse = self.db.get_person_from_handle(spouse_handle)
+            spouse = self.dbstate.db.get_person_from_handle(spouse_handle)
         else:
             spouse = None
         if family:
@@ -237,8 +233,8 @@ class PersonEvents(Events):
         something close to birth.
         """
         active_handle = self.get_active('Person')
-        active = self.db.get_person_from_handle(active_handle)
-        event = get_birth_or_fallback(self.db, active)
+        active = self.dbstate.db.get_person_from_handle(active_handle)
+        event = get_birth_or_fallback(self.dbstate.db, active)
         return event.get_date_object() if event else None
 
 class FamilyEvents(Events):
@@ -268,20 +264,18 @@ class FamilyEvents(Events):
     def main(self): # return false finishes
         active_handle = self.get_active('Family')
 
-        self.db = CacheProxyDb(self.dbstate.db)
         self.model.clear()
         self.callman.unregister_all()
         if active_handle:
             self.display_family(active_handle)
         else:
             self.set_has_data(False)
-        self.db = None
 
     def display_family(self, active_handle):
         """
         Display the events for the active family.
         """
-        active_family = self.db.get_family_from_handle(active_handle)
+        active_family = self.dbstate.db.get_family_from_handle(active_handle)
         self.cached_start_date = self.get_start_date()
         for event_ref in active_family.get_event_ref_list():
             self.add_event_ref(event_ref)
@@ -293,7 +287,79 @@ class FamilyEvents(Events):
         something close to marriage.
         """
         active_handle = self.get_active('Family')
-        active = self.db.get_family_from_handle(active_handle)
-        event = get_marriage_or_fallback(self.db, active)
+        active = self.dbstate.db.get_family_from_handle(active_handle)
+        event = get_marriage_or_fallback(self.dbstate.db, active)
         return event.get_date_object() if event else None
 
+
+class PlaceEvents(Events):
+    """
+    Displays the events for a place.
+    """
+    def db_changed(self):
+        self.connect(self.dbstate.db, 'place-update', self.update)
+        self.connect_signal('Place', self.update)
+
+    def update_has_data(self):
+        active_handle = self.get_active('Place')
+        active = None
+        if active_handle:
+            active = self.dbstate.db.get_place_from_handle(active_handle)
+        self.set_has_data(self.get_has_data(active))
+
+    @staticmethod
+    def get_has_data(active_place):
+        """
+        Return True if the gramplet has data, else return False.
+        """
+        if active_place:
+            if active_place.get_event_ref_list():
+                return True
+        return False
+
+    def main(self):  # return false finishes
+        active_handle = self.get_active('Place')
+
+        self.model.clear()
+        self.callman.unregister_all()
+        if active_handle:
+            self.display_place(active_handle)
+        else:
+            self.set_has_data(False)
+
+    def display_place(self, active_handle):
+        """
+        Display the events for the active place.
+        """
+        active_place = self.dbstate.db.get_place_from_handle(active_handle)
+        self.cached_start_date = self.get_start_date()
+        for event_ref in active_place.get_event_ref_list():
+            self.add_event_ref(event_ref)
+        self.set_has_data(self.model.count > 0)
+
+    def get_start_date(self):
+        """
+        Get the start date for a place, usually a marriage date, or
+        something close to marriage.
+        """
+        return None
+
+    def build_gui(self):
+        """
+        Build the GUI interface.
+        """
+        tip = _('Double-click on a row to edit the selected event.')
+        self.set_tooltip(tip)
+        top = Gtk.TreeView()
+        titles = [('', NOSORT, 50,),
+                  (_('Type'), 1, 100),
+                  (_('Description'), 2, 150),
+                  (_('Date'), 3, 100),
+                  ('', NOSORT, 50),
+                  ('', NOSORT, 50),
+                  ('', NOSORT, 50),
+                  (_('Place'), 5, 400),
+                  (_('Main Participants'), 6, 200),
+                  (_('Role'), 7, 100)]
+        self.model = ListModel(top, titles, event_func=self.edit_event)
+        return top

@@ -34,10 +34,12 @@ import logging
 #
 #------------------------------------------------------------------------
 from gramps.cli.clidbman import NAME_FILE
-from gramps.gen.lib import EventType, NameOriginType, Tag, MarkerType
-from gramps.gen.utils.file import create_checksum
-from gramps.gen.utils.id import create_id
 from gramps.gui.dialog import (InfoDialog)
+from ..lib import (AttributeType, EventType, MarkerType,
+                   NameOriginType, PlaceHierType, PlaceType, Tag)
+from ..utils.place import translate_en_loc
+from ..utils.file import create_checksum
+from ..utils.id import create_id
 from .dbconst import (PERSON_KEY, FAMILY_KEY, EVENT_KEY, MEDIA_KEY, PLACE_KEY,
                       REPOSITORY_KEY, CITATION_KEY, SOURCE_KEY, NOTE_KEY,
                       TAG_KEY)
@@ -49,14 +51,70 @@ LOG = logging.getLogger(".upgrade")
 
 def gramps_upgrade_20(self):
     """
-    Placeholder update.
+    Upgrade database from version 19 to 20.
+    Place update.
     """
-    length = 0
+    length = self.get_number_of_places()
     self.set_total(length)
     self._txn_begin()
+    for handle in self.get_place_handles():
+        data = self.get_raw_place_data(handle)
+        (hndl, gramps_id, title, long, lat, placeref_list, name,
+         alt_names, the_type, code, alt_loc, urls, media_list,
+         citation_list, note_list, change, tag_list, private) = data
+        new_prefs = []
+        for pref in placeref_list:  # placeref_list
+            (ref, date) = pref
+            n_pref = (ref, date, [], (PlaceHierType.ADMIN, ''))
+            new_prefs.append(n_pref)
+        old_names = [name]  # old name
+        old_names.extend(alt_names)  # old alt names
+        new_names = []
+        for nam in old_names:  # all old names
+            (pname, date, lang) = nam
+            n_name = (pname, date, lang, [], [])  # abbrev_list, cit_list
+            new_names.append(n_name)
+        # PlaceType
+        # date = cal, mod, qual, val, text, sort, ny
+        mtdate = (0, 0, 0, (0, 0, 0, False), '', 0, 0)
+        if not the_type[0]:  # older CUSTOM value == 0
+            for t_val, (text, _groups, _vis) in PlaceType.DATAMAP.items():
+                if the_type[1].lower() == text.lower():
+                    break
+            else:
+                # Must be a completely new type
+                t_val = PlaceType.new()
+                PlaceType.DATAMAP[t_val] = (the_type[1],
+                                            PlaceType.G_PLACE, True)
+        elif the_type[0] == -1:  # older UNKNOWN
+            t_val = 0            # new UNKNOWN
+        else:   # Standard place type value
+            t_val = the_type[0]
+        # the place type becomes the top (only) item in placetype list
+        new_types = [(t_val,   # type number
+                      mtdate,  # empty date
+                      [])]     # add cit_list
+        eventrefs = []
+        if code:
+            # attr = privacy, citation_list, note_list, the_type, value
+            code_attr = (0, [], [], (AttributeType.POSTAL, ''), code)
+            attrs = [code_attr]
+        else:
+            attrs = []
 
-    # uid and place upgrade code goes here
+        # get longitude localized E,W translated to English
+        long = long.replace(
+            translate_en_loc['E'], 'E').replace(translate_en_loc['W'], 'W')
+        # get latitude localized N,S translated to English
+        lat = lat.replace(
+            translate_en_loc['N'], 'N').replace(translate_en_loc['S'], 'S')
 
+        new_place_data = (hndl, gramps_id, title, long, lat, new_prefs,
+                          new_names, new_types, eventrefs, alt_loc, urls,
+                          media_list, citation_list, note_list, change,
+                          tag_list, private, attrs)
+        self._commit_raw(new_place_data, PLACE_KEY)
+        self.update()
     self._txn_commit()
     # Bump up database version. Separate transaction to save metadata.
     self._set_metadata('version', 20)

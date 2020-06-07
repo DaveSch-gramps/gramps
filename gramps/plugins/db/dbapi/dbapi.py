@@ -39,10 +39,10 @@ from gramps.gen.db.dbconst import (DBLOGNAME, DBBACKEND, KEY_TO_NAME_MAP,
                                    PERSON_KEY, FAMILY_KEY, SOURCE_KEY,
                                    EVENT_KEY, MEDIA_KEY, PLACE_KEY, NOTE_KEY,
                                    TAG_KEY, CITATION_KEY, REPOSITORY_KEY,
-                                   REFERENCE_KEY)
+                                   REFERENCE_KEY, PLACETYPE_KEY)
 from gramps.gen.db.generic import DbGeneric
 from gramps.gen.updatecallback import UpdateCallback
-from gramps.gen.lib import (Tag, Media, Person, Family, Source,
+from gramps.gen.lib import (Tag, Media, Person, Family, Source, PlaceType,
                             Citation, Event, Place, Repository, Note)
 from gramps.gen.lib.genderstats import GenderStats
 from gramps.gen.const import GRAMPS_LOCALE as glocale
@@ -122,6 +122,11 @@ class DBAPI(DbGeneric):
                            'blob_data BLOB'
                            ')')
         self.dbapi.execute('CREATE TABLE tag '
+                           '('
+                           'handle VARCHAR(50) PRIMARY KEY NOT NULL, '
+                           'blob_data BLOB'
+                           ')')
+        self.dbapi.execute('CREATE TABLE placetype '
                            '('
                            'handle VARCHAR(50) PRIMARY KEY NOT NULL, '
                            'blob_data BLOB'
@@ -248,9 +253,6 @@ class DBAPI(DbGeneric):
                   TXNUPD: "-update",
                   TXNDEL: "-delete",
                   None: "-delete"}
-        if txn.batch:
-            # FIXME: need a User GUI update callback here:
-            self.reindex_reference_map(lambda percent: percent)
         self.dbapi.commit()
         if not txn.batch:
             # Now, emit signals:
@@ -522,6 +524,15 @@ class DBAPI(DbGeneric):
         rows = self.dbapi.fetchall()
         return [row[0] for row in rows]
 
+    def get_placetype_handles(self):
+        """
+        Return a list of database handles, one handle for each PlaceType in the
+        database.
+        """
+        self.dbapi.execute("SELECT handle FROM placetype")
+        rows = self.dbapi.fetchall()
+        return [row[0] for row in rows]
+
     def get_tag_handles(self, sort_handles=False, locale=glocale):
         """
         Return a list of database handles, one handle for each Tag in
@@ -616,8 +627,8 @@ class DBAPI(DbGeneric):
                                [obj.handle,
                                 pickle.dumps(obj.serialize())])
         self._update_secondary_values(obj)
+        self._update_backlinks(obj, trans)
         if not trans.batch:
-            self._update_backlinks(obj, trans)
             if old_data:
                 trans.add(obj_key, TXNUPD, obj.handle,
                           old_data,
@@ -814,7 +825,8 @@ class DBAPI(DbGeneric):
         self.dbapi.execute("DELETE FROM reference")
         total = 0
         for tbl in ('people', 'families', 'events', 'places', 'sources',
-                    'citations', 'media', 'repositories', 'notes', 'tags'):
+                    'citations', 'media', 'repositories', 'notes', 'tags',
+                    'placetypes'):
             total += self.method("get_number_of_%s", tbl)()
         UpdateCallback.__init__(self, callback)
         self.set_total(total)
@@ -829,6 +841,7 @@ class DBAPI(DbGeneric):
             (self.get_repository_cursor, Repository),
             (self.get_note_cursor, Note),
             (self.get_tag_cursor, Tag),
+            (self.get_placetype_cursor, PlaceType),
         )
         # Now we use the functions and classes defined above
         # to loop through each of the primary object tables.
@@ -860,7 +873,8 @@ class DBAPI(DbGeneric):
 
         total = 0
         for tbl in ('people', 'families', 'events', 'places', 'sources',
-                    'citations', 'media', 'repositories', 'notes', 'tags'):
+                    'citations', 'media', 'repositories', 'notes', 'tags',
+                    'placetypes'):
             total += self.method("get_number_of_%s", tbl)()
         UpdateCallback.__init__(self, callback)
         self.set_total(total)
@@ -868,7 +882,8 @@ class DBAPI(DbGeneric):
         # First, expand blob to individual fields:
         self._txn_begin()
         for obj_type in ('Person', 'Family', 'Event', 'Place', 'Repository',
-                         'Source', 'Citation', 'Media', 'Note', 'Tag'):
+                         'Source', 'Citation', 'Media', 'Note', 'Tag',
+                         'PlaceType'):
             for handle in self.method('get_%s_handles', obj_type)():
                 obj = self.method('get_%s_from_handle', obj_type)(handle)
                 self._update_secondary_values(obj)
@@ -1005,7 +1020,7 @@ class DBAPI(DbGeneric):
         """
         LOG.info("Creating secondary columns...")
         for cls in (Person, Family, Event, Place, Repository, Source,
-                    Citation, Media, Note, Tag):
+                    Citation, Media, Note, Tag, PlaceType):
             table_name = cls.__name__.lower()
             for field, schema_type, max_length in cls.get_secondary_fields():
                 if field != 'handle':

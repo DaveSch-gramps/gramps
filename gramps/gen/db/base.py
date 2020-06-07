@@ -376,6 +376,16 @@ class DbReadBase:
         """
         raise NotImplementedError
 
+    def get_placetype_cursor(self):
+        """
+        Return a reference to a cursor over PlaceType objects.  Example use::
+
+            with get_placetype_cursor() as cursor:
+                for handle, placetype in cursor:
+                    # process placetype object pointed to by the handle
+        """
+        raise NotImplementedError
+
     def get_citation_from_gramps_id(self, val):
         """
         Find a Citation in the database from the passed Gramps ID.
@@ -605,6 +615,19 @@ class DbReadBase:
         """
         raise NotImplementedError
 
+    def get_placetype_from_handle(self, handle):
+        """
+        Return a PlaceType in the database from the passed handle.
+
+        :param handle: handle of the object to search for.
+        :type handle: str or bytes
+
+        If no such PlaceType exists, a HandleError is raised.
+        Note: if used through a proxy (Filter for reports etc.) a 'None' is
+        returned in cases where the PlaceType is filtered out.
+        """
+        raise NotImplementedError
+
     def get_citation_handles(self, sort_handles=False, locale=glocale):
         """
         Return a list of database handles, one handle for each Citation in
@@ -737,6 +760,21 @@ class DbReadBase:
         """
         raise NotImplementedError
 
+    def get_placetype_handles(self, sort_handles=False, locale=glocale):
+        """
+        Return a list of database handles, one handle for each PlaceType in
+        the database.
+
+        :param sort_handles: If True, the list is sorted by PlaceType name.
+        :type sort_handles: bool
+        :param locale: The locale to use for collation.
+        :type locale: A GrampsLocale object.
+
+        .. warning:: For speed the keys are directly returned, so handles are
+                     bytes type
+        """
+        raise NotImplementedError
+
     def get_event_roles(self):
         """
         Return a list of all custom event role names associated with Event
@@ -819,10 +857,24 @@ class DbReadBase:
         """
         raise NotImplementedError
 
-    def get_place_types(self):
+    def get_placehier_types(self):
         """
-        Return a list of all custom place types assocated with Place instances
-        in the database.
+        Return a list of all custom place hierarchy types assocated with Place
+        instances in the database.
+        """
+        raise NotImplementedError
+
+    def get_placeabbr_types(self):
+        """
+        Return a list of all custom place name types assocated with Place
+        instances in the database.
+        """
+        raise NotImplementedError
+
+    def get_place_attribute_types(self):
+        """
+        Return a list of all custom place name types assocated with Place
+        instances in the database.
         """
         raise NotImplementedError
 
@@ -925,6 +977,12 @@ class DbReadBase:
         """
         raise NotImplementedError
 
+    def get_number_of_placetypes(self):
+        """
+        Return the number of placetypes currently in the database.
+        """
+        raise NotImplementedError
+
     def get_person_event_types(self):
         """
         Deprecated:  Use get_event_types
@@ -988,6 +1046,12 @@ class DbReadBase:
     def get_raw_tag_data(self, handle):
         """
         Return raw (serialized and pickled) Tag object from handle
+        """
+        raise NotImplementedError
+
+    def get_raw_placetype_data(self, handle):
+        """
+        Return raw (serialized and pickled) PlaceType object from handle
         """
         raise NotImplementedError
 
@@ -1132,6 +1196,12 @@ class DbReadBase:
         """
         raise NotImplementedError
 
+    def has_placetype_handle(self, handle):
+        """
+        Return True if the handle exists in the current PlaceType database.
+        """
+        raise NotImplementedError
+
     def has_name_group_key(self, name):
         """
         Return if a key exists in the name_group table.
@@ -1204,6 +1274,12 @@ class DbReadBase:
         """
         raise NotImplementedError
 
+    def iter_placetypes(self):
+        """
+        Return an iterator over objects for PlaceTypes in the database
+        """
+        raise NotImplementedError
+
     def iter_citation_handles(self):
         """
         Return an iterator over handles for Citations in the database
@@ -1261,6 +1337,12 @@ class DbReadBase:
     def iter_tag_handles(self):
         """
         Return an iterator over handles for Tags in the database
+        """
+        raise NotImplementedError
+
+    def iter_placetype_handles(self):
+        """
+        Return an iterator over handles for PlaceTypes in the database
         """
         raise NotImplementedError
 
@@ -1641,6 +1723,13 @@ class DbWriteBase(DbReadBase):
         """
         raise NotImplementedError
 
+    def commit_placetype(self, placetype, transaction, change_time=None):
+        """
+        Commit the specified PlaceType to the database, storing the changes as
+        part of the transaction.
+        """
+        raise NotImplementedError
+
     def get_undodb(self):
         """
         Return the database that keeps track of Undo/Redo operations.
@@ -1729,6 +1818,13 @@ class DbWriteBase(DbReadBase):
         """
         raise NotImplementedError
 
+    def remove_placetype(self, handle, transaction):
+        """
+        Remove the PlaceType specified by the database handle from the
+        database, preserving the change in the passed transaction.
+        """
+        raise NotImplementedError
+
     def remove_from_surname_list(self, person):
         """
         Check whether there are persons with the same surname left in
@@ -1750,6 +1846,11 @@ class DbWriteBase(DbReadBase):
         Set the default grouping name for a surname.
 
         Needs to be overridden in the derived class.
+        """
+        raise NotImplementedError
+
+    def save_place_formats(self, formats):
+        """ save the place formats for the place displayer
         """
         raise NotImplementedError
 

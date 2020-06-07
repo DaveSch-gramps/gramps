@@ -25,7 +25,7 @@ Provide tagging functionality.
 #
 #-------------------------------------------------------------------------
 from bisect import insort_left
-from xml.sax.saxutils import escape
+from html import escape
 
 #-------------------------------------------------------------------------
 #
@@ -247,12 +247,12 @@ class Tags(DbGUIElement):
 
         for tag_name, handle in self.__tag_list:
             tag_menu += menuitem % ("TAG-%s" % handle,
-                                    _("Add tag '%s'") % escape(tag_name))
+                                    "Add tag '%s'" % tag_name)
             actions.append(('TAG-%s' % handle,
                             make_callback(self.tag_selected_rows, handle)))
         for tag_name, handle in self.__tag_list:
             tag_menu += menuitem % ("R-TAG-%s" % handle,
-                                    _("Remove tag '%s'") % escape(tag_name))
+                                    "Remove tag '%s'" % tag_name)
             actions.append(('R-TAG-%s' % handle,
                             make_callback(self.remove_tag_selected_rows,
                                           handle)))
@@ -332,7 +332,7 @@ class Tags(DbGUIElement):
         # database transaction while the one setting tags is still running.
         pmon = progressdlg.ProgressMonitor(progressdlg.GtkProgressDialog,
                 ("", self.uistate.window, Gtk.DialogFlags.MODAL), popup_time=2)
-        status = progressdlg.LongOpStatus(msg=_("Removing Tags"),
+        status = progressdlg.LongOpStatus(msg=_("Adding Tags"),
                                           total_steps=len(selected),
                                           interval=len(selected)//20)
         pmon.add_op(status)

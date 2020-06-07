@@ -49,20 +49,19 @@ import logging
 # Gramps module
 #------------------------------------------------
 from gramps.gen.const import GRAMPS_LOCALE as glocale
-from gramps.gen.lib import (PlaceType, Place, PlaceName)
+from gramps.gen.lib import (PlaceType as P_T, Place)
 from gramps.gen.plug.report import Bibliography
 from gramps.plugins.lib.libhtml import Html
 from gramps.gen.utils.place import conv_lat_lon
-from gramps.gen.utils.location import get_main_location
-from gramps.gen.display.place import displayer as _pd
+from gramps.gen.utils.location import get_location_list
 
 #------------------------------------------------
 # specific narrative web import
 #------------------------------------------------
 from gramps.plugins.webreport.basepage import BasePage
-from gramps.plugins.webreport.common import (first_letter,
+from gramps.plugins.webreport.common import (get_first_letters, first_letter,
                                              alphabet_navigation, GOOGLE_MAPS,
-                                             primary_difference,
+                                             primary_difference, _KEYPLACE,
                                              get_index_letter, FULLCLEAR,
                                              MARKER_PATH, OPENLAYER,
                                              OSM_MARKERS, STAMEN_MARKERS,
@@ -122,21 +121,22 @@ class PlacePages(BasePage):
                                   len(self.report.obj_dict[Place]) + 1
                                  ) as step:
             index = 1
-            for place_name in self.report.obj_dict[PlaceName].keys():
+            for place_handle in self.report.obj_dict[Place]:
                 step()
-                p_handle = self.report.obj_dict[PlaceName][place_name]
                 index += 1
-                self.placepage(self.report, title, p_handle[0], place_name)
+                self.placepage(self.report, title, place_handle)
             step()
-            self.placelistpage(self.report, title)
+            self.placelistpage(self.report, title,
+                               self.report.obj_dict[Place].keys())
 
-    def placelistpage(self, report, title):
+    def placelistpage(self, report, title, place_handles):
         """
         Create a place index
 
         @param: report        -- The instance of the main report class for
                                  this report
         @param: title         -- Is the title of the web page
+        @param: place_handles -- The handle for the place to add
         """
         BasePage.__init__(self, report, title)
 
@@ -158,8 +158,8 @@ class PlacePages(BasePage):
             placelist += Html("p", msg, id="description")
 
             # begin alphabet navigation
-            pkeys = self.report.obj_dict[PlaceName].keys()
-            index_list = get_first_letters(pkeys, rlocale=self.rlocale)
+            index_list = get_first_letters(self.r_db, place_handles,
+                                           _KEYPLACE, rlocale=self.rlocale)
             alpha_nav = alphabet_navigation(index_list, self.rlocale)
             if alpha_nav is not None:
                 placelist += alpha_nav
@@ -199,8 +199,7 @@ class PlacePages(BasePage):
                         ]
                     )
 
-                handle_list = sort_places(self.r_db,
-                                          self.report.obj_dict[PlaceName],
+                handle_list = sort_places(self.r_db, place_handles,
                                           self.rlocale)
                 first = True
 
@@ -208,13 +207,26 @@ class PlacePages(BasePage):
                 tbody = Html("tbody")
                 table += tbody
 
-                for (pname, place_handle) in handle_list:
+                for (dummy_pname, place_handle) in handle_list:
                     place = self.r_db.get_place_from_handle(place_handle)
                     if place:
                         if place.get_change_time() > ldatec:
                             ldatec = place.get_change_time()
-                        plc_title = pname
-                        main_location = get_main_location(self.r_db, place)
+                        plc_title = self.report.obj_dict[
+                            Place][place_handle][1]
+                        loc_list = get_location_list(self.r_db, place)
+                        state = country = ''
+                        for loc in loc_list:
+                            # loc_list shoud be in order from small to largest
+                            name, place_type, dummy_hndl, _abbrs = loc
+                            if place_type & P_T.G_COUNTRY and not country:
+                                # should find smaller of country group
+                                country = name
+                                continue
+                            elif place_type & P_T.G_REGION:
+                                # should find largest (state)
+                                state = name
+                                continue
 
                         if plc_title and plc_title != " ":
                             letter = get_index_letter(first_letter(plc_title),
@@ -250,10 +262,8 @@ class PlacePages(BasePage):
                             Html("td", data or "&nbsp;", class_=colclass,
                                  inline=True)
                             for (colclass, data) in [
-                                ["ColumnState",
-                                 main_location.get(PlaceType.STATE, '')],
-                                ["ColumnCountry",
-                                 main_location.get(PlaceType.COUNTRY, '')]
+                                ["ColumnState", state],
+                                ["ColumnCountry", country]
                             ]
                         )
 
@@ -283,7 +293,7 @@ class PlacePages(BasePage):
         # and close the file
         self.xhtml_writer(placelistpage, output_file, sio, ldatec)
 
-    def placepage(self, report, title, place_handle, place_name):
+    def placepage(self, report, title, place_handle):
         """
         Create a place page
 
@@ -294,14 +304,13 @@ class PlacePages(BasePage):
         """
         place = report.database.get_place_from_handle(place_handle)
         if not place:
-            return None
+            return
         BasePage.__init__(self, report, title, place.get_gramps_id())
         self.bibli = Bibliography()
+        place_name = self.report.obj_dict[Place][place_handle][1]
         ldatec = place.get_change_time()
-        apname = _pd.display(self.r_db, place)
 
-        if place_name == apname: # store only the primary named page
-            output_file, sio = self.report.create_file(place_handle, "plc")
+        output_file, sio = self.report.create_file(place_handle, "plc")
         self.uplink = True
         self.page_title = place_name
         (placepage, head, dummy_body,
@@ -484,36 +493,4 @@ class PlacePages(BasePage):
 
         # send page out for processing
         # and close the file
-        if place_name == apname: # store only the primary named page
-            if place in self.report.visited: # only the first time
-                self.report.close_file(output_file, sio, None)
-                return None
-            self.report.visited.append(place)
-            self.xhtml_writer(placepage, output_file, sio, ldatec)
-
-def get_first_letters(place_list, rlocale=glocale):
-    """
-    get the first letters of the place name list
-
-    @param: handle_list -- The place name list
-
-    The first letter (or letters if there is a contraction) are extracted from
-    """
-    index_list = []
-    for place in place_list:
-        ltr = first_letter(place)
-        index_list.append(ltr)
-
-    # Now remove letters where there is not a primary difference
-    index_list.sort(key=rlocale.sort_key)
-    first = True
-    prev_index = None
-    for nkey in index_list[:]:   #iterate over a slice copy of the list
-        if first or primary_difference(prev_index, nkey, rlocale):
-            first = False
-            prev_index = nkey
-        else:
-            index_list.remove(nkey)
-
-    # return menu set letters for alphabet_navigation
-    return index_list
+        self.xhtml_writer(placepage, output_file, sio, ldatec)

@@ -65,7 +65,7 @@ class EditRepository(EditPrimary):
 
         EditPrimary.__init__(self, dbstate, uistate, track, repository,
                              dbstate.db.get_repository_from_handle,
-                             dbstate.db.get_repository_from_gramps_id, callback)
+                             dbstate.db.get_repository_from_gramps_id)
 
     def empty_object(self):
         return Repository()
@@ -208,8 +208,6 @@ class EditRepository(EditPrimary):
                     self.db.commit_repository(self.obj, trans)
 
         self._do_close()
-        if self.callback:
-            self.callback(self.obj)
 
 class DeleteRepositoryQuery:
     def __init__(self, dbstate, uistate, repository, sources):

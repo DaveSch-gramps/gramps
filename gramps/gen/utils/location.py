@@ -22,25 +22,42 @@
 Location utility functions
 """
 from ..lib.date import Date, Today
+from ..lib.placetype import PlaceType
+from ..lib.placehiertype import PlaceHierType
+from ..lib.namelang import NameLang
+from ..lib.attrtype import AttributeType
+from ..errors import HandleError
+from gramps.gen.const import GRAMPS_LOCALE as glocale
+_ = glocale.translation.sgettext
+
 
 #-------------------------------------------------------------------------
 #
 # get_location_list
 #
 #-------------------------------------------------------------------------
-def get_location_list(db, place, date=None, lang=''):
+def get_location_list(db, place, date=None, lang='', hier=PlaceHierType.ADMIN):
     """
-    Return a list of place names for display.
+    Return a list of place tuples for display:
+    name str      (0)
+    PlaceType     (1)
+    Place handle  (2)
+    Place abbr    (3)
+
+    the list is in order of smallest (most enclosed) to largest place.
+    The list will match the date, lang and hierarchy type.
     """
     if date is None:
         date = __get_latest_date(place)
     visited = [place.handle]
-    lines = [(__get_name(place, date, lang), place.get_type())]
+    name, abbrs = __get_name(place, date, lang)
+    lines = [(name, __get_type(db, place, date), place.handle, abbrs)]
     while True:
         handle = None
         for placeref in place.get_placeref_list():
             ref_date = placeref.get_date_object()
-            if ref_date.is_empty() or date.match_exact(ref_date):
+            if placeref.get_type() == hier and (ref_date.is_empty() or
+                                                date.match_exact(ref_date)):
                 handle = placeref.ref
                 break
         if handle is None or handle in visited:
@@ -49,23 +66,41 @@ def get_location_list(db, place, date=None, lang=''):
         if place is None:
             break
         visited.append(handle)
-        lines.append((__get_name(place, date, lang), place.get_type()))
+        name, abbrs = __get_name(place, date, lang)
+        lines.append((name, __get_type(db, place, date), place.handle, abbrs))
     return lines
 
+
 def __get_name(place, date, lang):
+    """ Gets the name for a given date and language.  Returns the str name and
+    a list of abbreviations (PlaceAbbrevType)
+    """
     endonym = None
-    for place_name in place.get_all_names():
+    for place_name in place.get_names():
         name_date = place_name.get_date_object()
         if name_date.is_empty() or date.match_exact(name_date):
             if place_name.get_language() == lang:
-                return place_name.get_value()
+                return place_name.get_value(), place_name.get_abbrevs()
             if endonym is None:
                 endonym = place_name.get_value()
-    return endonym if endonym is not None else '?'
+                abbs = place_name.get_abbrevs()
+    return (endonym, abbs) if endonym is not None else ('?', [])
+
+
+def __get_type(db, place, date):
+    for place_type in place.get_types():
+        type_date = place_type.get_date_object()
+        if type_date.is_empty() or date.match_exact(type_date):
+            try:
+                return db.get_placetype_from_handle(place_type.ref)
+            except HandleError:
+                break
+    return PlaceType()  # Unknown
+
 
 def __get_latest_date(place):
     latest_date = None
-    for place_name in place.get_all_names():
+    for place_name in place.get_names():
         date = place_name.get_date_object()
         if date.is_empty() or date.modifier == Date.MOD_AFTER:
             return Today()
@@ -89,10 +124,10 @@ def get_main_location(db, place, date=None):
     Find all places in the hierarchy above the given place, and return the
     result as a dictionary of place types and names.
     """
-    return dict([(int(place_type), name)
-                    for name, place_type
-                    in get_location_list(db, place, date)
-                    if not place_type.is_custom()])
+    return dict([(place_type, name)
+                 for name, place_type, dummy_hndl, dummy_abbrs
+                 in get_location_list(db, place, date)
+                 if not place_type.is_custom()])
 
 #-------------------------------------------------------------------------
 #
@@ -105,7 +140,7 @@ def get_locations(db, place):
     containing dictionaries of place types and names.
     """
     locations = []
-    todo = [(place, [(int(place.get_type()), __get_all_names(place))],
+    todo = [(place, [(place.get_type(), __get_all_names(place))],
             [place.handle])]
     while len(todo):
         place, tree, visited = todo.pop()
@@ -113,7 +148,7 @@ def get_locations(db, place):
             if parent.ref not in visited:
                 parent_place = db.get_place_from_handle(parent.ref)
                 if parent_place is not None:
-                    parent_tree = tree + [(int(parent_place.get_type()),
+                    parent_tree = tree + [(parent_place.get_type(),
                                            __get_all_names(parent_place))]
                     parent_visited = visited + [parent.ref]
                     todo.append((parent_place, parent_tree, parent_visited))
@@ -122,7 +157,7 @@ def get_locations(db, place):
     return locations
 
 def __get_all_names(place):
-    return [name.get_value() for name in place.get_all_names()]
+    return [name.get_value() for name in place.get_names()]
 
 #-------------------------------------------------------------------------
 #
@@ -147,3 +182,103 @@ def located_in(db, handle1, handle2):
                     parent_visited = visited + [parent.ref]
                     todo.append((parent_place, parent_visited))
     return False
+
+
+#-------------------------------------------------------------------------
+#
+# get_code (postal code)
+#
+#-------------------------------------------------------------------------
+def get_code(place):
+    """
+    Returns the postal code(s) from a place that are found in attributes.
+    """
+    txt = ''
+    for attr in place.get_attribute_list():
+        if attr.type == AttributeType.POSTAL:
+            txt += (_(", ") if txt else '') + attr.value
+    return txt
+
+
+#-------------------------------------------------------------------------
+#
+# Find or create the place type from string
+#
+#-------------------------------------------------------------------------
+def placetype_from_str(db, value, trans=None):
+    """
+    This method finds or creates the type instance based on the untranslated
+    string (obtained e.g. from XML) or the translated string.
+    Used for legacy XML import and comboentry type-in custom values
+
+    The place type is commited if not present
+
+    :param value: the string name of a type.
+    :type value: string
+    :param db: a Gramps db
+    :type db: DbGeneric (or similar)
+    :param trans: db transaction or None (if do our own)
+    :type trans: DbTxn
+    :returns: Returns the handle of the db place type.
+    :rtype: string
+    """
+    from gramps.gen.db.txn import DbTxn
+    ptype = PlaceType()
+    hndl = value.capitalize()
+    # is this already in the db (value is XML legacy type == hndl)?
+    if db.has_placetype_handle(hndl):
+        return hndl
+    # is this already in the db (value is translated name of legacy type)?
+    if hndl in ptype.str_to_handle:
+        hndl = ptype.str_to_handle[hndl]
+        if db.has_placetype_handle(hndl):
+            return hndl
+    # We check if this is a name of an already present place type
+    # do we need a db.find_placetype_by_name method  TODO?
+    for p_typ in db.iter_placetypes():
+        for name in p_typ.name_list:
+            if name.value == hndl:
+                return p_typ.handle
+    # must be something new to the db
+    if hndl in ptype.DATAMAP:  # test for original PlaceType
+        ptype.handle = hndl
+        ptype.group = ptype.DATAMAP[ptype.handle][1]
+        ptype.show = ptype.DATAMAP[ptype.handle][2]
+        ptype.name_list.append(NameLang(value=hndl, lang=''))
+        ptype.name_list.append(NameLang(value=ptype.DATAMAP[ptype.handle][0],
+                                        lang=glocale.lang[0:2]))
+    else:
+        # Must be a completely new type
+        ptype.handle = hndl
+        ptype.name_list.append(NameLang(value=hndl, lang=''))
+    if trans is None:
+        with DbTxn(_("Add Place Type (%s)") % str(ptype), db) as trans:
+            db.commit_placetype(ptype, trans)
+    else:
+        db.commit_placetype(ptype, trans)
+    return hndl
+
+#     @classmethod
+#     def valid_name(cls, name, p_type=0):
+#         """ Check for a valid, non-duplicated name and return a good one.
+# 
+#         :param p_type: the int value of a potential type from new() or GOV.
+#         :type p_type: int
+#         :returns: Valid PlaceType name.
+#         :rtype: string
+#         """
+#         suffix_n = 1
+#         suffix = ''
+#         while True:
+#             for tup in cls.DATAMAP.values():
+#                 if (name + suffix).lower() == tup[DM_NAME].lower():  # conflict
+#                     if p_type < 0 and p_type > cls.CUSTOM:     # a GOV type
+#                         name += str(-p_type)
+#                         break
+#                     else:
+#                         suffix = '_' + str(suffix_n)
+#                         suffix_n += 1
+#                         break
+#             else:
+#                 return name + suffix
+

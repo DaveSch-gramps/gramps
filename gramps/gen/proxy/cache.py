@@ -154,3 +154,12 @@ class CacheProxyDb:
         if handle not in self.cache_handle:
             self.cache_handle[handle] = self.db.get_tag_from_handle(handle)
         return self.cache_handle[handle]
+
+    def get_placetype_from_handle(self, handle):
+        """
+        Gets item from cache if it exists. Converts
+        handles to string, for uniformity.
+        """
+        if handle not in self.cache_handle:
+            self.cache_handle[handle] = self.db.get_placetype_from_handle(handle)
+        return self.cache_handle[handle]

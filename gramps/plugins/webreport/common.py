@@ -423,19 +423,16 @@ def sort_people(dbase, handle_list, rlocale=glocale):
 
 def sort_places(dbase, handle_list, rlocale=glocale):
     """
-    will sort the database places
+    will sort the database place
     """
     pname_sub = defaultdict(list)
+    sortnames = {}
 
-    for place_name in handle_list.keys():
-        (hdle, pname, dummy_id, event) = handle_list[place_name]
-        place = dbase.get_place_from_handle(hdle)
+    for place_handle in handle_list:
+        place = dbase.get_place_from_handle(place_handle)
         pname = _pd.display(dbase, place)
-        apname = _pd.display_event(dbase, event)
-
-        pname_sub[pname].append(hdle)
-        if pname != apname:
-            pname_sub[apname].append(hdle)
+        sortnames[place_handle] = pname
+        pname_sub[pname].append(place_handle)
 
     sorted_lists = []
     temp_list = sorted(pname_sub, key=rlocale.sort_key)
@@ -443,7 +440,10 @@ def sort_places(dbase, handle_list, rlocale=glocale):
     for name in temp_list:
         if isinstance(name, bytes):
             name = name.decode('utf-8')
-        sorted_lists.append((name, pname_sub[name][0]))
+        slist = sorted(((sortnames[x], x) for x in pname_sub[name]),
+                       key=lambda x: rlocale.sort_key(x[0]))
+        for entry in slist:
+            sorted_lists.append(entry)
 
     return sorted_lists
 
@@ -924,12 +924,13 @@ def name_to_md5(text):
 
     return md5(text.encode('utf-8')).hexdigest()
 
-def get_gendex_data(database, event_ref):
+def get_gendex_data(database, event_ref, p_fmt=-1):
     """
     Given an event, return the date and place a strings
 
     @param: database  -- The database
     @param: event_ref -- The event reference
+    @param: p_fmt -- The place format to use for gendex file
     """
     doe = "" # date of event
     poe = "" # place of event
@@ -943,7 +944,7 @@ def get_gendex_data(database, event_ref):
                 if place_handle:
                     place = database.get_place_from_handle(place_handle)
                     if place:
-                        poe = _pd.display(database, place, date)
+                        poe = _pd.display(database, place, date, fmt=p_fmt)
     return doe, poe
 
 def format_date(date):
