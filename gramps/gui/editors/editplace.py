@@ -66,7 +66,7 @@ from gramps.gen.const import URL_MANUAL_SECT2
 #-------------------------------------------------------------------------
 
 WIKI_HELP_PAGE = URL_MANUAL_SECT2
-WIKI_HELP_SEC = _('manual|Place_Editor_dialog')
+WIKI_HELP_SEC = _('Place_Editor_dialog', 'manual')
 
 #-------------------------------------------------------------------------
 #
@@ -88,7 +88,7 @@ class EditPlace(EditPrimary):
         self.set_window(self.top.toplevel, None, self.get_menu_title())
         self.setup_configs('interface.place', 650, 450)
         self.place_name_label = self.top.get_object('place_name_label')
-        self.place_name_label.set_text(_('place|Name:'))
+        self.place_name_label.set_text(_('Name:', 'place'))
 
     def get_menu_title(self):
         if self.obj and self.obj.get_handle():
@@ -187,9 +187,11 @@ class EditPlace(EditPrimary):
 
     def set_latlongitude(self, value):
         try:
-            coma = value.index(',')
-            self.longitude.set_text(value[coma+1:].strip())
-            self.latitude.set_text(value[:coma].strip())
+            coma = value.index(', ')
+            longitude = value[coma+2:].strip().replace(',','.')
+            latitude = value[:coma].strip().replace(',','.')
+            self.longitude.set_text(longitude)
+            self.latitude.set_text(latitude)
             self.top.get_object("lat_entry").validate(force=True)
             self.top.get_object("lon_entry").validate(force=True)
             self.obj.set_latitude(self.latitude.get_value())

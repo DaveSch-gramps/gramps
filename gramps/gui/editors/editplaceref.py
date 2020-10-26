@@ -18,7 +18,7 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
-
+from copy import deepcopy
 #-------------------------------------------------------------------------
 #
 # Gramps modules
@@ -51,7 +51,7 @@ class EditPlaceRef(EditReference):
     def __init__(self, state, uistate, track, place, place_ref, update):
         EditReference.__init__(self, state, uistate, track, place, place_ref,
                                update)
-        self.original = place.serialize()
+        self.original = deepcopy(place.serialize())
 
     def _local_init(self):
 
@@ -62,7 +62,7 @@ class EditPlaceRef(EditReference):
         self.define_warn_box(self.top.get_object("warning"))
         self.define_expander(self.top.get_object("expander"))
         #self.place_name_label = self.top.get_object('place_name_label')
-        #self.place_name_label.set_text(_('place|Name:'))
+        #self.place_name_label.set_text(_('Name:', 'place'))
 
         tblref = self.top.get_object('table64')
         notebook = self.top.get_object('notebook_ref')
@@ -181,9 +181,11 @@ class EditPlaceRef(EditReference):
 
     def set_latlongitude(self, value):
         try:
-            coma = value.index(',')
-            self.longitude.set_text(value[coma+1:].strip())
-            self.latitude.set_text(value[:coma].strip())
+            coma = value.index(', ')
+            longitude = value[coma+2:].strip().replace(',','.')
+            latitude = value[:coma].strip().replace(',','.')
+            self.longitude.set_text(longitude)
+            self.latitude.set_text(latitude)
             self.top.get_object("lat_entry").validate(force=True)
             self.top.get_object("lon_entry").validate(force=True)
             self.source.set_latitude(self.latitude.get_value())

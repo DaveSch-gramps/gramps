@@ -29,6 +29,7 @@
 #
 #-------------------------------------------------------------------------
 import os
+from copy import deepcopy
 
 #-------------------------------------------------------------------------
 #
@@ -68,7 +69,7 @@ from gramps.gen.const import URL_MANUAL_SECT2
 #-------------------------------------------------------------------------
 
 WIKI_HELP_PAGE = URL_MANUAL_SECT2
-WIKI_HELP_SEC = _('manual|Media_Reference_Editor_dialog')
+WIKI_HELP_SEC = _('Media_Reference_Editor_dialog', 'manual')
 
 #-------------------------------------------------------------------------
 #
@@ -85,7 +86,7 @@ class EditMediaRef(EditReference):
             AddMedia(state, self.uistate, self.track, self.source,
                      self._update_addmedia)
         else:
-            self.original = self.source.serialize()
+            self.original = deepcopy(self.source.serialize())
 
     def _local_init(self):
 
@@ -96,8 +97,8 @@ class EditMediaRef(EditReference):
         self.setup_configs('interface.media-ref', 600, 450)
 
         self.define_warn_box(self.top.get_object("warn_box"))
-        self.top.get_object("label427").set_text(_("Y coordinate|Y"))
-        self.top.get_object("label428").set_text(_("Y coordinate|Y"))
+        self.top.get_object("label427").set_text(_("Y", "Y coordinate"))
+        self.top.get_object("label428").set_text(_("Y", "Y coordinate"))
 
         tblref = self.top.get_object('table50')
         self.notebook_ref = self.top.get_object('notebook_ref')

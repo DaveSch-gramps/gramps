@@ -47,8 +47,8 @@ from .const import GRAMPS_LOCALE as glocale
 _ = glocale.translation.gettext
 
 # _T_ is a gramps-defined keyword -- see po/update_po.py and po/genpot.sh
-def _T_(value): # enable deferred translations (see Python docs 22.1.3.4)
-    return value
+def _T_(value, context=''): # enable deferred translations
+    return "%s\x04%s" % (context, value) if context else value
 
 #---------------------------------------------------------------
 #
@@ -133,7 +133,6 @@ register('behavior.addmedia-image-dir', '')
 register('behavior.addmedia-relative-path', False)
 register('behavior.autoload', False)
 register('behavior.avg-generation-gap', 20)
-register('behavior.betawarn', False)
 register('behavior.check-for-addon-updates', 0)
 register('behavior.check-for-addon-update-types', ["new"])
 register('behavior.last-check-for-addon-updates', "1970/01/01")
@@ -157,7 +156,7 @@ register('behavior.translator-needed', True)
 register('behavior.use-tips', False)
 register('behavior.welcome', 100)
 register('behavior.web-search-url', 'http://google.com/#&q=%(text)s')
-register('behavior.addons-url', "https://raw.githubusercontent.com/gramps-project/addons/master/gramps51")
+register('behavior.addons-url', "https://raw.githubusercontent.com/gramps-project/addons/master/gramps52")
 
 register('database.backend', 'sqlite')
 register('database.compress-backup', True)
@@ -317,7 +316,7 @@ register('utf8.selected-font', "")
 register('utf8.death-symbol', 13)
 
 if __debug__: # enable a simple CLI test to see if the datestrings exist
-    register('test.january', _("localized lexeme inflections||January"))
+    register('test.january', _("|January", "localized lexeme inflections"))
 
 #---------------------------------------------------------------
 #

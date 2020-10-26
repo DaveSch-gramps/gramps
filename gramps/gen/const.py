@@ -41,7 +41,7 @@ import uuid
 #-------------------------------------------------------------------------
 from .git_revision import get_git_revision
 from .constfunc import get_env_var
-from ..version import VERSION, VERSION_TUPLE, major_version
+from ..version import VERSION, VERSION_TUPLE, major_version, DEV_VERSION
 from .utils.resourcepath import ResourcePath
 from .utils.grampslocale import GrampsLocale
 
@@ -145,7 +145,8 @@ sys.path.insert(0, ROOT_DIR)
 git_revision = get_git_revision(ROOT_DIR).replace('\n', '')
 if sys.platform == 'win32' and git_revision == "":
     git_revision = get_git_revision(os.path.split(ROOT_DIR)[1])
-VERSION += git_revision
+if DEV_VERSION:
+    VERSION += git_revision
 #VERSION += "-1"
 
 #
@@ -225,7 +226,7 @@ GTK_GETTEXT_DOMAIN = 'gtk30'
 #
 #-------------------------------------------------------------------------
 COPYRIGHT_MSG = "© 2001-2006 Donald N. Allingham\n" \
-                "© 2007-2019 The Gramps Developers"
+                "© 2007-2020 The Gramps Developers"
 COMMENTS = _("Gramps\n (Genealogical Research and Analysis "
              "Management Programming System)\n"
              "is a personal genealogy program.")
@@ -256,8 +257,8 @@ DOCUMENTERS = [
 THUMBSCALE = 96.0
 THUMBSCALE_LARGE = 180.0
 XMLFILE = "data.gramps"
-NO_SURNAME = "(%s)" % _("surname|none")
-NO_GIVEN = "(%s)" % _("given-name|none")
+NO_SURNAME = "(%s)" % _("none", "surname")
+NO_GIVEN = "(%s)" % _("none", "given-name")
 ARABIC_COMMA = "،"
 ARABIC_SEMICOLON = "؛"
 DOCGEN_OPTIONS = 'Docgen Options'

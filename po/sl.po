@@ -1,13 +1,13 @@
 # Slovenian translation for Gramps
 # This file is distributed under the same license as the Gramps package.
 # Copyright (c) 2007 gramps-project
-# Bernard Banko <beernarrd at gmail.com>, 2007-2019.
+# Bernard Banko <beernarrd at gmail.com>, 2007-2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: gramps 3.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-10 17:16+0100\n"
-"PO-Revision-Date: 2019-02-24 22:16+0200\n"
+"POT-Creation-Date: 2020-07-15 22:20+0200\n"
+"PO-Revision-Date: 2020-02-25 22:47+0200\n"
 "Last-Translator: Bernard Banko <beernarrd at gmail.com>\n"
 "Language-Team: lugos.si\n"
 "Language: sl\n"
@@ -91,195 +91,199 @@ msgstr "GeneWeb"
 msgid "GeneWeb source file"
 msgstr "GeneWeb izvorna datoteka"
 
-#: ../data/holidays.xml.in.h:1
+#: ../data/holidays.xml.in.h:3
 msgid "Bulgaria"
 msgstr "Bolgarija"
 
-#: ../data/holidays.xml.in.h:2
+#: ../data/holidays.xml.in.h:52
 msgid "Canada"
 msgstr "Kanada"
 
-#: ../data/holidays.xml.in.h:3
-msgid "Czech Republic"
-msgstr "Češka"
-
-#: ../data/holidays.xml.in.h:4
+#: ../data/holidays.xml.in.h:84
 msgid "Chile"
 msgstr "Čile"
 
-#: ../data/holidays.xml.in.h:5
+#: ../data/holidays.xml.in.h:107
 msgid "China"
 msgstr "Kitajska"
 
-#: ../data/holidays.xml.in.h:6
+#: ../data/holidays.xml.in.h:110
 msgid "Croatia"
 msgstr "Hrvaška"
 
-#: ../data/holidays.xml.in.h:7
+#: ../data/holidays.xml.in.h:126
+msgid "Czech Republic"
+msgstr "Češka"
+
+#: ../data/holidays.xml.in.h:141
 msgid "England"
 msgstr "Anglija"
 
-#: ../data/holidays.xml.in.h:8
+#: ../data/holidays.xml.in.h:171
 msgid "Finland"
 msgstr "Finska"
 
-#: ../data/holidays.xml.in.h:9
+#: ../data/holidays.xml.in.h:265
 msgid "France"
 msgstr "Francija"
 
-#: ../data/holidays.xml.in.h:10
+#: ../data/holidays.xml.in.h:301
 msgid "Germany"
 msgstr "Nemčija"
 
-#: ../data/holidays.xml.in.h:11
+#: ../data/holidays.xml.in.h:318
 msgid "Japan"
 msgstr "Japonska"
 
-#: ../data/holidays.xml.in.h:12
+#: ../data/holidays.xml.in.h:341
+msgid "Jewish Holidays"
+msgstr "Judovski prazniki"
+
+#: ../data/holidays.xml.in.h:342
+msgid "Purim"
+msgstr "Purim"
+
+#: ../data/holidays.xml.in.h:343
+msgid "Passover"
+msgstr "Prehod"
+
+#: ../data/holidays.xml.in.h:344
+msgid "2 of Passover"
+msgstr "Prehod 2"
+
+#: ../data/holidays.xml.in.h:345
+msgid "3 of Passover"
+msgstr "Prehod 3"
+
+#: ../data/holidays.xml.in.h:346
+msgid "4 of Passover"
+msgstr "Prehod 4"
+
+#: ../data/holidays.xml.in.h:347
+msgid "5 of Passover"
+msgstr "Prehod 5"
+
+#: ../data/holidays.xml.in.h:348
+msgid "6 of Passover"
+msgstr "Prehod 6"
+
+#: ../data/holidays.xml.in.h:349
+msgid "7 of Passover"
+msgstr "Prehod 7"
+
+#: ../data/holidays.xml.in.h:350
+msgid "Shavuot"
+msgstr "Šavuot"
+
+#: ../data/holidays.xml.in.h:351
+msgid "Rosh Ha'Shana"
+msgstr "Roš Ha Šana"
+
+#: ../data/holidays.xml.in.h:352
+msgid "Rosh Ha'Shana 2"
+msgstr "Roš Ha Šana 2"
+
+#: ../data/holidays.xml.in.h:353
+msgid "Yom Kippur"
+msgstr "Jom Kippur"
+
+#: ../data/holidays.xml.in.h:354
+msgid "Sukot"
+msgstr "Sukot"
+
+#: ../data/holidays.xml.in.h:355
+msgid "2 of Sukot"
+msgstr "Sukot 2"
+
+#: ../data/holidays.xml.in.h:356
+msgid "3 of Sukot"
+msgstr "Sukot 3"
+
+#: ../data/holidays.xml.in.h:357
+msgid "4 of Sukot"
+msgstr "Sukot 4"
+
+#: ../data/holidays.xml.in.h:358
+msgid "5 of Sukot"
+msgstr "Sukot 5"
+
+#: ../data/holidays.xml.in.h:359
+msgid "6 of Sukot"
+msgstr "Sukot 6"
+
+#: ../data/holidays.xml.in.h:360
+msgid "7 of Sukot"
+msgstr "Sukot 7"
+
+#: ../data/holidays.xml.in.h:361
+msgid "Simhat Tora"
+msgstr "Simhat Tora"
+
+#: ../data/holidays.xml.in.h:362
+msgid "Hanuka"
+msgstr "Hanuka"
+
+#: ../data/holidays.xml.in.h:363
+msgid "2 of Hanuka"
+msgstr "Hanuka 2"
+
+#: ../data/holidays.xml.in.h:364
+msgid "3 of Hanuka"
+msgstr "Hanuka 3"
+
+#: ../data/holidays.xml.in.h:365
+msgid "4 of Hanuka"
+msgstr "Hanuka 4"
+
+#: ../data/holidays.xml.in.h:366
+msgid "5 of Hanuka"
+msgstr "Hanuka 5"
+
+#: ../data/holidays.xml.in.h:367
+msgid "6 of Hanuka"
+msgstr "Hanuka 6"
+
+#: ../data/holidays.xml.in.h:368
+msgid "7 of Hanuka"
+msgstr "Hanuka 7"
+
+#: ../data/holidays.xml.in.h:369
+msgid "8 of Hanuka"
+msgstr "Hanuka 8"
+
+#: ../data/holidays.xml.in.h:371
+msgid "New Zealand"
+msgstr "Nova Zelandija"
+
+#: ../data/holidays.xml.in.h:387
+msgid "Russia"
+msgstr "Rusija"
+
+#: ../data/holidays.xml.in.h:400
+msgid "Serbia"
+msgstr "Srbija"
+
+#: ../data/holidays.xml.in.h:415
+msgid "Serbia (Latin)"
+msgstr "Srbija (latinica)"
+
+#: ../data/holidays.xml.in.h:430
 msgid "Slovakia"
 msgstr "Slovaška"
 
-#. Make upper case of translaed country so string search works later
-#: ../data/holidays.xml.in.h:13
+#. Make upper case of translated country so string search works later
+#: ../data/holidays.xml.in.h:447
 #: ../gramps/plugins/mapservices/eniroswedenmap.py:47
 msgid "Sweden"
 msgstr "Švedska"
 
-#: ../data/holidays.xml.in.h:14
-msgid "United States of America"
-msgstr "Združene države Amerike"
-
-#: ../data/holidays.xml.in.h:15
-msgid "Jewish Holidays"
-msgstr "Judovski prazniki"
-
-#: ../data/holidays.xml.in.h:16
-msgid "Purim"
-msgstr "Purim"
-
-#: ../data/holidays.xml.in.h:17
-msgid "Passover"
-msgstr "Prehod"
-
-#: ../data/holidays.xml.in.h:18
-msgid "2 of Passover"
-msgstr "Prehod 2"
-
-#: ../data/holidays.xml.in.h:19
-msgid "3 of Passover"
-msgstr "Prehod 3"
-
-#: ../data/holidays.xml.in.h:20
-msgid "4 of Passover"
-msgstr "Prehod 4"
-
-#: ../data/holidays.xml.in.h:21
-msgid "5 of Passover"
-msgstr "Prehod 5"
-
-#: ../data/holidays.xml.in.h:22
-msgid "6 of Passover"
-msgstr "Prehod 6"
-
-#: ../data/holidays.xml.in.h:23
-msgid "7 of Passover"
-msgstr "Prehod 7"
-
-#: ../data/holidays.xml.in.h:24
-msgid "Shavuot"
-msgstr "Šavuot"
-
-#: ../data/holidays.xml.in.h:25
-msgid "Rosh Ha'Shana"
-msgstr "Roš Ha Šana"
-
-#: ../data/holidays.xml.in.h:26
-msgid "Rosh Ha'Shana 2"
-msgstr "Roš Ha Šana 2"
-
-#: ../data/holidays.xml.in.h:27
-msgid "Yom Kippur"
-msgstr "Jom Kippur"
-
-#: ../data/holidays.xml.in.h:28
-msgid "Sukot"
-msgstr "Sukot"
-
-#: ../data/holidays.xml.in.h:29
-msgid "2 of Sukot"
-msgstr "Sukot 2"
-
-#: ../data/holidays.xml.in.h:30
-msgid "3 of Sukot"
-msgstr "Sukot 3"
-
-#: ../data/holidays.xml.in.h:31
-msgid "4 of Sukot"
-msgstr "Sukot 4"
-
-#: ../data/holidays.xml.in.h:32
-msgid "5 of Sukot"
-msgstr "Sukot 5"
-
-#: ../data/holidays.xml.in.h:33
-msgid "6 of Sukot"
-msgstr "Sukot 6"
-
-#: ../data/holidays.xml.in.h:34
-msgid "7 of Sukot"
-msgstr "Sukot 7"
-
-#: ../data/holidays.xml.in.h:35
-msgid "Simhat Tora"
-msgstr "Simhat Tora"
-
-#: ../data/holidays.xml.in.h:36
-msgid "Hanuka"
-msgstr "Hanuka"
-
-#: ../data/holidays.xml.in.h:37
-msgid "2 of Hanuka"
-msgstr "Hanuka 2"
-
-#: ../data/holidays.xml.in.h:38
-msgid "3 of Hanuka"
-msgstr "Hanuka 3"
-
-#: ../data/holidays.xml.in.h:39
-msgid "4 of Hanuka"
-msgstr "Hanuka 4"
-
-#: ../data/holidays.xml.in.h:40
-msgid "5 of Hanuka"
-msgstr "Hanuka 5"
-
-#: ../data/holidays.xml.in.h:41
-msgid "6 of Hanuka"
-msgstr "Hanuka 6"
-
-#: ../data/holidays.xml.in.h:42
-msgid "7 of Hanuka"
-msgstr "Hanuka 7"
-
-#: ../data/holidays.xml.in.h:43
-msgid "8 of Hanuka"
-msgstr "Hanuka 8"
-
-#: ../data/holidays.xml.in.h:44
-msgid "New Zealand"
-msgstr "Nova Zelandija"
-
-#: ../data/holidays.xml.in.h:45
+#: ../data/holidays.xml.in.h:474
 msgid "Ukraine"
 msgstr "Ukrajina"
 
-#: ../data/holidays.xml.in.h:46
-msgid "Serbia"
-msgstr "Srbija"
-
-#: ../data/holidays.xml.in.h:47
-msgid "Serbia (Latin)"
-msgstr "Srbija (latinica)"
+#: ../data/holidays.xml.in.h:501
+msgid "United States of America"
+msgstr "Združene države Amerike"
 
 #: ../data/tips.xml.in.h:1
 msgid ""
@@ -1291,7 +1295,6 @@ msgid "Unknown action: %s."
 msgstr "Neznan ukaz: %s."
 
 #: ../gramps/cli/argparser.py:56
-#, fuzzy
 msgid ""
 "\n"
 "Usage: gramps.py [OPTION...]\n"
@@ -1348,6 +1351,8 @@ msgstr ""
 "\n"
 "Možnosti programa\n"
 "  -O, --open=RODOVNIK                  Odpri rodovnik\n"
+"  -U, --username=UPORABNISKO_IME       Uporabniško ime baze podatkov\n"
+"  -P, --password=GESLO                 Geslo baze podatkov\n"
 "  -C, --create=RODOVNIK                Ustvari rodovnik, če ne obstaja\n"
 "  -i, --import=IME_DATOTEKE            Uvozi datoteko\n"
 "  -e, --export=IME_DATOTEKE            Izvozi datoteko\n"
@@ -1368,6 +1373,15 @@ msgstr ""
 "  -q, --quiet                          Ne prikazuj kazalnika napredka (samo "
 "negrafično)\n"
 "  -v, --version                        Pokaži različice\n"
+"  -S, --safe                           Zaženi Gramps v 'varnem načinu'\n"
+"                                         (začasno uporabi privzete "
+"nastavitve)\n"
+"  -D, --default=[APXFE]\n"
+"                 A - počisti dodatke\n"
+"                 P - uporabi privzete nastavitve\n"
+"                 X - počisti knjige, nastavitve poročil in orodij\n"
+"                 F - počisti filtre\n"
+"                 E - počisti ali ponastavi vse\n"
 
 #: ../gramps/cli/argparser.py:95
 msgid ""
@@ -2085,7 +2099,8 @@ msgstr "Zasebni zapis"
 #. to learn how to select proper inflection to be used in your localized
 #. DateDisplayer code!
 #: ../gramps/gen/config.py:319 ../gramps/gen/datehandler/_datestrings.py:79
-msgid "localized lexeme inflections||January"
+msgctxt "localized lexeme inflections"
+msgid "|January"
 msgstr "i=januar|r=januarja|d=januarju|t=januar|m=januarju|o=januarjem"
 
 #: ../gramps/gen/const.py:229
@@ -2099,11 +2114,13 @@ msgstr ""
 "osebni rodoslovni program."
 
 #: ../gramps/gen/const.py:259
-msgid "surname|none"
+msgctxt "surname"
+msgid "none"
 msgstr "brez"
 
 #: ../gramps/gen/const.py:260
-msgid "given-name|none"
+msgctxt "given-name"
+msgid "none"
 msgstr "brez"
 
 #: ../gramps/gen/const.py:264 ../gramps/plugins/gramplet/todo.py:202
@@ -2132,7 +2149,8 @@ msgstr "YYYY-MM-DD (ISO)"
 #. strftime() for '%x'.
 #. You may translate this as "Numerical", "System preferred", or similar.
 #: ../gramps/gen/datehandler/_datedisplay.py:77
-msgid "date format|Numerical"
+msgctxt "date format"
+msgid "Numerical"
 msgstr "Številčno"
 
 #. Full month name, day, year
@@ -2167,7 +2185,8 @@ msgstr "{long_month.f[r]} {year}"
 #. else leave it untranslated
 #: ../gramps/gen/datehandler/_datedisplay.py:189
 #, python-brace-format
-msgid "from|{long_month} {year}"
+msgctxt "from"
+msgid "{long_month} {year}"
 msgstr "{long_month.f[r]} {year}"
 
 #. second date in a span
@@ -2177,7 +2196,8 @@ msgstr "{long_month.f[r]} {year}"
 #. else leave it untranslated
 #: ../gramps/gen/datehandler/_datedisplay.py:197
 #, python-brace-format
-msgid "to|{long_month} {year}"
+msgctxt "to"
+msgid "{long_month} {year}"
 msgstr "{long_month.f[r]} {year}"
 
 #. first date in a range
@@ -2187,7 +2207,8 @@ msgstr "{long_month.f[r]} {year}"
 #. else leave it untranslated
 #: ../gramps/gen/datehandler/_datedisplay.py:205
 #, python-brace-format
-msgid "between|{long_month} {year}"
+msgctxt "between"
+msgid "{long_month} {year}"
 msgstr "{long_month.f[o]} {year}"
 
 #. second date in a range
@@ -2197,7 +2218,8 @@ msgstr "{long_month.f[o]} {year}"
 #. else leave it untranslated
 #: ../gramps/gen/datehandler/_datedisplay.py:213
 #, python-brace-format
-msgid "and|{long_month} {year}"
+msgctxt "and"
+msgid "{long_month} {year}"
 msgstr "{long_month.f[o]} {year}"
 
 #. If "before <Month>" needs a special inflection in your
@@ -2206,7 +2228,8 @@ msgstr "{long_month.f[o]} {year}"
 #. else leave it untranslated
 #: ../gramps/gen/datehandler/_datedisplay.py:220
 #, python-brace-format
-msgid "before|{long_month} {year}"
+msgctxt "before"
+msgid "{long_month} {year}"
 msgstr "{long_month.f[o]} {year}"
 
 #. If "after <Month>" needs a special inflection in your
@@ -2215,7 +2238,8 @@ msgstr "{long_month.f[o]} {year}"
 #. else leave it untranslated
 #: ../gramps/gen/datehandler/_datedisplay.py:227
 #, python-brace-format
-msgid "after|{long_month} {year}"
+msgctxt "after"
+msgid "{long_month} {year}"
 msgstr "{long_month.f[m]} {year}"
 
 #. If "about <Month>" needs a special inflection in your
@@ -2224,7 +2248,8 @@ msgstr "{long_month.f[m]} {year}"
 #. else leave it untranslated
 #: ../gramps/gen/datehandler/_datedisplay.py:234
 #, python-brace-format
-msgid "about|{long_month} {year}"
+msgctxt "about"
+msgid "{long_month} {year}"
 msgstr "{long_month.f[r]} {year}"
 
 #. If "estimated <Month>" needs a special inflection in your
@@ -2233,7 +2258,8 @@ msgstr "{long_month.f[r]} {year}"
 #. else leave it untranslated
 #: ../gramps/gen/datehandler/_datedisplay.py:241
 #, python-brace-format
-msgid "estimated|{long_month} {year}"
+msgctxt "estimated"
+msgid "{long_month} {year}"
 msgstr "{long_month.f[r]} {year}"
 
 #. If "calculated <Month>" needs a special inflection in your
@@ -2242,7 +2268,8 @@ msgstr "{long_month.f[r]} {year}"
 #. else leave it untranslated
 #: ../gramps/gen/datehandler/_datedisplay.py:248
 #, python-brace-format
-msgid "calculated|{long_month} {year}"
+msgctxt "calculated"
+msgid "{long_month} {year}"
 msgstr "{long_month.f[r]} {year}"
 
 #: ../gramps/gen/datehandler/_datedisplay.py:253
@@ -2257,7 +2284,8 @@ msgstr "{short_month} {year}"
 #. else leave it untranslated
 #: ../gramps/gen/datehandler/_datedisplay.py:261
 #, python-brace-format
-msgid "from|{short_month} {year}"
+msgctxt "from"
+msgid "{short_month} {year}"
 msgstr "{short_month} {year}"
 
 #. second date in a span
@@ -2267,7 +2295,8 @@ msgstr "{short_month} {year}"
 #. else leave it untranslated
 #: ../gramps/gen/datehandler/_datedisplay.py:269
 #, python-brace-format
-msgid "to|{short_month} {year}"
+msgctxt "to"
+msgid "{short_month} {year}"
 msgstr "{short_month} {year}"
 
 #. first date in a range
@@ -2277,7 +2306,8 @@ msgstr "{short_month} {year}"
 #. else leave it untranslated
 #: ../gramps/gen/datehandler/_datedisplay.py:277
 #, python-brace-format
-msgid "between|{short_month} {year}"
+msgctxt "between"
+msgid "{short_month} {year}"
 msgstr "{short_month} {year}"
 
 #. second date in a range
@@ -2287,7 +2317,8 @@ msgstr "{short_month} {year}"
 #. else leave it untranslated
 #: ../gramps/gen/datehandler/_datedisplay.py:285
 #, python-brace-format
-msgid "and|{short_month} {year}"
+msgctxt "and"
+msgid "{short_month} {year}"
 msgstr "{short_month} {year}"
 
 #. If "before <Month>" needs a special inflection in your
@@ -2296,7 +2327,8 @@ msgstr "{short_month} {year}"
 #. else leave it untranslated
 #: ../gramps/gen/datehandler/_datedisplay.py:292
 #, python-brace-format
-msgid "before|{short_month} {year}"
+msgctxt "before"
+msgid "{short_month} {year}"
 msgstr "{short_month} {year}"
 
 #. If "after <Month>" needs a special inflection in your
@@ -2305,7 +2337,8 @@ msgstr "{short_month} {year}"
 #. else leave it untranslated
 #: ../gramps/gen/datehandler/_datedisplay.py:299
 #, python-brace-format
-msgid "after|{short_month} {year}"
+msgctxt "after"
+msgid "{short_month} {year}"
 msgstr "{short_month} {year}"
 
 #. If "about <Month>" needs a special inflection in your
@@ -2314,7 +2347,8 @@ msgstr "{short_month} {year}"
 #. else leave it untranslated
 #: ../gramps/gen/datehandler/_datedisplay.py:306
 #, python-brace-format
-msgid "about|{short_month} {year}"
+msgctxt "about"
+msgid "{short_month} {year}"
 msgstr "{short_month} {year}"
 
 #. If "estimated <Month>" needs a special inflection in your
@@ -2323,7 +2357,8 @@ msgstr "{short_month} {year}"
 #. else leave it untranslated
 #: ../gramps/gen/datehandler/_datedisplay.py:313
 #, python-brace-format
-msgid "estimated|{short_month} {year}"
+msgctxt "estimated"
+msgid "{short_month} {year}"
 msgstr "{short_month} {year}"
 
 #. If "calculated <Month>" needs a special inflection in your
@@ -2332,21 +2367,24 @@ msgstr "{short_month} {year}"
 #. else leave it untranslated
 #: ../gramps/gen/datehandler/_datedisplay.py:320
 #, python-brace-format
-msgid "calculated|{short_month} {year}"
+msgctxt "calculated"
+msgid "{short_month} {year}"
 msgstr "{short_month} {year}"
 
 #. If there is no special inflection for "from <Month>"
 #. in your language, DON'T translate this string.  Otherwise,
 #. "translate" this to "from" in ENGLISH!!! ENGLISH!!!
 #: ../gramps/gen/datehandler/_datedisplay.py:427
-msgid "from-date|"
+msgctxt "from-date"
+msgid ""
 msgstr "from"
 
 #. If there is no special inflection for "to <Month>"
 #. in your language, DON'T translate this string.  Otherwise,
 #. "translate" this to "to" in ENGLISH!!! ENGLISH!!!
 #: ../gramps/gen/datehandler/_datedisplay.py:432
-msgid "to-date|"
+msgctxt "to-date"
+msgid ""
 msgstr "to"
 
 #: ../gramps/gen/datehandler/_datedisplay.py:433
@@ -2358,14 +2396,16 @@ msgstr "{date_quality}od {date_start} do {date_stop}{nonstd_calendar_and_ny}"
 #. in your language, DON'T translate this string.  Otherwise,
 #. "translate" this to "between" in ENGLISH!!! ENGLISH!!!
 #: ../gramps/gen/datehandler/_datedisplay.py:452
-msgid "between-date|"
+msgctxt "between-date"
+msgid ""
 msgstr "between"
 
 #. If there is no special inflection for "and <Month>"
 #. in your language, DON'T translate this string.  Otherwise,
 #. "translate" this to "and" in ENGLISH!!! ENGLISH!!!
 #: ../gramps/gen/datehandler/_datedisplay.py:457
-msgid "and-date|"
+msgctxt "and-date"
+msgid ""
 msgstr "and"
 
 #: ../gramps/gen/datehandler/_datedisplay.py:458
@@ -2378,35 +2418,40 @@ msgstr "{date_quality}med {date_start} in {date_stop}{nonstd_calendar_and_ny}"
 #. in your language, DON'T translate this string.  Otherwise,
 #. "translate" this to "before" in ENGLISH!!! ENGLISH!!!
 #: ../gramps/gen/datehandler/_datedisplay.py:491
-msgid "before-date|"
+msgctxt "before-date"
+msgid ""
 msgstr "before"
 
 #. If there is no special inflection for "after <Month>"
 #. in your language, DON'T translate this string.  Otherwise,
 #. "translate" this to "after" in ENGLISH!!! ENGLISH!!!
 #: ../gramps/gen/datehandler/_datedisplay.py:496
-msgid "after-date|"
+msgctxt "after-date"
+msgid ""
 msgstr "after"
 
 #. If there is no special inflection for "about <Month>"
 #. in your language, DON'T translate this string.  Otherwise,
 #. "translate" this to "about" in ENGLISH!!! ENGLISH!!!
 #: ../gramps/gen/datehandler/_datedisplay.py:501
-msgid "about-date|"
+msgctxt "about-date"
+msgid ""
 msgstr "about"
 
 #. If there is no special inflection for "estimated <Month>"
 #. in your language, DON'T translate this string.  Otherwise,
 #. "translate" this to "estimated" in ENGLISH!!! ENGLISH!!!
 #: ../gramps/gen/datehandler/_datedisplay.py:506
-msgid "estimated-date|"
+msgctxt "estimated-date"
+msgid ""
 msgstr "estimated"
 
 #. If there is no special inflection for "calculated <Month>"
 #. in your language, DON'T translate this string.  Otherwise,
 #. "translate" this to "calculated" in ENGLISH!!! ENGLISH!!!
 #: ../gramps/gen/datehandler/_datedisplay.py:511
-msgid "calculated-date|"
+msgctxt "calculated-date"
+msgid ""
 msgstr "calculated"
 
 #: ../gramps/gen/datehandler/_datedisplay.py:530
@@ -2443,48 +2488,59 @@ msgid "today"
 msgstr "danes"
 
 #: ../gramps/gen/datehandler/_datestrings.py:80
-msgid "localized lexeme inflections||February"
+msgctxt "localized lexeme inflections"
+msgid "|February"
 msgstr "i=februar|r=februarja|d=februarju|t=februar|m=februarju|o=februarjem"
 
 #: ../gramps/gen/datehandler/_datestrings.py:81
-msgid "localized lexeme inflections||March"
+msgctxt "localized lexeme inflections"
+msgid "|March"
 msgstr "i=marec|r=marca|d=marcu|t=marec|m=marcu|o=marcem"
 
 #: ../gramps/gen/datehandler/_datestrings.py:82
-msgid "localized lexeme inflections||April"
+msgctxt "localized lexeme inflections"
+msgid "|April"
 msgstr "i=april|r=aprila|d=aprilu|t=april|m=aprilu|o=aprilom"
 
 #: ../gramps/gen/datehandler/_datestrings.py:83
-msgid "localized lexeme inflections||May"
+msgctxt "localized lexeme inflections"
+msgid "|May"
 msgstr "i=maj|r=maja|d=maju|t=maj|m=maju|o=majem"
 
 #: ../gramps/gen/datehandler/_datestrings.py:84
-msgid "localized lexeme inflections||June"
+msgctxt "localized lexeme inflections"
+msgid "|June"
 msgstr "i=junij|r=junija|d=juniju|t=junij|m=juniju|o=junijem"
 
 #: ../gramps/gen/datehandler/_datestrings.py:85
-msgid "localized lexeme inflections||July"
+msgctxt "localized lexeme inflections"
+msgid "|July"
 msgstr "i=julij|r=julija|d=juliju|t=julij|m=juliju|o=julijem"
 
 #: ../gramps/gen/datehandler/_datestrings.py:86
-msgid "localized lexeme inflections||August"
+msgctxt "localized lexeme inflections"
+msgid "|August"
 msgstr "i=avgust|r=avgusta|d=avgustu|t=avgust|m=avgustu|o=avgustom"
 
 #: ../gramps/gen/datehandler/_datestrings.py:87
-msgid "localized lexeme inflections||September"
+msgctxt "localized lexeme inflections"
+msgid "|September"
 msgstr ""
 "i=september|r=septembra|d=septembru|t=september|m=septembru|o=septembrom"
 
 #: ../gramps/gen/datehandler/_datestrings.py:88
-msgid "localized lexeme inflections||October"
+msgctxt "localized lexeme inflections"
+msgid "|October"
 msgstr "i=oktober|r=oktobra|d=oktobru|t=oktober|m=oktobru|o=oktobrom"
 
 #: ../gramps/gen/datehandler/_datestrings.py:89
-msgid "localized lexeme inflections||November"
+msgctxt "localized lexeme inflections"
+msgid "|November"
 msgstr "i=november|r=novembra|d=novembru|t=november|m=novembru|o=novembrom"
 
 #: ../gramps/gen/datehandler/_datestrings.py:90
-msgid "localized lexeme inflections||December"
+msgctxt "localized lexeme inflections"
+msgid "|December"
 msgstr "i=december|r=decembra|d=decembru|t=december|m=decembru|o=decembrom"
 
 #. TRANSLATORS: see
@@ -2492,51 +2548,63 @@ msgstr "i=december|r=decembra|d=decembru|t=december|m=decembru|o=decembrom"
 #. to learn how to select proper inflection to be used in your localized
 #. DateDisplayer code!
 #: ../gramps/gen/datehandler/_datestrings.py:97
-msgid "localized lexeme inflections - short month form||Jan"
+msgctxt "localized lexeme inflections - short month form"
+msgid "|Jan"
 msgstr "jan"
 
 #: ../gramps/gen/datehandler/_datestrings.py:98
-msgid "localized lexeme inflections - short month form||Feb"
+msgctxt "localized lexeme inflections - short month form"
+msgid "|Feb"
 msgstr "feb"
 
 #: ../gramps/gen/datehandler/_datestrings.py:99
-msgid "localized lexeme inflections - short month form||Mar"
+msgctxt "localized lexeme inflections - short month form"
+msgid "|Mar"
 msgstr "mar"
 
 #: ../gramps/gen/datehandler/_datestrings.py:100
-msgid "localized lexeme inflections - short month form||Apr"
+msgctxt "localized lexeme inflections - short month form"
+msgid "|Apr"
 msgstr "apr"
 
 #: ../gramps/gen/datehandler/_datestrings.py:101
-msgid "localized lexeme inflections - short month form||May"
+msgctxt "localized lexeme inflections - short month form"
+msgid "|May"
 msgstr "maj"
 
 #: ../gramps/gen/datehandler/_datestrings.py:102
-msgid "localized lexeme inflections - short month form||Jun"
+msgctxt "localized lexeme inflections - short month form"
+msgid "|Jun"
 msgstr "jun"
 
 #: ../gramps/gen/datehandler/_datestrings.py:103
-msgid "localized lexeme inflections - short month form||Jul"
+msgctxt "localized lexeme inflections - short month form"
+msgid "|Jul"
 msgstr "jul"
 
 #: ../gramps/gen/datehandler/_datestrings.py:104
-msgid "localized lexeme inflections - short month form||Aug"
+msgctxt "localized lexeme inflections - short month form"
+msgid "|Aug"
 msgstr "avg"
 
 #: ../gramps/gen/datehandler/_datestrings.py:105
-msgid "localized lexeme inflections - short month form||Sep"
+msgctxt "localized lexeme inflections - short month form"
+msgid "|Sep"
 msgstr "sep"
 
 #: ../gramps/gen/datehandler/_datestrings.py:106
-msgid "localized lexeme inflections - short month form||Oct"
+msgctxt "localized lexeme inflections - short month form"
+msgid "|Oct"
 msgstr "okt"
 
 #: ../gramps/gen/datehandler/_datestrings.py:107
-msgid "localized lexeme inflections - short month form||Nov"
+msgctxt "localized lexeme inflections - short month form"
+msgid "|Nov"
 msgstr "nov"
 
 #: ../gramps/gen/datehandler/_datestrings.py:108
-msgid "localized lexeme inflections - short month form||Dec"
+msgctxt "localized lexeme inflections - short month form"
+msgid "|Dec"
 msgstr "dec"
 
 #. TRANSLATORS: see
@@ -2544,80 +2612,99 @@ msgstr "dec"
 #. to learn how to add proper alternatives to be recognized in your localized
 #. DateParser code!
 #: ../gramps/gen/datehandler/_datestrings.py:116
-msgid "alternative month names for January||"
+msgctxt "alternative month names for January"
+msgid "|"
 msgstr "Prosinca|I"
 
 #: ../gramps/gen/datehandler/_datestrings.py:117
-msgid "alternative month names for February||"
+msgctxt "alternative month names for February"
+msgid "|"
 msgstr "Sečana|II"
 
 #: ../gramps/gen/datehandler/_datestrings.py:118
-msgid "alternative month names for March||"
+msgctxt "alternative month names for March"
+msgid "|"
 msgstr "Sušca|III"
 
 #: ../gramps/gen/datehandler/_datestrings.py:119
-msgid "alternative month names for April||"
+msgctxt "alternative month names for April"
+msgid "|"
 msgstr "Malega travna|IV"
 
 #: ../gramps/gen/datehandler/_datestrings.py:120
-msgid "alternative month names for May||"
+msgctxt "alternative month names for May"
+msgid "|"
 msgstr "Velikega travna|V"
 
 #: ../gramps/gen/datehandler/_datestrings.py:121
-msgid "alternative month names for June||"
+msgctxt "alternative month names for June"
+msgid "|"
 msgstr "Rožnika|VI"
 
 #: ../gramps/gen/datehandler/_datestrings.py:122
-msgid "alternative month names for July||"
+msgctxt "alternative month names for July"
+msgid "|"
 msgstr "Malega srpana|VII"
 
 #: ../gramps/gen/datehandler/_datestrings.py:123
-msgid "alternative month names for August||"
+msgctxt "alternative month names for August"
+msgid "|"
 msgstr "Velikega srpana|VIII"
 
 #: ../gramps/gen/datehandler/_datestrings.py:124
-msgid "alternative month names for September||"
+msgctxt "alternative month names for September"
+msgid "|"
 msgstr "Kimavca|IX"
 
 #: ../gramps/gen/datehandler/_datestrings.py:125
-msgid "alternative month names for October||"
+msgctxt "alternative month names for October"
+msgid "|"
 msgstr "Vinotoka|X"
 
 #: ../gramps/gen/datehandler/_datestrings.py:126
-msgid "alternative month names for November||"
+msgctxt "alternative month names for November"
+msgid "|"
 msgstr "Listopada|XI"
 
 #: ../gramps/gen/datehandler/_datestrings.py:127
-msgid "alternative month names for December||"
+msgctxt "alternative month names for December"
+msgid "|"
 msgstr "Grudna|XII"
 
 #. Must appear in the order indexed by Date.CAL_... numeric constants
 #: ../gramps/gen/datehandler/_datestrings.py:131 ../gramps/gen/lib/date.py:609
-msgid "calendar|Gregorian"
+msgctxt "calendar"
+msgid "Gregorian"
 msgstr "Gregorijanski"
 
 #: ../gramps/gen/datehandler/_datestrings.py:132 ../gramps/gen/lib/date.py:610
-msgid "calendar|Julian"
+msgctxt "calendar"
+msgid "Julian"
 msgstr "Julijanski"
 
 #: ../gramps/gen/datehandler/_datestrings.py:133 ../gramps/gen/lib/date.py:611
-msgid "calendar|Hebrew"
+msgctxt "calendar"
+msgid "Hebrew"
 msgstr "Hebrejski"
 
 #: ../gramps/gen/datehandler/_datestrings.py:134 ../gramps/gen/lib/date.py:612
-msgid "calendar|French Republican"
+msgctxt "calendar"
+msgid "French Republican"
 msgstr "Francoski republikanski"
 
 #: ../gramps/gen/datehandler/_datestrings.py:135 ../gramps/gen/lib/date.py:613
-msgid "calendar|Persian"
+msgctxt "calendar"
+msgid "Persian"
 msgstr "Perzijski"
 
 #: ../gramps/gen/datehandler/_datestrings.py:136 ../gramps/gen/lib/date.py:614
-msgid "calendar|Islamic"
+msgctxt "calendar"
+msgid "Islamic"
 msgstr "Islamski"
 
 #: ../gramps/gen/datehandler/_datestrings.py:137 ../gramps/gen/lib/date.py:615
-msgid "calendar|Swedish"
+msgctxt "calendar"
+msgid "Swedish"
 msgstr "Švedski"
 
 #. TRANSLATORS: see
@@ -2625,55 +2712,68 @@ msgstr "Švedski"
 #. to learn how to select proper inflection to be used in your localized
 #. DateDisplayer code!
 #: ../gramps/gen/datehandler/_datestrings.py:146
-msgid "Hebrew month lexeme|Tishri"
+msgctxt "Hebrew month lexeme"
+msgid "Tishri"
 msgstr "Tishri"
 
 #: ../gramps/gen/datehandler/_datestrings.py:147
-msgid "Hebrew month lexeme|Heshvan"
+msgctxt "Hebrew month lexeme"
+msgid "Heshvan"
 msgstr "Heshvan"
 
 #: ../gramps/gen/datehandler/_datestrings.py:148
-msgid "Hebrew month lexeme|Kislev"
+msgctxt "Hebrew month lexeme"
+msgid "Kislev"
 msgstr "Kislev"
 
 #: ../gramps/gen/datehandler/_datestrings.py:149
-msgid "Hebrew month lexeme|Tevet"
+msgctxt "Hebrew month lexeme"
+msgid "Tevet"
 msgstr "Hebrew month lexeme|Tevet"
 
 #: ../gramps/gen/datehandler/_datestrings.py:150
-msgid "Hebrew month lexeme|Shevat"
+msgctxt "Hebrew month lexeme"
+msgid "Shevat"
 msgstr "Shevat"
 
 #: ../gramps/gen/datehandler/_datestrings.py:151
-msgid "Hebrew month lexeme|AdarI"
+msgctxt "Hebrew month lexeme"
+msgid "AdarI"
 msgstr "AdarI"
 
 #: ../gramps/gen/datehandler/_datestrings.py:152
-msgid "Hebrew month lexeme|AdarII"
+msgctxt "Hebrew month lexeme"
+msgid "AdarII"
 msgstr "AdarII"
 
 #: ../gramps/gen/datehandler/_datestrings.py:153
-msgid "Hebrew month lexeme|Nisan"
+msgctxt "Hebrew month lexeme"
+msgid "Nisan"
 msgstr "Nisan"
 
 #: ../gramps/gen/datehandler/_datestrings.py:154
-msgid "Hebrew month lexeme|Iyyar"
+msgctxt "Hebrew month lexeme"
+msgid "Iyyar"
 msgstr "Iyyar"
 
 #: ../gramps/gen/datehandler/_datestrings.py:155
-msgid "Hebrew month lexeme|Sivan"
+msgctxt "Hebrew month lexeme"
+msgid "Sivan"
 msgstr "Sivan"
 
 #: ../gramps/gen/datehandler/_datestrings.py:156
-msgid "Hebrew month lexeme|Tammuz"
+msgctxt "Hebrew month lexeme"
+msgid "Tammuz"
 msgstr "Tammuz"
 
 #: ../gramps/gen/datehandler/_datestrings.py:157
-msgid "Hebrew month lexeme|Av"
+msgctxt "Hebrew month lexeme"
+msgid "Av"
 msgstr "Av"
 
 #: ../gramps/gen/datehandler/_datestrings.py:158
-msgid "Hebrew month lexeme|Elul"
+msgctxt "Hebrew month lexeme"
+msgid "Elul"
 msgstr "Elul"
 
 #. TRANSLATORS: see
@@ -2681,55 +2781,68 @@ msgstr "Elul"
 #. to learn how to select proper inflection to be used in your localized
 #. DateDisplayer code!
 #: ../gramps/gen/datehandler/_datestrings.py:167
-msgid "French month lexeme|Vendémiaire"
+msgctxt "French month lexeme"
+msgid "Vendémiaire"
 msgstr "Vendémiaire"
 
 #: ../gramps/gen/datehandler/_datestrings.py:168
-msgid "French month lexeme|Brumaire"
+msgctxt "French month lexeme"
+msgid "Brumaire"
 msgstr "Brumaire"
 
 #: ../gramps/gen/datehandler/_datestrings.py:169
-msgid "French month lexeme|Frimaire"
+msgctxt "French month lexeme"
+msgid "Frimaire"
 msgstr "Frimaire"
 
 #: ../gramps/gen/datehandler/_datestrings.py:170
-msgid "French month lexeme|Nivôse"
+msgctxt "French month lexeme"
+msgid "Nivôse"
 msgstr "Nivôse"
 
 #: ../gramps/gen/datehandler/_datestrings.py:171
-msgid "French month lexeme|Pluviôse"
+msgctxt "French month lexeme"
+msgid "Pluviôse"
 msgstr "Pluviôse"
 
 #: ../gramps/gen/datehandler/_datestrings.py:172
-msgid "French month lexeme|Ventôse"
+msgctxt "French month lexeme"
+msgid "Ventôse"
 msgstr "Ventôse"
 
 #: ../gramps/gen/datehandler/_datestrings.py:173
-msgid "French month lexeme|Germinal"
+msgctxt "French month lexeme"
+msgid "Germinal"
 msgstr "Germinal"
 
 #: ../gramps/gen/datehandler/_datestrings.py:174
-msgid "French month lexeme|Floréal"
+msgctxt "French month lexeme"
+msgid "Floréal"
 msgstr "Floréal"
 
 #: ../gramps/gen/datehandler/_datestrings.py:175
-msgid "French month lexeme|Prairial"
+msgctxt "French month lexeme"
+msgid "Prairial"
 msgstr "Prairial"
 
 #: ../gramps/gen/datehandler/_datestrings.py:176
-msgid "French month lexeme|Messidor"
+msgctxt "French month lexeme"
+msgid "Messidor"
 msgstr "Messidor"
 
 #: ../gramps/gen/datehandler/_datestrings.py:177
-msgid "French month lexeme|Thermidor"
+msgctxt "French month lexeme"
+msgid "Thermidor"
 msgstr "Thermidor"
 
 #: ../gramps/gen/datehandler/_datestrings.py:178
-msgid "French month lexeme|Fructidor"
+msgctxt "French month lexeme"
+msgid "Fructidor"
 msgstr "Fructidor"
 
 #: ../gramps/gen/datehandler/_datestrings.py:179
-msgid "French month lexeme|Extra"
+msgctxt "French month lexeme"
+msgid "Extra"
 msgstr "Extra"
 
 #. TRANSLATORS: see
@@ -2737,51 +2850,63 @@ msgstr "Extra"
 #. to learn how to select proper inflection to be used in your localized
 #. DateDisplayer code!
 #: ../gramps/gen/datehandler/_datestrings.py:188
-msgid "Islamic month lexeme|Muharram"
+msgctxt "Islamic month lexeme"
+msgid "Muharram"
 msgstr "muharam"
 
 #: ../gramps/gen/datehandler/_datestrings.py:189
-msgid "Islamic month lexeme|Safar"
+msgctxt "Islamic month lexeme"
+msgid "Safar"
 msgstr "safar"
 
 #: ../gramps/gen/datehandler/_datestrings.py:190
-msgid "Islamic month lexeme|Rabi`al-Awwal"
+msgctxt "Islamic month lexeme"
+msgid "Rabi`al-Awwal"
 msgstr "rabia I"
 
 #: ../gramps/gen/datehandler/_datestrings.py:191
-msgid "Islamic month lexeme|Rabi`ath-Thani"
+msgctxt "Islamic month lexeme"
+msgid "Rabi`ath-Thani"
 msgstr "rabia II"
 
 #: ../gramps/gen/datehandler/_datestrings.py:192
-msgid "Islamic month lexeme|Jumada l-Ula"
+msgctxt "Islamic month lexeme"
+msgid "Jumada l-Ula"
 msgstr "jumada I"
 
 #: ../gramps/gen/datehandler/_datestrings.py:193
-msgid "Islamic month lexeme|Jumada t-Tania"
+msgctxt "Islamic month lexeme"
+msgid "Jumada t-Tania"
 msgstr "jumada II"
 
 #: ../gramps/gen/datehandler/_datestrings.py:194
-msgid "Islamic month lexeme|Rajab"
+msgctxt "Islamic month lexeme"
+msgid "Rajab"
 msgstr "radžab"
 
 #: ../gramps/gen/datehandler/_datestrings.py:195
-msgid "Islamic month lexeme|Sha`ban"
+msgctxt "Islamic month lexeme"
+msgid "Sha`ban"
 msgstr "šaban"
 
 #: ../gramps/gen/datehandler/_datestrings.py:196
-msgid "Islamic month lexeme|Ramadan"
+msgctxt "Islamic month lexeme"
+msgid "Ramadan"
 msgstr "ramadan"
 
 #: ../gramps/gen/datehandler/_datestrings.py:197
-msgid "Islamic month lexeme|Shawwal"
+msgctxt "Islamic month lexeme"
+msgid "Shawwal"
 msgstr "šaval"
 
 #: ../gramps/gen/datehandler/_datestrings.py:198
-msgid "Islamic month lexeme|Dhu l-Qa`da"
+msgctxt "Islamic month lexeme"
+msgid "Dhu l-Qa`da"
 msgstr "dulkada"
 
 #: ../gramps/gen/datehandler/_datestrings.py:199
-msgid "Islamic month lexeme|Dhu l-Hijja"
+msgctxt "Islamic month lexeme"
+msgid "Dhu l-Hijja"
 msgstr "dulhidža"
 
 #. TRANSLATORS: see
@@ -2789,77 +2914,94 @@ msgstr "dulhidža"
 #. to learn how to select proper inflection to be used in your localized
 #. DateDisplayer code!
 #: ../gramps/gen/datehandler/_datestrings.py:208
-msgid "Persian month lexeme|Farvardin"
+msgctxt "Persian month lexeme"
+msgid "Farvardin"
 msgstr "Farvardin"
 
 #: ../gramps/gen/datehandler/_datestrings.py:209
-msgid "Persian month lexeme|Ordibehesht"
+msgctxt "Persian month lexeme"
+msgid "Ordibehesht"
 msgstr "Ordibehesht"
 
 #: ../gramps/gen/datehandler/_datestrings.py:210
-msgid "Persian month lexeme|Khordad"
+msgctxt "Persian month lexeme"
+msgid "Khordad"
 msgstr "Khordad"
 
 #: ../gramps/gen/datehandler/_datestrings.py:211
-msgid "Persian month lexeme|Tir"
+msgctxt "Persian month lexeme"
+msgid "Tir"
 msgstr "Tir"
 
 #: ../gramps/gen/datehandler/_datestrings.py:212
-msgid "Persian month lexeme|Mordad"
+msgctxt "Persian month lexeme"
+msgid "Mordad"
 msgstr "Mordad"
 
 #: ../gramps/gen/datehandler/_datestrings.py:213
-msgid "Persian month lexeme|Shahrivar"
+msgctxt "Persian month lexeme"
+msgid "Shahrivar"
 msgstr "Shahrivar"
 
 #: ../gramps/gen/datehandler/_datestrings.py:214
-msgid "Persian month lexeme|Mehr"
+msgctxt "Persian month lexeme"
+msgid "Mehr"
 msgstr "Mehr"
 
 #: ../gramps/gen/datehandler/_datestrings.py:215
-msgid "Persian month lexeme|Aban"
+msgctxt "Persian month lexeme"
+msgid "Aban"
 msgstr "Mehr"
 
 #: ../gramps/gen/datehandler/_datestrings.py:216
-msgid "Persian month lexeme|Azar"
+msgctxt "Persian month lexeme"
+msgid "Azar"
 msgstr "Azar"
 
 #: ../gramps/gen/datehandler/_datestrings.py:217
-msgid "Persian month lexeme|Dey"
+msgctxt "Persian month lexeme"
+msgid "Dey"
 msgstr "Dey"
 
 #: ../gramps/gen/datehandler/_datestrings.py:218
-msgid "Persian month lexeme|Bahman"
+msgctxt "Persian month lexeme"
+msgid "Bahman"
 msgstr "Bahman"
 
 #: ../gramps/gen/datehandler/_datestrings.py:219
-msgid "Persian month lexeme|Esfand"
+msgctxt "Persian month lexeme"
+msgid "Esfand"
 msgstr "Esfand"
 
 #. TRANSLATORS: if the modifier is after the date
 #. put the space ahead of the word instead of after it
 #: ../gramps/gen/datehandler/_datestrings.py:225
-msgid "date modifier|before "
+msgctxt "date modifier"
+msgid "before "
 msgstr "pred "
 
 #. TRANSLATORS: if the modifier is after the date
 #. put the space ahead of the word instead of after it
 #: ../gramps/gen/datehandler/_datestrings.py:228
-msgid "date modifier|after "
+msgctxt "date modifier"
+msgid "after "
 msgstr "po "
 
 #. TRANSLATORS: if the modifier is after the date
 #. put the space ahead of the word instead of after it
 #: ../gramps/gen/datehandler/_datestrings.py:231
-msgid "date modifier|about "
+msgctxt "date modifier"
+msgid "about "
 msgstr "okrog "
 
 #: ../gramps/gen/datehandler/_datestrings.py:235
-msgid "date quality|estimated "
+msgctxt "date quality"
+msgid "estimated "
 msgstr "po oceni "
 
 #: ../gramps/gen/datehandler/_datestrings.py:236
-msgid "date quality|calculated "
+msgctxt "date quality"
+msgid "calculated "
 msgstr "po izračunu "
 
 #: ../gramps/gen/datehandler/_datestrings.py:242
@@ -3308,7 +3450,8 @@ msgid "Patronymic, Given"
 msgstr "Patronim, Imena"
 
 #: ../gramps/gen/display/name.py:602 ../gramps/gen/display/name.py:702
-msgid "Person|title"
+msgctxt "Person"
+msgid "title"
 msgstr "naziv"
 
 #: ../gramps/gen/display/name.py:604 ../gramps/gen/display/name.py:704
@@ -3330,11 +3473,13 @@ msgid "suffix"
 msgstr "pripona"
 
 #: ../gramps/gen/display/name.py:610 ../gramps/gen/display/name.py:710
-msgid "Name|call"
+msgctxt "Name"
+msgid "call"
 msgstr "klicno"
 
 #: ../gramps/gen/display/name.py:613 ../gramps/gen/display/name.py:712
-msgid "Name|common"
+msgctxt "Name"
+msgid "common"
 msgstr "običajno"
 
 #: ../gramps/gen/display/name.py:617 ../gramps/gen/display/name.py:715
@@ -3342,7 +3487,8 @@ msgid "initials"
 msgstr "začetnice"
 
 #: ../gramps/gen/display/name.py:620 ../gramps/gen/display/name.py:717
-msgid "Name|primary"
+msgctxt "Name"
+msgid "primary"
 msgstr "primaren"
 
 #: ../gramps/gen/display/name.py:623 ../gramps/gen/display/name.py:719
@@ -3378,7 +3524,8 @@ msgid "notpatronymic"
 msgstr "nepatronim"
 
 #: ../gramps/gen/display/name.py:642 ../gramps/gen/display/name.py:735
-msgid "Remaining names|rest"
+msgctxt "Remaining names"
+msgid "rest"
 msgstr "ostalo"
 
 #: ../gramps/gen/display/name.py:645 ../gramps/gen/display/name.py:737
@@ -4830,8 +4977,7 @@ msgstr ""
 #: ../gramps/gen/filters/rules/media/_matchessourceconfidence.py:45
 msgid "Matches media with at least one direct source with confidence level(s)"
 msgstr ""
-"Najde zunanje predmete z vsaj enim neposrednim virom določene stopnje "
-"zanesljivosti"
+"Najde predmete z vsaj enim neposrednim virom določene stopnje zanesljivosti"
 
 #: ../gramps/gen/filters/rules/media/_mediaprivate.py:42
 msgid "Media objects marked private"
@@ -5209,7 +5355,8 @@ msgid "Full Family name:"
 msgstr "Celotni priimek:"
 
 #: ../gramps/gen/filters/rules/person/_hasnameof.py:48
-msgid "person|Title:"
+msgctxt "person"
+msgid "Title:"
 msgstr "Naziv:"
 
 #: ../gramps/gen/filters/rules/person/_hasnameof.py:49
@@ -5583,6 +5730,16 @@ msgid ""
 msgstr ""
 "Najde prednike ljudi z določenimi zaznamki, ki od teh ljudi niso oddaljeni "
 "za več kot določeno število rodov"
+
+#: ../gramps/gen/filters/rules/person/_islessthannthgenerationancestorofdefaultperson.py:47
+msgid "Ancestors of the Home Person not more than <N> generations away"
+msgstr "Predniki privzete osebe znotraj določenega števila rodov"
+
+#: ../gramps/gen/filters/rules/person/_islessthannthgenerationancestorofdefaultperson.py:50
+msgid "Matches ancestors of the Home Person not more than N generations away"
+msgstr ""
+"Najde prednike določene osebe, ki od nje niso oddaljeni več kot določeno "
+"število rodov"
 
 #: ../gramps/gen/filters/rules/person/_islessthannthgenerationancestorofdefaultperson.py:47
 msgid "Ancestors of the default person not more than <N> generations away"
@@ -6133,13 +6290,15 @@ msgstr "Najde kraje znotraj določene razdalje do drugega kraja"
 
 #: ../gramps/gen/filters/rules/place/_withinarea.py:83
 msgid "Cannot use the filter 'within area'"
-msgstr ""
+msgstr "Ni mogoče uporabiti filtra 'znotraj določenega področja'"
 
 #: ../gramps/gen/filters/rules/place/_withinarea.py:84
 msgid ""
 "The place you selected contains bad coordinates. Please, run the tool 'clean "
 "input data'"
 msgstr ""
+"Izbrani kraj vsebuje slabe koordinate. Zaženite orodje 'Počisti vhodne "
+"podatke'"
 
 #: ../gramps/gen/filters/rules/repository/_allrepos.py:44
 msgid "Every repository"
@@ -6201,7 +6360,8 @@ msgstr "Najde nahajališča z določenim številom navedb"
 #: ../gramps/gui/glade/mergerepository.glade:212
 #: ../gramps/gui/glade/mergerepository.glade:228
 #: ../gramps/gui/merge/mergerepository.py:46
-msgid "repo|Name:"
+msgctxt "repo"
+msgid "Name:"
 msgstr "Ime nahajališča:"
 
 #: ../gramps/gen/filters/rules/repository/_hasrepo.py:48
@@ -7075,7 +7235,8 @@ msgstr "manj kot"
 #: ../gramps/gen/lib/date.py:290 ../gramps/gen/lib/date.py:325
 #: ../gramps/gen/lib/date.py:331 ../gramps/gen/lib/date.py:333
 #: ../gramps/gen/lib/date.py:350
-msgid "age|about"
+msgctxt "age"
+msgid "about"
 msgstr "okrog"
 
 #: ../gramps/gen/lib/date.py:295 ../gramps/gen/lib/date.py:339
@@ -7130,7 +7291,7 @@ msgid_plural "{number_of} days"
 msgstr[0] "{number_of} dni"
 msgstr[1] "{number_of} dan"
 msgstr[2] "{number_of} dneva"
-msgstr[3] "{number_of} dneve"
+msgstr[3] "{number_of} dni"
 
 #: ../gramps/gen/lib/date.py:461
 msgid "0 days"
@@ -7177,7 +7338,8 @@ msgid "New year begins"
 msgstr "Novo leto se začne"
 
 #: ../gramps/gen/lib/date.py:1856
-msgid "date-quality|none"
+msgctxt "date-quality"
+msgid "none"
 msgstr "brez"
 
 #: ../gramps/gen/lib/date.py:1857
@@ -7189,7 +7351,8 @@ msgid "estimated"
 msgstr "po oceni"
 
 #: ../gramps/gen/lib/date.py:1871
-msgid "date-modifier|none"
+msgctxt "date-modifier"
+msgid "none"
 msgstr "brez"
 
 #: ../gramps/gen/lib/date.py:1872 ../gramps/plugins/lib/libsubstkeyword.py:314
@@ -7299,7 +7462,8 @@ msgid "Attributes"
 msgstr "Atributi"
 
 #: ../gramps/gen/lib/eventroletype.py:54
-msgid "Role|Primary"
+msgctxt "Role"
+msgid "Primary"
 msgstr "Glavna"
 
 #: ../gramps/gen/lib/eventroletype.py:55
@@ -7323,7 +7487,8 @@ msgid "Groom"
 msgstr "Ženin"
 
 #: ../gramps/gen/lib/eventroletype.py:61
-msgid "Role|Family"
+msgctxt "Role"
+msgid "Family"
 msgstr "Družina"
 
 #: ../gramps/gen/lib/eventroletype.py:62
@@ -7591,191 +7756,237 @@ msgstr "Druga poroka"
 #: ../gramps/gen/lib/eventtype.py:211
 #: ../gramps/plugins/drawreport/ancestortree.py:61
 #: ../gramps/plugins/drawreport/descendtree.py:57
-msgid "birth abbreviation|b."
+msgctxt "birth abbreviation"
+msgid "b."
 msgstr "r."
 
 #: ../gramps/gen/lib/eventtype.py:212
 #: ../gramps/plugins/drawreport/ancestortree.py:62
 #: ../gramps/plugins/drawreport/descendtree.py:58
-msgid "death abbreviation|d."
+msgctxt "death abbreviation"
+msgid "d."
 msgstr "u."
 
 #: ../gramps/gen/lib/eventtype.py:213
 #: ../gramps/plugins/drawreport/ancestortree.py:63
 #: ../gramps/plugins/drawreport/descendtree.py:59
-msgid "marriage abbreviation|m."
+msgctxt "marriage abbreviation"
+msgid "m."
 msgstr "p."
 
 #: ../gramps/gen/lib/eventtype.py:214
-msgid "Unknown abbreviation|unkn."
+msgctxt "Unknown abbreviation"
+msgid "unkn."
 msgstr "nezn."
 
 #: ../gramps/gen/lib/eventtype.py:215
-msgid "Custom abbreviation|cust."
+msgctxt "Custom abbreviation"
+msgid "cust."
 msgstr "prilag."
 
 #: ../gramps/gen/lib/eventtype.py:216
-msgid "Adopted abbreviation|adop."
+msgctxt "Adopted abbreviation"
+msgid "adop."
 msgstr "posv."
 
 #: ../gramps/gen/lib/eventtype.py:217
-msgid "Adult Christening abbreviation|a.chr."
+msgctxt "Adult Christening abbreviation"
+msgid "a.chr."
 msgstr "kr. odr."
 
 #: ../gramps/gen/lib/eventtype.py:218
-msgid "Baptism abbreviation|bap."
+msgctxt "Baptism abbreviation"
+msgid "bap."
 msgstr "kr."
 
 #: ../gramps/gen/lib/eventtype.py:219
-msgid "Bar Mitzvah abbreviation|bar."
+msgctxt "Bar Mitzvah abbreviation"
+msgid "bar."
 msgstr "bar."
 
 #: ../gramps/gen/lib/eventtype.py:220
-msgid "Bat Mitzvah abbreviation|bat."
+msgctxt "Bat Mitzvah abbreviation"
+msgid "bat."
 msgstr "bas."
 
 #: ../gramps/gen/lib/eventtype.py:221
-msgid "Blessing abbreviation|bles."
+msgctxt "Blessing abbreviation"
+msgid "bles."
 msgstr "blag."
 
 #: ../gramps/gen/lib/eventtype.py:222
-msgid "Burial abbreviation|bur."
+msgctxt "Burial abbreviation"
+msgid "bur."
 msgstr "pok."
 
 #: ../gramps/gen/lib/eventtype.py:223
-msgid "Cause Of Death abbreviation|d.cau."
+msgctxt "Cause Of Death abbreviation"
+msgid "d.cau."
 msgstr "vzr. s."
 
 #: ../gramps/gen/lib/eventtype.py:224
-msgid "Census abbreviation|cens."
+msgctxt "Census abbreviation"
+msgid "cens."
 msgstr "cenz."
 
 #: ../gramps/gen/lib/eventtype.py:225
-msgid "Christening abbreviation|chr."
+msgctxt "Christening abbreviation"
+msgid "chr."
 msgstr "kršč."
 
 #: ../gramps/gen/lib/eventtype.py:226
-msgid "Confirmation abbreviation|conf."
+msgctxt "Confirmation abbreviation"
+msgid "conf."
 msgstr "birm."
 
 #: ../gramps/gen/lib/eventtype.py:227
-msgid "Cremation abbreviation|crem."
+msgctxt "Cremation abbreviation"
+msgid "crem."
 msgstr "upep."
 
 #: ../gramps/gen/lib/eventtype.py:228
-msgid "Degree abbreviation|deg."
+msgctxt "Degree abbreviation"
+msgid "deg."
 msgstr "dipl."
 
 #: ../gramps/gen/lib/eventtype.py:229
-msgid "Education abbreviation|edu."
+msgctxt "Education abbreviation"
+msgid "edu."
 msgstr "izob."
 
 #: ../gramps/gen/lib/eventtype.py:230
-msgid "Elected abbreviation|elec."
+msgctxt "Elected abbreviation"
+msgid "elec."
 msgstr "izv."
 
 #: ../gramps/gen/lib/eventtype.py:231
-msgid "Emigration abbreviation|em."
+msgctxt "Emigration abbreviation"
+msgid "em."
 msgstr "emig."
 
 #: ../gramps/gen/lib/eventtype.py:232
-msgid "First Communion abbreviation|f.comm."
+msgctxt "First Communion abbreviation"
+msgid "f.comm."
 msgstr "prv. obh."
 
 #: ../gramps/gen/lib/eventtype.py:233
-msgid "Immigration abbreviation|im."
+msgctxt "Immigration abbreviation"
+msgid "im."
 msgstr "imig."
 
 #: ../gramps/gen/lib/eventtype.py:234
-msgid "Graduation abbreviation|grad."
+msgctxt "Graduation abbreviation"
+msgid "grad."
 msgstr "mat."
 
 #: ../gramps/gen/lib/eventtype.py:235
-msgid "Medical Information abbreviation|medinf."
+msgctxt "Medical Information abbreviation"
+msgid "medinf."
 msgstr "zdr. pod."
 
 #: ../gramps/gen/lib/eventtype.py:236
-msgid "Military Service abbreviation|milser."
+msgctxt "Military Service abbreviation"
+msgid "milser."
 msgstr "voj. r."
 
 #: ../gramps/gen/lib/eventtype.py:237
-msgid "Naturalization abbreviation|nat."
+msgctxt "Naturalization abbreviation"
+msgid "nat."
 msgstr "nat."
 
 #: ../gramps/gen/lib/eventtype.py:238
-msgid "Nobility Title abbreviation|nob."
+msgctxt "Nobility Title abbreviation"
+msgid "nob."
 msgstr "plem."
 
 #: ../gramps/gen/lib/eventtype.py:239
-msgid "Number of Marriages abbreviation|n.o.mar."
+msgctxt "Number of Marriages abbreviation"
+msgid "n.o.mar."
 msgstr "št. por."
 
 #: ../gramps/gen/lib/eventtype.py:240
-msgid "Occupation abbreviation|occ."
+msgctxt "Occupation abbreviation"
+msgid "occ."
 msgstr "pokl."
 
 #: ../gramps/gen/lib/eventtype.py:241
-msgid "Ordination abbreviation|ord."
+msgctxt "Ordination abbreviation"
+msgid "ord."
 msgstr "ordin."
 
 #: ../gramps/gen/lib/eventtype.py:242
-msgid "Probate abbreviation|prob."
+msgctxt "Probate abbreviation"
+msgid "prob."
 msgstr "prob."
 
 #: ../gramps/gen/lib/eventtype.py:243
-msgid "Property abbreviation|prop."
+msgctxt "Property abbreviation"
+msgid "prop."
 msgstr "last."
 
 #: ../gramps/gen/lib/eventtype.py:244
-msgid "Religion abbreviation|rel."
+msgctxt "Religion abbreviation"
+msgid "rel."
 msgstr "red."
 
 #: ../gramps/gen/lib/eventtype.py:245
-msgid "Residence abbreviation|res."
+msgctxt "Residence abbreviation"
+msgid "res."
 msgstr "preb."
 
 #: ../gramps/gen/lib/eventtype.py:246
-msgid "Retirement abbreviation|ret."
+msgctxt "Retirement abbreviation"
+msgid "ret."
 msgstr "upok."
 
 #: ../gramps/gen/lib/eventtype.py:247
-msgid "Will abbreviation|will."
+msgctxt "Will abbreviation"
+msgid "will."
 msgstr "opor."
 
 #: ../gramps/gen/lib/eventtype.py:248
-msgid "Marriage Settlement abbreviation|m.set."
+msgctxt "Marriage Settlement abbreviation"
+msgid "m.set."
 msgstr "por. porav."
 
 #: ../gramps/gen/lib/eventtype.py:249
-msgid "Marriage License abbreviation|m.lic."
+msgctxt "Marriage License abbreviation"
+msgid "m.lic."
 msgstr "por. dovolj."
 
 #: ../gramps/gen/lib/eventtype.py:250
-msgid "Marriage Contract abbreviation|m.con."
+msgctxt "Marriage Contract abbreviation"
+msgid "m.con."
 msgstr "por. pog."
 
 #: ../gramps/gen/lib/eventtype.py:251
-msgid "Marriage Banns abbreviation|m.ban."
+msgctxt "Marriage Banns abbreviation"
+msgid "m.ban."
 msgstr "okl."
 
 #: ../gramps/gen/lib/eventtype.py:252
-msgid "Alternate Marriage abbreviation|alt.mar."
+msgctxt "Alternate Marriage abbreviation"
+msgid "alt.mar."
 msgstr "drug. por."
 
 #: ../gramps/gen/lib/eventtype.py:253
-msgid "Engagement abbreviation|engd."
+msgctxt "Engagement abbreviation"
+msgid "engd."
 msgstr "zar."
 
 #: ../gramps/gen/lib/eventtype.py:254
-msgid "Divorce abbreviation|div."
+msgctxt "Divorce abbreviation"
+msgid "div."
 msgstr "loč."
 
 #: ../gramps/gen/lib/eventtype.py:255
-msgid "Divorce Filing abbreviation|div.f."
+msgctxt "Divorce Filing abbreviation"
+msgid "div.f."
 msgstr "vl. za loč."
 
 #: ../gramps/gen/lib/eventtype.py:256
-msgid "Annulment abbreviation|annul."
+msgctxt "Annulment abbreviation"
+msgid "annul."
 msgstr "razvelj."
 
 #. The parent may not be birth father in ths family, because it
@@ -8238,15 +8449,18 @@ msgid "%(first)s %(surname)s, %(suffix)s"
 msgstr "%(first)s %(surname)s, %(suffix)s"
 
 #: ../gramps/gen/lib/nameorigintype.py:76
-msgid "Surname|Inherited"
+msgctxt "Surname"
+msgid "Inherited"
 msgstr "Podedovan"
 
 #: ../gramps/gen/lib/nameorigintype.py:77
-msgid "Surname|Given"
+msgctxt "Surname"
+msgid "Given"
 msgstr "Podeljen"
 
 #: ../gramps/gen/lib/nameorigintype.py:78
-msgid "Surname|Taken"
+msgctxt "Surname"
+msgid "Taken"
 msgstr "Privzet"
 
 #: ../gramps/gen/lib/nameorigintype.py:79 ../gramps/gen/utils/keyword.py:65
@@ -8259,7 +8473,8 @@ msgid "Matronymic"
 msgstr "Matronim"
 
 #: ../gramps/gen/lib/nameorigintype.py:81
-msgid "Surname|Feudal"
+msgctxt "Surname"
+msgid "Feudal"
 msgstr "Fevdalen"
 
 #: ../gramps/gen/lib/nameorigintype.py:82
@@ -8368,11 +8583,13 @@ msgid "Html code"
 msgstr "Koda html"
 
 #: ../gramps/gen/lib/notetype.py:82
-msgid "notetype|To Do"
+msgctxt "notetype"
+msgid "To Do"
 msgstr "Naredi"
 
 #: ../gramps/gen/lib/notetype.py:83
-msgid "notetype|Link"
+msgctxt "notetype"
+msgid "Link"
 msgstr "Povezava"
 
 #: ../gramps/gen/lib/notetype.py:87
@@ -9135,9 +9352,8 @@ msgid "Sidebar"
 msgstr "Stranska vrstica"
 
 #: ../gramps/gen/plug/_pluginreg.py:92
-#, fuzzy
 msgid "Rule"
-msgstr "Dodaj pravilo"
+msgstr "Pravilo"
 
 #. add miscellaneous column
 #: ../gramps/gen/plug/_pluginreg.py:528
@@ -9443,14 +9659,12 @@ msgid "How the lines between objects will be drawn."
 msgstr "Kako naj bodo narisane črte med predmeti."
 
 #: ../gramps/gen/plug/docgen/graphdoc.py:193
-#, fuzzy
 msgid "Alternate line attachment"
-msgstr "Druga imena"
+msgstr "Drugo pritrdišče črte"
 
 #: ../gramps/gen/plug/docgen/graphdoc.py:194
-#, fuzzy
 msgid "Whether lines attach to nodes differently"
-msgstr "Ali naj bodo vključene povezave do spletnega poročila"
+msgstr "Ali naj bodo črte povezane z vozlišči drugače"
 
 #. ###############################
 #: ../gramps/gen/plug/docgen/graphdoc.py:210
@@ -9612,11 +9826,13 @@ msgid "Graphviz File"
 msgstr "Datoteka Graphviz"
 
 #: ../gramps/gen/plug/docgen/paperstyle.py:78
-msgid "paper size|Letter"
+msgctxt "paper size"
+msgid "Letter"
 msgstr "Letter"
 
 #: ../gramps/gen/plug/docgen/paperstyle.py:80
-msgid "paper size|Legal"
+msgctxt "paper size"
+msgid "Legal"
 msgstr "Legal"
 
 #: ../gramps/gen/plug/docgen/paperstyle.py:82
@@ -10006,23 +10222,28 @@ msgid "Living People"
 msgstr "Še živeče osebe"
 
 #: ../gramps/gen/plug/report/stdoptions.py:174
-msgid "'living people'|Included, and all data"
+msgctxt "'living people'"
+msgid "Included, and all data"
 msgstr "Vključeni z vsemi podatki"
 
 #: ../gramps/gen/plug/report/stdoptions.py:178
-msgid "'living people'|Full names, but data removed"
+msgctxt "'living people'"
+msgid "Full names, but data removed"
 msgstr "Vključeni s polnimi imeni brez podatkov"
 
 #: ../gramps/gen/plug/report/stdoptions.py:180
-msgid "'living people'|Given names replaced, and data removed"
+msgctxt "'living people'"
+msgid "Given names replaced, and data removed"
 msgstr "Vključeni z zamenjanimi imeni in brez podatkov"
 
 #: ../gramps/gen/plug/report/stdoptions.py:182
-msgid "'living people'|Complete names replaced, and data removed"
+msgctxt "'living people'"
+msgid "Complete names replaced, and data removed"
 msgstr "Vključeni s spremenjenimi celotnimi imeni in brez podatkov"
 
 #: ../gramps/gen/plug/report/stdoptions.py:184
-msgid "'living people'|Not included"
+msgctxt "'living people'"
+msgid "Not included"
 msgstr "Izpuščeni"
 
 #. for deferred translation
@@ -10176,7 +10397,8 @@ msgid "Updated"
 msgstr "Posodobljeno"
 
 #: ../gramps/gen/plug/utils.py:262
-msgid "updates|New"
+msgctxt "updates"
+msgid "New"
 msgstr "Novo"
 
 #: ../gramps/gen/plug/utils.py:291 ../gramps/gen/plug/utils.py:298
@@ -10299,7 +10521,8 @@ msgid "wife"
 msgstr "žena"
 
 #: ../gramps/gen/relationship.py:2174
-msgid "gender unknown|spouse"
+msgctxt "gender unknown"
+msgid "spouse"
 msgstr "zakonec"
 
 #: ../gramps/gen/relationship.py:2177
@@ -10311,79 +10534,98 @@ msgid "ex-wife"
 msgstr "bivša žena"
 
 #: ../gramps/gen/relationship.py:2181
-msgid "gender unknown|ex-spouse"
+msgctxt "gender unknown"
+msgid "ex-spouse"
 msgstr "bivši zakonec"
 
 #: ../gramps/gen/relationship.py:2184
-msgid "male,unmarried|partner"
+msgctxt "male,unmarried"
+msgid "partner"
 msgstr "partner"
 
 #: ../gramps/gen/relationship.py:2186
-msgid "female,unmarried|partner"
+msgctxt "female,unmarried"
+msgid "partner"
 msgstr "partnerka"
 
 #: ../gramps/gen/relationship.py:2188
-msgid "gender unknown,unmarried|partner"
+msgctxt "gender unknown,unmarried"
+msgid "partner"
 msgstr "partner"
 
 #: ../gramps/gen/relationship.py:2191
-msgid "male,unmarried|ex-partner"
+msgctxt "male,unmarried"
+msgid "ex-partner"
 msgstr "bivši partner"
 
 #: ../gramps/gen/relationship.py:2193
-msgid "female,unmarried|ex-partner"
+msgctxt "female,unmarried"
+msgid "ex-partner"
 msgstr "bivša partnerka"
 
 #: ../gramps/gen/relationship.py:2195
-msgid "gender unknown,unmarried|ex-partner"
+msgctxt "gender unknown,unmarried"
+msgid "ex-partner"
 msgstr "bivši partner"
 
 #: ../gramps/gen/relationship.py:2198
-msgid "male,civil union|partner"
+msgctxt "male,civil union"
+msgid "partner"
 msgstr "partner"
 
 #: ../gramps/gen/relationship.py:2200
-msgid "female,civil union|partner"
+msgctxt "female,civil union"
+msgid "partner"
 msgstr "partnerka"
 
 #: ../gramps/gen/relationship.py:2202
-msgid "gender unknown,civil union|partner"
+msgctxt "gender unknown,civil union"
+msgid "partner"
 msgstr "parner"
 
 #: ../gramps/gen/relationship.py:2205
-msgid "male,civil union|former partner"
+msgctxt "male,civil union"
+msgid "former partner"
 msgstr "bivši partner"
 
 #: ../gramps/gen/relationship.py:2207
-msgid "female,civil union|former partner"
+msgctxt "female,civil union"
+msgid "former partner"
 msgstr "bivša partnerka"
 
 #: ../gramps/gen/relationship.py:2209
-msgid "gender unknown,civil union|former partner"
+msgctxt "gender unknown,civil union"
+msgid "former partner"
 msgstr "bivši partner"
 
 #: ../gramps/gen/relationship.py:2212
-msgid "male,unknown relation|partner"
+msgctxt "male,unknown relation"
+msgid "partner"
 msgstr "partner"
 
 #: ../gramps/gen/relationship.py:2214
-msgid "female,unknown relation|partner"
+msgctxt "female,unknown relation"
+msgid "partner"
 msgstr "partnerka"
 
 #: ../gramps/gen/relationship.py:2216
-msgid "gender unknown,unknown relation|partner"
+msgctxt "gender unknown,unknown relation"
+msgid "partner"
 msgstr "partner"
 
 #: ../gramps/gen/relationship.py:2221
-msgid "male,unknown relation|former partner"
+msgctxt "male,unknown relation"
+msgid "former partner"
 msgstr "bivši partner"
 
 #: ../gramps/gen/relationship.py:2223
-msgid "female,unknown relation|former partner"
+msgctxt "female,unknown relation"
+msgid "former partner"
 msgstr "bivša partnerka"
 
 #: ../gramps/gen/relationship.py:2225
-msgid "gender unknown,unknown relation|former partner"
+msgctxt "gender unknown,unknown relation"
+msgid "former partner"
 msgstr "bivši partner"
 
 #: ../gramps/gen/relationship.py:2318
@@ -10736,12 +10978,14 @@ msgstr ""
 "OPOZORILO: modul PIL ni naložen. Obrezovanje slik v poročilih ne bo popolno."
 
 #: ../gramps/gen/utils/keyword.py:54
-msgid "Person|TITLE"
+msgctxt "Person"
+msgid "TITLE"
 msgstr "NAZIV"
 
 #: ../gramps/gen/utils/keyword.py:54 ../gramps/plugins/export/exportcsv.py:356
 #: ../gramps/plugins/tool/patchnames.py:446
-msgid "Person|Title"
+msgctxt "Person"
+msgid "Title"
 msgstr "Naziv"
 
 #: ../gramps/gen/utils/keyword.py:55
@@ -10757,21 +11001,25 @@ msgid "SURNAME"
 msgstr "PRIIMKI"
 
 #: ../gramps/gen/utils/keyword.py:57
-msgid "Name|CALL"
+msgctxt "Name"
+msgid "CALL"
 msgstr "KLICNO"
 
 #: ../gramps/gen/utils/keyword.py:57
-msgid "Name|Call"
+msgctxt "Name"
+msgid "Call"
 msgstr "Klicno"
 
 #: ../gramps/gen/utils/keyword.py:58
-msgid "Name|COMMON"
+msgctxt "Name"
+msgid "COMMON"
 msgstr "OBIČAJNO"
 
 #: ../gramps/gen/utils/keyword.py:58 ../gramps/gui/configure.py:848
 #: ../gramps/gui/configure.py:850 ../gramps/gui/configure.py:853
 #: ../gramps/gui/configure.py:854 ../gramps/gui/configure.py:860
-msgid "Name|Common"
+msgctxt "Name"
+msgid "Common"
 msgstr "Običajno"
 
 #: ../gramps/gen/utils/keyword.py:59
@@ -10789,7 +11037,8 @@ msgstr "PRIPONA"
 #. name, sort, width, modelcol
 #: ../gramps/gen/utils/keyword.py:61
 #: ../gramps/gui/editors/displaytabs/surnametab.py:82
-msgid "Name|Primary"
+msgctxt "Name"
+msgid "Primary"
 msgstr "Primaren"
 
 #: ../gramps/gen/utils/keyword.py:61
@@ -10919,7 +11168,8 @@ msgid "female"
 msgstr "ženska"
 
 #: ../gramps/gen/utils/string.py:48
-msgid "gender|unknown"
+msgctxt "gender"
+msgid "unknown"
 msgstr "neznan"
 
 #: ../gramps/gen/utils/string.py:52
@@ -10997,141 +11247,130 @@ msgstr "Moški"
 
 #: ../gramps/gen/utils/symbols.py:63
 msgid "Asexuality, sexless, genderless"
-msgstr ""
+msgstr "Brezspolni"
 
 #: ../gramps/gen/utils/symbols.py:64
 msgid "Lesbianism"
-msgstr ""
+msgstr "Lezbijštvo"
 
 #: ../gramps/gen/utils/symbols.py:65
 msgid "Male homosexuality"
-msgstr ""
+msgstr "Homoseksualnost"
 
 #: ../gramps/gen/utils/symbols.py:66
 msgid "Heterosexuality"
-msgstr ""
+msgstr "Heteroseksualnost"
 
 #: ../gramps/gen/utils/symbols.py:67
 msgid "Transgender, hermaphrodite (in entomology)"
-msgstr ""
+msgstr "Hermafrodit"
 
 #: ../gramps/gen/utils/symbols.py:68
-#, fuzzy
 msgid "Transgender"
-msgstr "spol"
+msgstr "Transspolnen"
 
 #: ../gramps/gen/utils/symbols.py:69
 msgid "Neuter"
-msgstr ""
+msgstr "Srednji"
 
 #: ../gramps/gen/utils/symbols.py:71
-#, fuzzy
 msgid "Illegitimate"
-msgstr "po oceni"
+msgstr "Nezakonski"
 
 #: ../gramps/gen/utils/symbols.py:73
-#, fuzzy
 msgid "Baptism/Christening"
-msgstr "Krščenje"
+msgstr "Krst"
 
 #: ../gramps/gen/utils/symbols.py:74
-#, fuzzy
 msgid "Engaged"
-msgstr "Zaroka"
+msgstr "Zaročen"
 
 #: ../gramps/gen/utils/symbols.py:77
-#, fuzzy
 msgid "Unmarried partnership"
-msgstr "partner"
+msgstr "Neporočeno partnerstvo"
 
 #: ../gramps/gen/utils/symbols.py:78
-#, fuzzy
 msgid "Buried"
-msgstr "Pogreb"
+msgstr "Pokopan"
 
 #: ../gramps/gen/utils/symbols.py:79
 msgid "Cremated/Funeral urn"
-msgstr ""
+msgstr "Kremiran"
 
 #: ../gramps/gen/utils/symbols.py:80
-#, fuzzy
 msgid "Killed in action"
-msgstr "Zbirka"
+msgstr "Padel"
 
 #: ../gramps/gen/utils/symbols.py:81
 msgid "Extinct"
-msgstr ""
+msgstr "Izumrl"
 
 #. The following is used in the global preferences in the display tab.
 #. Name
 #. UNICODE    SUBSTITUTION
 #: ../gramps/gen/utils/symbols.py:106
-#, fuzzy
 msgid "Nothing"
-msgstr "Znotraj"
+msgstr "Nič"
 
 #: ../gramps/gen/utils/symbols.py:108
 msgid "Skull and crossbones"
-msgstr ""
+msgstr "Mrtvaška glava s kostmi"
 
 #: ../gramps/gen/utils/symbols.py:109
 msgid "Ankh"
-msgstr ""
+msgstr "Sidro"
 
 #: ../gramps/gen/utils/symbols.py:110
 msgid "Orthodox cross"
-msgstr ""
+msgstr "Pravoslavni križ"
 
 #: ../gramps/gen/utils/symbols.py:111
 msgid "Chi rho"
-msgstr ""
+msgstr "Či ro"
 
 #: ../gramps/gen/utils/symbols.py:112
 msgid "Cross of Lorraine"
-msgstr ""
+msgstr "Lorenski križ"
 
 #: ../gramps/gen/utils/symbols.py:113
 msgid "Cross of Jerusalem"
-msgstr ""
+msgstr "Jeruzalemski križ"
 
 #: ../gramps/gen/utils/symbols.py:114
-#, fuzzy
 msgid "Star and crescent"
-msgstr "Zagon preizkusa datumov?"
+msgstr "Zvezda in polmesec"
 
 #: ../gramps/gen/utils/symbols.py:115
 msgid "West Syriac cross"
-msgstr ""
+msgstr "Zahodnosirski križ"
 
 #: ../gramps/gen/utils/symbols.py:116
-#, fuzzy
 msgid "East Syriac cross"
-msgstr "Zadnjič odprto"
+msgstr "Vzhodnosirski križ"
 
 #: ../gramps/gen/utils/symbols.py:117
 msgid "Heavy Greek cross"
-msgstr ""
+msgstr "Grški križ"
 
 #: ../gramps/gen/utils/symbols.py:118
 msgid "Latin cross"
-msgstr ""
+msgstr "Latinski križ"
 
 #: ../gramps/gen/utils/symbols.py:119
 msgid "Shadowed White Latin cross"
-msgstr ""
+msgstr "Osenčen beli latinski križ"
 
 #: ../gramps/gen/utils/symbols.py:120
 msgid "Maltese cross"
-msgstr ""
+msgstr "Malteški križ"
 
 #: ../gramps/gen/utils/symbols.py:121
 msgid "Star of David"
-msgstr ""
+msgstr "Davidova zvezda"
 
 #: ../gramps/gen/utils/symbols.py:122
-#, fuzzy
 msgid "Dead"
-msgstr "Mrtev moški"
+msgstr "Mrtev"
 
 #: ../gramps/gen/utils/unknown.py:140
 msgid "Unknown, created to replace a missing note object."
@@ -11222,7 +11461,8 @@ msgid "OS: %s"
 msgstr "OS: %s"
 
 #: ../gramps/gui/clipboard.py:70
-msgid "manual|Using_the_Clipboard"
+msgctxt "manual"
+msgid "Using_the_Clipboard"
 msgstr "Uporaba_Odložišča"
 
 #: ../gramps/gui/clipboard.py:401
@@ -11235,7 +11475,8 @@ msgid "Family Attribute"
 msgstr "Družinski atribut"
 
 #: ../gramps/gui/clipboard.py:483
-msgid "not available|NA"
+msgctxt "not available"
+msgid "NA"
 msgstr "n﹒ d﹒"
 
 #: ../gramps/gui/clipboard.py:492
@@ -11266,17 +11507,20 @@ msgstr "Odložišče"
 #. See details (edit, etc):
 #: ../gramps/gui/clipboard.py:1493 ../gramps/gui/plug/quick/_quicktable.py:141
 #, python-format
-msgid "the object|See %s details"
+msgctxt "the object"
+msgid "See %s details"
 msgstr "Prikaži podrobnosti %s"
 
 #: ../gramps/gui/clipboard.py:1502 ../gramps/gui/plug/quick/_quicktable.py:149
 #, python-format
-msgid "the object|Make %s active"
+msgctxt "the object"
+msgid "Make %s active"
 msgstr "Nastavi %s za aktivni predmet"
 
 #: ../gramps/gui/clipboard.py:1524
 #, python-format
-msgid "the object|Create Filter from %s selected..."
+msgctxt "the object"
+msgid "Create Filter from %s selected..."
 msgstr "Iz predmeta %s napravi filter ..."
 
 #: ../gramps/gui/columnorder.py:89
@@ -11488,9 +11732,8 @@ msgid "_Help"
 msgstr "Po_moč"
 
 #: ../gramps/gui/configure.py:597
-#, fuzzy
 msgid "Researcher information"
-msgstr "Podatki o navedbi"
+msgstr "Podatki o raziskovalcu"
 
 #: ../gramps/gui/configure.py:602
 #, fuzzy
@@ -11521,9 +11764,8 @@ msgid "Researcher"
 msgstr "Rodoslovec"
 
 #: ../gramps/gui/configure.py:638
-#, fuzzy
 msgid "Gramps ID format settings"
-msgstr "Napačen niz %s za zapis imena"
+msgstr "Nastavitve oblike ID"
 
 #: ../gramps/gui/configure.py:658 ../gramps/gui/editors/editperson.py:641
 #: ../gramps/gui/widgets/photo.py:87
@@ -11535,9 +11777,8 @@ msgid "ID Formats"
 msgstr "Oblike oznak ID"
 
 #: ../gramps/gui/configure.py:677
-#, fuzzy
 msgid "Colors used for boxes in the graphical views"
-msgstr "Nastavi barve okvirjev v grafičnih pogledih"
+msgstr "Barve okvirjev v grafičnih pogledih"
 
 #: ../gramps/gui/configure.py:683
 msgid "Light colors"
@@ -11557,103 +11798,86 @@ msgstr "Ponastavi na privzeto"
 
 #: ../gramps/gui/configure.py:695
 msgid "Restore colors for current theme to default."
-msgstr ""
+msgstr "Ponastavi barve trenutne sheme"
 
 #: ../gramps/gui/configure.py:701
-#, fuzzy
 msgid "Colors for Male persons"
-msgstr "Barva za podvojene osebe"
+msgstr "Barva za moške"
 
 #: ../gramps/gui/configure.py:702
 msgid "Colors for Female persons"
-msgstr ""
+msgstr "Barva za ženske"
 
 #: ../gramps/gui/configure.py:703
-#, fuzzy
 msgid "Colors for Unknown persons"
-msgstr "(Neznana oseba)"
+msgstr "Barva za neznane"
 
 #: ../gramps/gui/configure.py:704
-#, fuzzy
 msgid "Colors for Family nodes"
-msgstr "Prikaži vozlišča družin"
+msgstr "Barva za vozlišča družin"
 
 #: ../gramps/gui/configure.py:705
-#, fuzzy
 msgid "Other colors"
-msgstr "Barve spolov"
+msgstr "Druge barve"
 
 #: ../gramps/gui/configure.py:707
-#, fuzzy
 msgid "Background for Alive"
-msgstr "Barva ozadja"
+msgstr "Barva ozadja za žive"
 
 #: ../gramps/gui/configure.py:708
-#, fuzzy
 msgid "Background for Dead"
-msgstr "Barva ozadja"
+msgstr "Barva ozadja za mrtve"
 
 #: ../gramps/gui/configure.py:709
-#, fuzzy
 msgid "Border for Alive"
-msgstr "Okvir za žive moške"
+msgstr "Okvir za žive"
 
 #: ../gramps/gui/configure.py:710
-#, fuzzy
 msgid "Border for Dead"
-msgstr "Okvir za umrle moške"
+msgstr "Okvir za mrtve"
 
 #. for family
 #: ../gramps/gui/configure.py:730
-#, fuzzy
 msgid "Default background"
-msgstr "Privzeta oseba"
+msgstr "Privzeto ozadje"
 
 #: ../gramps/gui/configure.py:731
-#, fuzzy
 msgid "Background for Married"
-msgstr "Barva ozadja"
+msgstr "Ozadje za poročene"
 
 #: ../gramps/gui/configure.py:732
-#, fuzzy
 msgid "Background for Unmarried"
-msgstr "Barva ozadja"
+msgstr "Ozadje za neporočene"
 
 #: ../gramps/gui/configure.py:734
-#, fuzzy
 msgid "Background for Civil union"
-msgstr "Barva ozadja"
+msgstr "Ozadje za civilno zvezo"
 
 #: ../gramps/gui/configure.py:736
-#, fuzzy
 msgid "Background for Unknown"
-msgstr "%d?"
+msgstr "Ozadje za neznano"
 
 #: ../gramps/gui/configure.py:737
-#, fuzzy
 msgid "Background for Divorced"
-msgstr "Barva ozadja"
+msgstr "Ozadje za ločene"
 
 #: ../gramps/gui/configure.py:738
-#, fuzzy
 msgid "Default border"
-msgstr "Privzeta oseba"
+msgstr "Privzet okvir"
 
 #: ../gramps/gui/configure.py:739
-#, fuzzy
 msgid "Border for Divorced"
-msgstr "Okvir za ločene družine"
+msgstr "Okvir za ločene"
 
 #. for other
 #: ../gramps/gui/configure.py:742
-#, fuzzy
 msgid "Background for Home Person"
-msgstr "Sorodstvo z izhodiščno osebo"
+msgstr "Ozadje za izhodiščno osebo"
 
 #: ../gramps/gui/configure.py:761
 #, python-format
 msgid "<b>%s</b>"
-msgstr ""
+msgstr "<b>%s</b>"
 
 #: ../gramps/gui/configure.py:774
 msgid "Colors"
@@ -11661,28 +11885,24 @@ msgstr "Barve"
 
 #: ../gramps/gui/configure.py:794
 msgid "Warnings and Error dialogs"
-msgstr ""
+msgstr "Pogovorna okna za opozorila in napake"
 
 #: ../gramps/gui/configure.py:800
-#, fuzzy
 msgid "Suppress warning when adding parents to a child"
-msgstr "Izklopi opozorilo pri dodajanju staršev otroku."
+msgstr "Izklopi opozorilo pri dodajanju staršev otroku"
 
 #: ../gramps/gui/configure.py:804
-#, fuzzy
 msgid "Suppress warning when canceling with changed data"
-msgstr "Izklopi opozorilo pri preklicevanju ob spremenjenih podatkih."
+msgstr "Izklopi opozorilo pri preklicevanju ob spremenjenih podatkih"
 
 #: ../gramps/gui/configure.py:808
-#, fuzzy
 msgid "Suppress warning about missing researcher when exporting to GEDCOM"
 msgstr ""
-"Izklopi opozorilo o manjkajočih podatkih o raziskovalcu pri izvozu v GEDCOM."
+"Izklopi opozorilo o manjkajočih podatkih o raziskovalcu pri izvozu v GEDCOM"
 
 #: ../gramps/gui/configure.py:813
-#, fuzzy
 msgid "Show plugin status dialog on plugin load error"
-msgstr "Ob napakah pri nalaganju vključkov prikaži stanje vključkov."
+msgstr "Ob napakah pri nalaganju vključkov prikaži stanje vključkov"
 
 #: ../gramps/gui/configure.py:816
 msgid "Warnings"
@@ -11762,9 +11982,8 @@ msgid "_Remove"
 msgstr "_Odstrani"
 
 #: ../gramps/gui/configure.py:1153
-#, fuzzy
 msgid "Appearance and format settings"
-msgstr "Napačen niz %s za zapis imena"
+msgstr "Nastavitve izgleda in oblike"
 
 #: ../gramps/gui/configure.py:1198 ../gramps/gui/configure.py:1237
 #: ../gramps/gui/editors/displaytabs/buttontab.py:71
@@ -11784,9 +12003,12 @@ msgid "Consider single pa/matronymic as surname"
 msgstr "Uporabljaj enostavni patronim kot priimek"
 
 #: ../gramps/gui/configure.py:1240
-#, fuzzy
 msgid "Place format (auto place title)"
-msgstr "Kraji, ki ustrezajo nazivu"
+msgstr "Oblika kraja (samodejen naslov kraja)"
+
+#: ../gramps/gui/configure.py:1243
+msgid "Enables automatic place title generation using specified format."
+msgstr "Vključi samodejno ustvarjanje naziva kraja glede na navedeno obliko."
 
 #: ../gramps/gui/configure.py:1243
 #, fuzzy
@@ -11843,27 +12065,26 @@ msgid "Show text label beside Navigator buttons (requires restart)"
 msgstr ""
 "Prikaži besedilo poleg gumbov krmarja (potreben ponovni zagon programa)"
 
-#: ../gramps/gui/configure.py:1342
-#, fuzzy
+#: ../gramps/gui/configure.py:1343
 msgid ""
 "Show or hide text beside Navigator buttons (People, Families, Events...).\n"
 "Requires Gramps restart to apply."
 msgstr ""
-"Prikaži besedilo poleg gumbov krmarja (potreben ponovni zagon programa)"
+"Prikaži ali skrij besedilo poleg gumbov krmarja (Osebe, Družine, "
+"Dogodki ...).\n"
+"Za vklop je zahtevan ponoven zagon programa."
 
 #: ../gramps/gui/configure.py:1348
 msgid "Show close button in gramplet bar tabs"
 msgstr "Prikaži gumb za zapiranje v zavihkih pripomočkov"
 
-#: ../gramps/gui/configure.py:1351
-#, fuzzy
+#: ../gramps/gui/configure.py:1352
 msgid "Show close button to simplify removing gramplets from bars."
-msgstr "Prikaži gumb za zapiranje v zavihkih pripomočkov"
+msgstr "Prikaži gumb za lažje zapiranje pripomočkov."
 
-#: ../gramps/gui/configure.py:1370
-#, fuzzy
+#: ../gramps/gui/configure.py:1371
 msgid "Default text used for conditions"
-msgstr "Slog za podrobnosti."
+msgstr "Privzeto besedilo za pogoje"
 
 #: ../gramps/gui/configure.py:1375
 msgid "Missing surname"
@@ -11901,9 +12122,9 @@ msgstr ""
 "Sprememba oblike datuma se bo upoštevala šele po ponovnem zagonu programa "
 "Gramps."
 
-#: ../gramps/gui/configure.py:1487
+#: ../gramps/gui/configure.py:1488
 msgid "Dates settings used for calculation operations"
-msgstr ""
+msgstr "Datumske nastavitve za računske operacije"
 
 #: ../gramps/gui/configure.py:1493
 msgid "Date about range"
@@ -11972,9 +12193,9 @@ msgstr ""
 msgid "Dates"
 msgstr "Datumi"
 
-#: ../gramps/gui/configure.py:1548
+#: ../gramps/gui/configure.py:1549
 msgid "General Gramps settings"
-msgstr ""
+msgstr "Splošne nastavitve programa Gramps"
 
 #: ../gramps/gui/configure.py:1553
 msgid "Add default source on GEDCOM import"
@@ -11983,6 +12204,14 @@ msgstr "Pri uvozu GEDCOM dodaj privzeti vir"
 #: ../gramps/gui/configure.py:1572
 msgid "Add tag on import"
 msgstr "Pri uvozu dodaj oznako"
+
+#: ../gramps/gui/configure.py:1576
+msgid ""
+"Specified tag will be added on import.\n"
+"Clear to set default value."
+msgstr ""
+"Pri uvozu bo dodana navedena oznaka.\n"
+"Za nastavitev privzete oznake jo izbrišite."
 
 #: ../gramps/gui/configure.py:1575
 msgid ""
@@ -12008,18 +12237,18 @@ msgstr ""
 msgid "Display Tip of the Day"
 msgstr "Prikaži namig dneva"
 
-#: ../gramps/gui/configure.py:1597
+#: ../gramps/gui/configure.py:1598
 msgid "Show useful information about using Gramps on startup."
-msgstr ""
+msgstr "Pri zagonu pokaži podatke o uporabi Grampsa."
 
 #: ../gramps/gui/configure.py:1600
 msgid "Remember last view displayed"
 msgstr "Zapomni si zadnji prikazani pogled"
 
-#: ../gramps/gui/configure.py:1602
-#, fuzzy
+#: ../gramps/gui/configure.py:1603
 msgid "Remember last view displayed and open it next time."
-msgstr "Zapomni si zadnji prikazani pogled"
+msgstr ""
+"Zapomni si zadnji prikazani pogled in ga uporabi pri naslednjem zagonu."
 
 #: ../gramps/gui/configure.py:1605
 msgid "Max generations for relationships"
@@ -12029,9 +12258,9 @@ msgstr "Število rodov, ki naj bodo vključeni v računanje sorodstva"
 msgid "Base path for relative media paths"
 msgstr "Izhodišče za relativne poti do predmetov"
 
-#: ../gramps/gui/configure.py:1617
+#: ../gramps/gui/configure.py:1618
 msgid "Third party addons management"
-msgstr ""
+msgstr "Upravljanje z dodatki tretjih oseb"
 
 #: ../gramps/gui/configure.py:1626
 msgid "Once a month"
@@ -12112,9 +12341,9 @@ msgstr "novo"
 msgid "update"
 msgstr "posodobljeno"
 
-#: ../gramps/gui/configure.py:1729
+#: ../gramps/gui/configure.py:1730
 msgid "Family tree database settings and Backup management"
-msgstr ""
+msgstr "Nastavitve baze podatkov in varnostnih kopij rodovnika"
 
 #: ../gramps/gui/configure.py:1735
 msgid "Database backend"
@@ -12136,11 +12365,13 @@ msgstr "Pot do datotek rodovnika"
 msgid "Automatically load last Family Tree"
 msgstr "Samodejno naloži zadnji rodovnik"
 
-#: ../gramps/gui/configure.py:1761
+#: ../gramps/gui/configure.py:1762
 msgid ""
 "Don't open dialog to choose family tree to load on startup, just load last "
 "used."
 msgstr ""
+"Ob zagonu ne odpiraj pogovornega okna za izbor rodovnika, ampak naloži "
+"zadnjega uporabljenega."
 
 #: ../gramps/gui/configure.py:1766
 msgid "Backup path"
@@ -12150,9 +12381,9 @@ msgstr "Pot varnostnih kopij"
 msgid "Backup on exit"
 msgstr "Izdelaj varnostno kopijo ob izhodu"
 
-#: ../gramps/gui/configure.py:1773
+#: ../gramps/gui/configure.py:1774
 msgid "Backup Your family tree on exit to Backup path specified above."
-msgstr ""
+msgstr "Ob izhodu ustvari varnostno kopijo rodovnika na zgoraj navedeni poti."
 
 #: ../gramps/gui/configure.py:1779
 msgid "Every 15 minutes"
@@ -12242,7 +12473,7 @@ msgstr "Izberi mapo zbirke podatkov"
 msgid "Select backup directory"
 msgstr "Izberite mapo za varnostne kopije"
 
-#: ../gramps/gui/configure.py:1946
+#: ../gramps/gui/configure.py:1947
 msgid ""
 "This tab gives you the possibility to use one font which is able to show all "
 "genealogical symbols\n"
@@ -12250,75 +12481,89 @@ msgid ""
 "If you select the \"use symbols\" checkbox, Gramps will use the selected "
 "font if it exists."
 msgstr ""
+"V tem zavihku imate možnost nastaviti pisavo za prikaz vseh rodoslovnih "
+"simbolov.\n"
+"\n"
+"Če izberete \"uporabi simbole\", bo Gramps uporabil izbrano pisavo, če je na "
+"voljo."
 
-#: ../gramps/gui/configure.py:1952
+#: ../gramps/gui/configure.py:1953
 msgid ""
 "This can be useful if you want to add phonetic in a note to show how to "
 "pronounce a name or if you mix multiple languages like greek and russian."
 msgstr ""
+"To zna biti uporabno, če želite v opombo dodati fonetičen zapis, da boste "
+"vedeli, kako izgovoriti ime, ali pa če uporabljate več jezikov z različnimi "
+"pisavami hkrati."
 
-#: ../gramps/gui/configure.py:1959
+#: ../gramps/gui/configure.py:1960
 msgid "Use symbols"
-msgstr ""
+msgstr "Uporabi simbole"
 
-#: ../gramps/gui/configure.py:1964
+#: ../gramps/gui/configure.py:1965
 msgid ""
 "Be careful, if you click on the \"Try to find\" button, it can take a while "
 "before you can continue (10 minutes or more). \n"
 "If you cancel the process, nothing will be changed."
 msgstr ""
+"Bodite previdni, če kliknete na gumb \"Poizkusi najti\", saj lahko traja kar "
+"nekaj časa, preden boste lahko nadaljevali (10 minut ali več).\n"
+"Če postopek prekinete, se bo končal brez sprememb."
 
-#: ../gramps/gui/configure.py:1974
+#: ../gramps/gui/configure.py:1975
 msgid ""
 "You have already run the tool to search for genealogy fonts.\n"
 "Run it again only if you added fonts on your system."
 msgstr ""
+"Orodje za iskanje rodoslovnih pisav ste že zagnali.\n"
+"Ponovno ga zaženite le, če ste v operacijski sistem dodali nove pisave."
 
-#: ../gramps/gui/configure.py:1979
+#: ../gramps/gui/configure.py:1980
 msgid "Try to find"
-msgstr ""
+msgstr "Poizkusi najti"
 
-#: ../gramps/gui/configure.py:1990 ../gramps/gui/configure.py:2091
+#: ../gramps/gui/configure.py:1991 ../gramps/gui/configure.py:2092
 msgid "Choose font"
-msgstr ""
+msgstr "Izberi pisavo"
 
-#: ../gramps/gui/configure.py:2003 ../gramps/gui/configure.py:2108
-#, fuzzy
+#: ../gramps/gui/configure.py:2004 ../gramps/gui/configure.py:2109
 msgid "Select default death symbol"
-msgstr "Nastavi za privzeto ime"
+msgstr "Nastavi privzet simbol za smrt"
 
-#: ../gramps/gui/configure.py:2012
-#, fuzzy
+#: ../gramps/gui/configure.py:2013
 msgid "Genealogical Symbols"
-msgstr "Rodoslovni sistem"
-
-#: ../gramps/gui/configure.py:2021
-msgid "Cannot look for genealogical fonts"
-msgstr ""
+msgstr "Rodoslovni simboli"
 
 #: ../gramps/gui/configure.py:2022
+msgid "Cannot look for genealogical fonts"
+msgstr "Rodoslovne pisave ni možno poiskati"
+
+#: ../gramps/gui/configure.py:2023
 msgid ""
 "I am not able to select genealogical fonts. Please, install the module "
 "fontconfig for python 3."
 msgstr ""
+"Rodoslovne pisave ni možno poiskati. Namestite modul fontconfig za python 3."
 
-#: ../gramps/gui/configure.py:2039
+#: ../gramps/gui/configure.py:2040
 msgid "Checking available genealogical fonts"
-msgstr ""
+msgstr "Preverjanje nameščenih rodoslovnih pisav"
 
-#: ../gramps/gui/configure.py:2043
+#: ../gramps/gui/configure.py:2044
 msgid "Looking for all fonts with genealogical symbols."
-msgstr ""
+msgstr "Iskanje vseh pisav z rodoslovnimi simboli."
 
-#: ../gramps/gui/configure.py:2116
+#: ../gramps/gui/configure.py:2117
 msgid ""
 "You have no font with genealogical symbols on your system. Gramps will not "
 "be able to use symbols."
 msgstr ""
+"Na sistemu nimate nameščenih pisav z rodoslovnimi simboli. Gramps jih ne bo "
+"mogel uporabiti."
 
-#: ../gramps/gui/configure.py:2154
+#: ../gramps/gui/configure.py:2155
 msgid "What you will see"
-msgstr ""
+msgstr "Videli boste"
 
 #: ../gramps/gui/dbloader.py:120 ../gramps/gui/plug/tool.py:109
 msgid "Undo history warning"
@@ -12333,16 +12578,15 @@ msgid ""
 "If you think you may want to revert the import, please stop here and backup "
 "your database."
 msgstr ""
-"Če boste nadaljevali z uvozom, se bo izbrisala zgodovina zadnjih sprememb v "
-"tej seji, tako da ne boste mogli uporabiti ukaza Razveljavi oz. preklicati "
-"uvoza in sprememb pred njim.\n"
+"Če boste nadaljevali z uvozom, se bo izbrisala zgodovina sprememb v tej "
+"seji, tako da ne boste mogli preklicati uvoza ali sprememb pred njim.\n"
 "\n"
-"Če torej menite, da bi kasneje morda radi preklicali uvoz, se tukaj ustavite "
-"in pred nadaljevanjem shranite varnostno kopijo zbirke podatkov."
+"Če menite še utegnili potrebovati preklic uvoza, se tukaj ustavite varnostno "
+"kopijo zbirke podatkov."
 
 #: ../gramps/gui/dbloader.py:126
 msgid "_Proceed with import"
-msgstr "_Nadaljuj z uvažanjem"
+msgstr "_Nadaljuj z uvozom"
 
 #: ../gramps/gui/dbloader.py:126 ../gramps/gui/plug/tool.py:116
 msgid "_Stop"
@@ -12869,7 +13113,8 @@ msgid "No active object"
 msgstr "Ni aktivnega predmeta"
 
 #: ../gramps/gui/editors/addmedia.py:70
-msgid "manual|Select_a_media_selector"
+msgctxt "manual"
+msgid "Select_a_media_selector"
 msgstr "Izbor_Zunanjih_Predmetov"
 
 #: ../gramps/gui/editors/addmedia.py:104
@@ -13081,14 +13326,12 @@ msgid "Move Down"
 msgstr "Premakni dol"
 
 #: ../gramps/gui/editors/displaytabs/buttontab.py:76
-#, fuzzy
 msgid "Move Left"
-msgstr "Zgoraj levo"
+msgstr "Premakni levo"
 
 #: ../gramps/gui/editors/displaytabs/buttontab.py:77
-#, fuzzy
 msgid "Move right"
-msgstr "Copyright"
+msgstr "Premakni desno"
 
 #: ../gramps/gui/editors/displaytabs/citationembedlist.py:69
 msgid "Create and add a new citation and new source"
@@ -13221,7 +13464,8 @@ msgstr "_Galerija"
 
 #. Translators: _View means "to look at this"
 #: ../gramps/gui/editors/displaytabs/gallerytab.py:142
-msgid "verb:look at this|_View"
+msgctxt "verb:look at this"
+msgid "_View"
 msgstr "_Poglej"
 
 #: ../gramps/gui/editors/displaytabs/gallerytab.py:147
@@ -13606,7 +13850,8 @@ msgid "_Jump to"
 msgstr "_Preklopi na"
 
 #: ../gramps/gui/editors/editaddress.py:65
-msgid "manual|Address_Editor_dialog"
+msgctxt "manual"
+msgid "Address_Editor_dialog"
 msgstr "Urejevalnik_naslovov"
 
 #: ../gramps/gui/editors/editaddress.py:92
@@ -13615,7 +13860,8 @@ msgid "Address Editor"
 msgstr "Urejevalnik naslovov"
 
 #: ../gramps/gui/editors/editattribute.py:62
-msgid "manual|Attribute_Editor_dialog"
+msgctxt "manual"
+msgid "Attribute_Editor_dialog"
 msgstr "Urejevalnik_atributov"
 
 #: ../gramps/gui/editors/editattribute.py:94
@@ -13637,7 +13883,8 @@ msgid "The attribute type cannot be empty"
 msgstr "Vrsta atributa ne more biti prazna"
 
 #: ../gramps/gui/editors/editchildref.py:66
-msgid "manual|Child_Reference_Editor"
+msgctxt "manual"
+msgid "Child_Reference_Editor"
 msgstr "Urejevalnik_navedb_za_otroke"
 
 #: ../gramps/gui/editors/editchildref.py:99
@@ -13646,7 +13893,8 @@ msgid "Child Reference Editor"
 msgstr "Urejevalnik navedb za otroke"
 
 #: ../gramps/gui/editors/editcitation.py:69
-msgid "manual|New_Citation_dialog"
+msgctxt "manual"
+msgid "New_Citation_dialog"
 msgstr "Nov_navedek"
 
 #: ../gramps/gui/editors/editcitation.py:128
@@ -13749,7 +13997,8 @@ msgid "Calculated"
 msgstr "Po izračunu"
 
 #: ../gramps/gui/editors/editdate.py:99
-msgid "manual|Editing_dates"
+msgctxt "manual"
+msgid "Editing_dates"
 msgstr "Urejanje_datumov"
 
 #: ../gramps/gui/editors/editdate.py:126 ../gramps/gui/editors/editdate.py:279
@@ -13762,7 +14011,8 @@ msgid "Correct the date or switch from `{cur_mode}' to `{text_mode}'"
 msgstr "Popravite datum ali preklopite iz `{cur_mode}' v `{text_mode}'"
 
 #: ../gramps/gui/editors/editevent.py:64
-msgid "manual|New_Event_dialog"
+msgctxt "manual"
+msgid "New_Event_dialog"
 msgstr "Nov_dogodek"
 
 #: ../gramps/gui/editors/editevent.py:98
@@ -13823,7 +14073,8 @@ msgid "Delete Event (%s)"
 msgstr "Zbriši dogodek (%s)"
 
 #: ../gramps/gui/editors/editeventref.py:57
-msgid "manual|Event_Reference_Editor_dialog"
+msgctxt "manual"
+msgid "Event_Reference_Editor_dialog"
 msgstr "Urejevalnik_navedb_za_dogodke"
 
 #: ../gramps/gui/editors/editeventref.py:76
@@ -13848,7 +14099,8 @@ msgid "Add Event"
 msgstr "Dodaj dogodek"
 
 #: ../gramps/gui/editors/editfamily.py:92
-msgid "manual|Family_Editor_dialog"
+msgctxt "manual"
+msgid "Family_Editor_dialog"
 msgstr "Urejevalnik_družin"
 
 #: ../gramps/gui/editors/editfamily.py:113
@@ -14106,7 +14358,8 @@ msgid "Add Family"
 msgstr "Dodaj družino"
 
 #: ../gramps/gui/editors/editldsord.py:67
-msgid "manual|LDS_Ordinance_Editor"
+msgctxt "manual"
+msgid "LDS_Ordinance_Editor"
 msgstr "Urejevalnik_LDS_ordinanc"
 
 #: ../gramps/gui/editors/editldsord.py:158
@@ -14132,7 +14385,8 @@ msgid "%(mother)s [%(gramps_id)s]"
 msgstr "%(mother)s [%(gramps_id)s]"
 
 #: ../gramps/gui/editors/editlink.py:49
-msgid "manual|Link_Editor"
+msgctxt "manual"
+msgid "Link_Editor"
 msgstr "Urejevalnik_povezav"
 
 #: ../gramps/gui/editors/editlink.py:87 ../gramps/gui/editors/editlink.py:239
@@ -14148,7 +14402,8 @@ msgid "Location Editor"
 msgstr "Urejevalnik krajev"
 
 #: ../gramps/gui/editors/editmedia.py:68
-msgid "manual|New_Media_dialog"
+msgctxt "manual"
+msgid "New_Media_dialog"
 msgstr "Nov_zunanji_predmet"
 
 #: ../gramps/gui/editors/editmedia.py:99
@@ -14209,7 +14464,8 @@ msgid "Remove Media Object"
 msgstr "Odstrani predmet"
 
 #: ../gramps/gui/editors/editmediaref.py:71
-msgid "manual|Media_Reference_Editor_dialog"
+msgctxt "manual"
+msgid "Media_Reference_Editor_dialog"
 msgstr "Urejevalnik_navedb_za_zunanje_predmete"
 
 #: ../gramps/gui/editors/editmediaref.py:93
@@ -14221,7 +14477,8 @@ msgstr "Urejevalnik navedb predmetov"
 #: ../gramps/gui/editors/editmediaref.py:98
 #: ../gramps/gui/glade/editmediaref.glade:133
 #: ../gramps/gui/glade/editmediaref.glade:257
-msgid "Y coordinate|Y"
+msgctxt "Y coordinate"
+msgid "Y"
 msgstr "Y"
 
 #: ../gramps/gui/editors/editname.py:120 ../gramps/gui/editors/editname.py:314
@@ -14229,7 +14486,8 @@ msgid "Name Editor"
 msgstr "Urejevalnik imen"
 
 #: ../gramps/gui/editors/editname.py:162
-msgid "manual|Name_Editor"
+msgctxt "manual"
+msgid "Name_Editor"
 msgstr "Urejevalnik_imen"
 
 #: ../gramps/gui/editors/editname.py:174
@@ -14284,7 +14542,8 @@ msgid "Group this name only"
 msgstr "Združi samo to ime"
 
 #: ../gramps/gui/editors/editnote.py:67
-msgid "manual|Editing_information_about_notes"
+msgctxt "manual"
+msgid "Editing_information_about_notes"
 msgstr "Urejanje_podatkov_o_opombah"
 
 #: ../gramps/gui/editors/editnote.py:150
@@ -14351,7 +14610,8 @@ msgid "New Person"
 msgstr "Nova oseba"
 
 #: ../gramps/gui/editors/editperson.py:242
-msgid "manual|Editing_information_about_people"
+msgctxt "manual"
+msgid "Editing_information_about_people"
 msgstr "Urejanje_podatkov_o_osebah"
 
 #: ../gramps/gui/editors/editperson.py:600
@@ -14439,7 +14699,8 @@ msgid "_Unknown"
 msgstr "_Neznano"
 
 #: ../gramps/gui/editors/editpersonref.py:67
-msgid "manual|Person_Reference_Editor"
+msgctxt "manual"
+msgid "Person_Reference_Editor"
 msgstr "Urejevalnik_navedb_za_osebe"
 
 #: ../gramps/gui/editors/editpersonref.py:93
@@ -14460,12 +14721,14 @@ msgid "You must either select a person or Cancel the edit"
 msgstr "Izbrati morate osebo ali preklicati urejanje"
 
 #: ../gramps/gui/editors/editplace.py:69
-msgid "manual|Place_Editor_dialog"
+msgctxt "manual"
+msgid "Place_Editor_dialog"
 msgstr "Urejevalnik_krajev"
 
 #: ../gramps/gui/editors/editplace.py:91
 #: ../gramps/gui/glade/editplace.glade:355 ../gramps/gui/merge/mergeplace.py:55
-msgid "place|Name:"
+msgctxt "place"
+msgid "Name:"
 msgstr "Ime kraja:"
 
 #: ../gramps/gui/editors/editplace.py:96
@@ -14544,7 +14807,8 @@ msgid "New"
 msgstr "Novo"
 
 #: ../gramps/gui/editors/editplacename.py:49
-msgid "manual|Place_Name_Editor_dialog"
+msgctxt "manual"
+msgid "Place_Name_Editor_dialog"
 msgstr "Urejevalnik_imen_krajev"
 
 #: ../gramps/gui/editors/editplacename.py:101
@@ -14621,7 +14885,8 @@ msgid "Add Repository"
 msgstr "Dodaj nahajališče"
 
 #: ../gramps/gui/editors/editrepository.py:60
-msgid "manual|New_Repository_dialog"
+msgctxt "manual"
+msgid "New_Repository_dialog"
 msgstr "Novo_nahajališče"
 
 #: ../gramps/gui/editors/editrepository.py:92
@@ -14654,7 +14919,8 @@ msgid "Delete Repository (%s)"
 msgstr "Zbriši nahajališče (%s)"
 
 #: ../gramps/gui/editors/editsource.py:64
-msgid "manual|New_Source_dialog"
+msgctxt "manual"
+msgid "New_Source_dialog"
 msgstr "Nov_vir"
 
 #: ../gramps/gui/editors/editsource.py:88
@@ -14693,7 +14959,8 @@ msgid "Delete Source (%s)"
 msgstr "Zbriši vir (%s)"
 
 #: ../gramps/gui/editors/edittaglist.py:48
-msgid "manual|Tag_selection_dialog"
+msgctxt "manual"
+msgid "Tag_selection_dialog"
 msgstr "Izbor_oznak"
 
 #: ../gramps/gui/editors/edittaglist.py:70
@@ -14702,7 +14969,8 @@ msgid "Tag selection"
 msgstr "Izbira oznake"
 
 #: ../gramps/gui/editors/editurl.py:47
-msgid "manual|Internet_Address_Editor"
+msgctxt "manual"
+msgid "Internet_Address_Editor"
 msgstr "Urejevalnik_internetnih_naslovov"
 
 #: ../gramps/gui/editors/editurl.py:68 ../gramps/gui/editors/editurl.py:103
@@ -14710,15 +14978,18 @@ msgid "Internet Address Editor"
 msgstr "Urejevalnik internetnih naslovov"
 
 #: ../gramps/gui/editors/filtereditor.py:84
-msgid "manual|Add_Rule_dialog"
+msgctxt "manual"
+msgid "Add_Rule_dialog"
 msgstr "Dodaj_pravilo"
 
 #: ../gramps/gui/editors/filtereditor.py:85
-msgid "manual|Define_Filter_dialog"
+msgctxt "manual"
+msgid "Define_Filter_dialog"
 msgstr "Določi_filter"
 
 #: ../gramps/gui/editors/filtereditor.py:86
-msgid "manual|Custom_Filters"
+msgctxt "manual"
+msgid "Custom_Filters"
 msgstr "Prikrojeni_filtri"
 
 #: ../gramps/gui/editors/filtereditor.py:90
@@ -15061,7 +15332,8 @@ msgid "Volume/Page"
 msgstr "Del / Stran"
 
 #: ../gramps/gui/filters/sidebar/_citationsidebarfilter.py:114
-msgid "Citation: Minimum Confidence|Min. Conf."
+msgctxt "Citation: Minimum Confidence"
+msgid "Min. Conf."
 msgstr "Min. zaneslj."
 
 #: ../gramps/gui/filters/sidebar/_citationsidebarfilter.py:117
@@ -17193,7 +17465,8 @@ msgstr "Velikost"
 
 #: ../gramps/gui/glade/styleeditor.glade:385
 #: ../gramps/gui/plug/report/_styleeditor.py:268
-msgid "point size|pt"
+msgctxt "point size"
+msgid "pt"
 msgstr "pt"
 
 #: ../gramps/gui/glade/styleeditor.glade:432
@@ -17544,7 +17817,7 @@ msgstr "_Dodatna poročila / orodja"
 
 #: ../gramps/gui/grampsgui.py:56
 msgid "_FAQ"
-msgstr "_V&O"
+msgstr "_PZV"
 
 #: ../gramps/gui/grampsgui.py:56
 msgid "_Family Trees"
@@ -17927,7 +18200,8 @@ msgstr ""
 "namenjate poročanju o napakah."
 
 #: ../gramps/gui/logger/_errorview.py:46
-msgid "manual|Error_Report"
+msgctxt "manual"
+msgid "Error_Report"
 msgstr "Poročilo_o_napaki"
 
 #: ../gramps/gui/logger/_errorview.py:107
@@ -17966,7 +18240,8 @@ msgid "Created on %(year)4d/%(month)02d/%(day)02d"
 msgstr "Ustvarjeno %(day)02d. %(month)02d. %(year)4d"
 
 #: ../gramps/gui/merge/mergecitation.py:46
-msgid "manual|Merge_Citations"
+msgctxt "manual"
+msgid "Merge_Citations"
 msgstr "Združi_navedke"
 
 #: ../gramps/gui/merge/mergecitation.py:68
@@ -17975,7 +18250,8 @@ msgid "Merge Citations"
 msgstr "Združi navedke"
 
 #: ../gramps/gui/merge/mergeevent.py:45
-msgid "manual|Merge_Events"
+msgctxt "manual"
+msgid "Merge_Events"
 msgstr "Združi_Dogodke"
 
 #: ../gramps/gui/merge/mergeevent.py:67
@@ -17983,7 +18259,8 @@ msgid "Merge Events"
 msgstr "Združi dogodke"
 
 #: ../gramps/gui/merge/mergefamily.py:46
-msgid "manual|Merge_Families"
+msgctxt "manual"
+msgid "Merge_Families"
 msgstr "Združi_Družine"
 
 #: ../gramps/gui/merge/mergefamily.py:68
@@ -17997,11 +18274,13 @@ msgid "Cannot merge people"
 msgstr "Ne morem združiti oseb"
 
 #: ../gramps/gui/merge/mergemedia.py:44
-msgid "manual|Merge_Media_Objects"
+msgctxt "manual"
+msgid "Merge_Media_Objects"
 msgstr "Združi_Zunanje_Predmete"
 
 #: ../gramps/gui/merge/mergenote.py:44
-msgid "manual|Merge_Notes"
+msgctxt "manual"
+msgid "Merge_Notes"
 msgstr "Združi_Opombe"
 
 #: ../gramps/gui/merge/mergenote.py:94
@@ -18013,7 +18292,8 @@ msgid "preformatted"
 msgstr "predoblikovano"
 
 #: ../gramps/gui/merge/mergeperson.py:58
-msgid "manual|Merge_People"
+msgctxt "manual"
+msgid "Merge_People"
 msgstr "Združi_Osebe"
 
 #. translators: needed for French, ignore otherwise
@@ -18090,15 +18370,18 @@ msgstr ""
 "dodatno ročno urejanje družin."
 
 #: ../gramps/gui/merge/mergeplace.py:53
-msgid "manual|Merge_Places"
+msgctxt "manual"
+msgid "Merge_Places"
 msgstr "Združi_Kraje"
 
 #: ../gramps/gui/merge/mergerepository.py:44
-msgid "manual|Merge_Repositories"
+msgctxt "manual"
+msgid "Merge_Repositories"
 msgstr "Združi_Nahajališča"
 
 #: ../gramps/gui/merge/mergesource.py:45
-msgid "manual|Merge_Sources"
+msgctxt "manual"
+msgid "Merge_Sources"
 msgstr "Združi_Vire"
 
 #: ../gramps/gui/merge/mergesource.py:67
@@ -18879,7 +19162,8 @@ msgid "Landscape"
 msgstr "Ležeče"
 
 #: ../gramps/gui/plug/report/_papermenu.py:215
-msgid "inch|in."
+msgctxt "inch"
+msgid "in."
 msgstr "in."
 
 #: ../gramps/gui/plug/report/_reportdialog.py:143
@@ -19039,7 +19323,8 @@ msgid "Document Styles"
 msgstr "Slogi dokumentov"
 
 #: ../gramps/gui/plug/report/_styleeditor.py:108
-msgid "manual|Document_Styles_dialog"
+msgctxt "manual"
+msgid "Document_Styles_dialog"
 msgstr "Pogovorno_okno_Določi_sloge"
 
 #: ../gramps/gui/plug/report/_styleeditor.py:147
@@ -19069,7 +19354,8 @@ msgid "Style editor"
 msgstr "Urejevalnik slogov"
 
 #: ../gramps/gui/plug/report/_styleeditor.py:242
-msgid "manual|Style_editor_dialog"
+msgctxt "manual"
+msgid "Style_editor_dialog"
 msgstr "Pogovorno_okno_Urejevalnik_slogov"
 
 #: ../gramps/gui/plug/report/_styleeditor.py:352
@@ -19161,7 +19447,8 @@ msgid "Last Change"
 msgstr "Zadnja sprememba"
 
 #: ../gramps/gui/selectors/selectcitation.py:86
-msgid "manual|Select_Source_or_Citation_selector"
+msgctxt "manual"
+msgid "Select_Source_or_Citation_selector"
 msgstr "Izberi_vir_ali_navedek"
 
 #: ../gramps/gui/selectors/selectevent.py:59
@@ -19169,11 +19456,13 @@ msgid "Select Event"
 msgstr "Izberi dogodek"
 
 #: ../gramps/gui/selectors/selectevent.py:79
-msgid "manual|Select_Event_selector"
+msgctxt "manual"
+msgid "Select_Event_selector"
 msgstr "Izbor_dogodka"
 
 #: ../gramps/gui/selectors/selectfamily.py:76
-msgid "manual|Select_Family_selector"
+msgctxt "manual"
+msgid "Select_Family_selector"
 msgstr "Izbor_družine"
 
 #: ../gramps/gui/selectors/selectnote.py:64
@@ -19181,7 +19470,8 @@ msgid "Select Note"
 msgstr "Izberi opombo"
 
 #: ../gramps/gui/selectors/selectnote.py:82
-msgid "manual|Select_Note_selector"
+msgctxt "manual"
+msgid "Select_Note_selector"
 msgstr "Izbor_opombe"
 
 #: ../gramps/gui/selectors/selectobject.py:67
@@ -19189,23 +19479,28 @@ msgid "Select Media Object"
 msgstr "Izberi predmet"
 
 #: ../gramps/gui/selectors/selectobject.py:108
-msgid "manual|Select_Media_Object_selector"
+msgctxt "manual"
+msgid "Select_Media_Object_selector"
 msgstr "Izbor_zunanjega_predmeta"
 
 #: ../gramps/gui/selectors/selectperson.py:64
-msgid "manual|Select_Father_selector"
+msgctxt "manual"
+msgid "Select_Father_selector"
 msgstr "Izbor_očeta"
 
 #: ../gramps/gui/selectors/selectperson.py:66
-msgid "manual|Select_Mother_selector"
+msgctxt "manual"
+msgid "Select_Mother_selector"
 msgstr "Izbor_matere"
 
 #: ../gramps/gui/selectors/selectperson.py:68
-msgid "manual|Select_Child_selector"
+msgctxt "manual"
+msgid "Select_Child_selector"
 msgstr "Izbor_otroka"
 
 #: ../gramps/gui/selectors/selectperson.py:70
-msgid "manual|Select_Person_selector"
+msgctxt "manual"
+msgid "Select_Person_selector"
 msgstr "Izbirnik_Izbor_kraja"
 
 #: ../gramps/gui/selectors/selectplace.py:60
@@ -19213,7 +19508,8 @@ msgid "Select Place"
 msgstr "Izberi kraj"
 
 #: ../gramps/gui/selectors/selectplace.py:90
-msgid "manual|Select_Place_selector"
+msgctxt "manual"
+msgid "Select_Place_selector"
 msgstr "Izbor_kraja"
 
 #: ../gramps/gui/selectors/selectrepository.py:59
@@ -19221,7 +19517,8 @@ msgid "Select Repository"
 msgstr "Izberi nahajališče"
 
 #: ../gramps/gui/selectors/selectrepository.py:75
-msgid "manual|Select_Repository_selector"
+msgctxt "manual"
+msgid "Select_Repository_selector"
 msgstr "Izbirnik_Izbor_matere"
 
 #: ../gramps/gui/selectors/selectsource.py:59
@@ -19229,7 +19526,8 @@ msgid "Select Source"
 msgstr "Izberi vir"
 
 #: ../gramps/gui/selectors/selectsource.py:76
-msgid "manual|Select_Source_selector"
+msgctxt "manual"
+msgid "Select_Source_selector"
 msgstr "Izbirnik_Izbor_opombe"
 
 #: ../gramps/gui/spell.py:92
@@ -19407,14 +19705,13 @@ msgstr "Statistika uvoza"
 msgid "Read Only"
 msgstr "Samo za branje"
 
-#: ../gramps/gui/viewmanager.py:1023
+#: ../gramps/gui/viewmanager.py:1020
 msgid "Gramps had a problem the last time it was run."
-msgstr ""
+msgstr "Pri zadnjem zagonu je Gramps naletel na težavo."
 
-#: ../gramps/gui/viewmanager.py:1024
-#, fuzzy
+#: ../gramps/gui/viewmanager.py:1021
 msgid "Would you like to run the Check and Repair tool?"
-msgstr "Uporabite orodje Preveri in popravi zbirko podatkov"
+msgstr "Ali bi radi uporabili orodje Preveri in popravi?"
 
 #: ../gramps/gui/viewmanager.py:1189
 msgid "Autobackup..."
@@ -19497,7 +19794,8 @@ msgstr "Zunanji predmeti:"
 #: ../gramps/gui/viewmanager.py:1723
 #: ../gramps/plugins/gramplet/statsgramplet.py:196
 #: ../gramps/plugins/webreport/statistics.py:145
-msgid "Megabyte|MB"
+msgctxt "Megabyte"
+msgid "MB"
 msgstr "MB"
 
 #: ../gramps/gui/viewmanager.py:1725
@@ -19535,7 +19833,8 @@ msgid "Backup aborted"
 msgstr "Izdelava varnostne kopije je bila prekinjena"
 
 #: ../gramps/gui/views/bookmarks.py:69
-msgid "manual|Bookmarks"
+msgctxt "manual"
+msgid "Bookmarks"
 msgstr "Zaznamki"
 
 #. this is meaningless while it's modal
@@ -19660,6 +19959,16 @@ msgstr "Izhodiščna oseba ni nastavljena"
 
 #: ../gramps/gui/views/navigationview.py:324
 msgid ""
+"You need to set a 'Home Person' to go to. Select the People View, select the "
+"person you want as 'Home Person', then confirm your choice via the menu Edit "
+"-> Set Home Person."
+msgstr ""
+"Nastaviti morate 'privzeto osebo'. Izberite pogled Osebe, izberite osebo, ki "
+"bi jo radi nastavili za 'Izhodiščno osebo' in izbiro potrdite v meniju Uredi "
+"-> Nastavi izhodiščno osebo."
+
+#: ../gramps/gui/views/navigationview.py:324
+msgid ""
 "You need to set a 'default person' to go to. Select the People View, select "
 "the person you want as 'Home Person', then confirm your choice via the menu "
 "Edit -> Set Home Person."
@@ -19720,11 +20029,13 @@ msgid "Organize Tags..."
 msgstr "Uredi oznake ..."
 
 #: ../gramps/gui/views/tags.py:112
-msgid "manual|Organize_Tags_Window"
+msgctxt "manual"
+msgid "Organize_Tags_Window"
 msgstr "Okno_Uredi_oznake"
 
 #: ../gramps/gui/views/tags.py:113
-msgid "manual|New_Tag_dialog"
+msgctxt "manual"
+msgid "New_Tag_dialog"
 msgstr "Nova_oznaka"
 
 #: ../gramps/gui/views/tags.py:306
@@ -19872,9 +20183,8 @@ msgid "Add Child to Family"
 msgstr "Družini dodaj otroka"
 
 #: ../gramps/gui/widgets/grampletbar.py:118
-#, fuzzy
 msgid "Gramplet Bar Menu"
-msgstr "Plošča s pripomočki"
+msgstr "Meni plošče s pripomočki"
 
 #: ../gramps/gui/widgets/grampletbar.py:207
 #: ../gramps/gui/widgets/grampletpane.py:1194
@@ -19994,7 +20304,8 @@ msgid "Progress Information"
 msgstr "Podatki o napredovanju"
 
 #: ../gramps/gui/widgets/reorderfam.py:63
-msgid "manual|Reorder_Relationships_dialog"
+msgctxt "manual"
+msgid "Reorder_Relationships_dialog"
 msgstr "Pogovorno_okno_Preuredi_sorodstva"
 
 #: ../gramps/gui/widgets/reorderfam.py:91
@@ -21554,7 +21865,8 @@ msgid "Women"
 msgstr "Ženske"
 
 #: ../gramps/plugins/drawreport/statisticschart.py:338
-msgid "person|Title"
+msgctxt "person"
+msgid "Title"
 msgstr "Naziv"
 
 #: ../gramps/plugins/drawreport/statisticschart.py:342
@@ -21693,12 +22005,11 @@ msgstr "(Še živijo: %(option_name)s)"
 #: ../gramps/plugins/drawreport/statisticschart.py:801
 #, python-format
 msgid "%s born"
-msgstr ""
+msgstr "%s rojenih"
 
 #: ../gramps/plugins/drawreport/statisticschart.py:803
-#, fuzzy
 msgid "Persons born"
-msgstr "Nav. osebe"
+msgstr "Rojenih oseb"
 
 #: ../gramps/plugins/drawreport/statisticschart.py:813
 msgid "Collecting data..."
@@ -21800,18 +22111,14 @@ msgstr ""
 "graf z legendo."
 
 #: ../gramps/plugins/drawreport/statisticschart.py:1066
-#, fuzzy
 msgid "Include counts of missing information"
-msgstr "Izpiši polja z manjkajočimi podatki"
+msgstr "Vključi štetje manjkajočih podatkov"
 
 #: ../gramps/plugins/drawreport/statisticschart.py:1068
-#, fuzzy
 msgid ""
 "Whether to include counts of the number of people who lack the given "
 "information."
-msgstr ""
-"Ali naj bodo vključeni tudi drugi dogodki, pri katerih so bile osebe "
-"udeležene."
+msgstr "Ali naj bodo vključene osebe, pri katerih manjkajo navedene podatke."
 
 #: ../gramps/plugins/drawreport/statisticschart.py:1102
 msgid "Charts 3"
@@ -21835,11 +22142,13 @@ msgid "The style used for the items and values."
 msgstr "Slog za predmete in vrednosti."
 
 #: ../gramps/plugins/drawreport/timeline.py:66
-msgid "sorted by|Birth Date"
+msgctxt "sorted by"
+msgid "Birth Date"
 msgstr "Datum rojstva"
 
 #: ../gramps/plugins/drawreport/timeline.py:67
-msgid "sorted by|Name"
+msgctxt "sorted by"
+msgid "Name"
 msgstr "Ime"
 
 #. Sort the people as requested
@@ -22406,8 +22715,8 @@ msgid ""
 "Questions%(html_end)s%(bold_end)s\n"
 "(needs a connection to the internet)\n"
 msgstr ""
-"%(bold_start)s%(gramps_FAQ_html_start)s%(html_middle)sVprašanja in odgovori"
-"%(html_end)s%(bold_end)s\n"
+"%(bold_start)s%(gramps_FAQ_html_start)s%(html_middle)sPogosto zastavljena "
+"vprašanja%(html_end)s%(bold_end)s\n"
 "(potrebna je internetna povezava)\n"
 
 #: ../gramps/plugins/gramplet/faqgramplet.py:66
@@ -22687,7 +22996,7 @@ msgstr "Dvosmerni grafikon"
 #: ../gramps/plugins/gramplet/gramplet.gpr.py:172
 #: ../gramps/plugins/gramplet/gramplet.gpr.py:178
 msgid "FAQ"
-msgstr "V&O"
+msgstr "PZV"
 
 #: ../gramps/plugins/gramplet/gramplet.gpr.py:173
 msgid "Gramplet showing frequently asked questions"
@@ -22755,7 +23064,8 @@ msgstr "Pripomoček za prikaz vseh priimkov v obliki oblaka"
 #: ../gramps/plugins/gramplet/gramplet.gpr.py:1221
 #: ../gramps/plugins/gramplet/gramplet.gpr.py:1235
 #: ../gramps/plugins/gramplet/gramplet.gpr.py:1249
-msgid "gramplet|To Do"
+msgctxt "gramplet"
+msgid "To Do"
 msgstr "Treba narediti"
 
 #: ../gramps/plugins/gramplet/gramplet.gpr.py:291
@@ -23396,9 +23706,8 @@ msgid "Gramplet showing the events for all the family"
 msgstr "Pripomoček za prikaz dogodkov vse družine"
 
 #: ../gramps/plugins/gramplet/leak.py:99
-#, fuzzy
 msgid "Referrer"
-msgstr "Navedba"
+msgstr "Vir navedbe"
 
 #: ../gramps/plugins/gramplet/leak.py:103
 msgid "Uncollected object"
@@ -23410,7 +23719,7 @@ msgstr "Osveži"
 
 #: ../gramps/plugins/gramplet/leak.py:122
 msgid "Press Refresh to see initial results"
-msgstr ""
+msgstr "Pritisnite Osveži za prikaz začetnih rezultatov"
 
 #: ../gramps/plugins/gramplet/leak.py:158
 #, python-format
@@ -23428,9 +23737,8 @@ msgid "Uncollected Objects: %s"
 msgstr "Nezbranih predmetov: %s"
 
 #: ../gramps/plugins/gramplet/leak.py:239
-#, fuzzy
 msgid "Reference Error"
-msgstr "Navedba"
+msgstr "Napaka sklica"
 
 #: ../gramps/plugins/gramplet/locations.py:81
 msgid "Double-click on a row to edit the selected place."
@@ -23499,7 +23807,8 @@ msgstr ""
 "Prelom po rodovih:\n"
 
 #: ../gramps/plugins/gramplet/pedigreegramplet.py:254
-msgid "percent sign or text string|%"
+msgctxt "percent sign or text string"
+msgid "%"
 msgstr "%"
 
 #: ../gramps/plugins/gramplet/pedigreegramplet.py:261
@@ -23608,9 +23917,9 @@ msgid "Active person: %s"
 msgstr "Aktivna oseba: %s"
 
 #: ../gramps/plugins/gramplet/relativegramplet.py:88
-#, fuzzy, python-format
+#, python-format
 msgid "%(count)d. %(relation)s: "
-msgstr "%(person)s, rojstvo%(relation)s"
+msgstr "%(count)d. %(relation)s: "
 
 #: ../gramps/plugins/gramplet/relativegramplet.py:94
 #, python-format
@@ -23853,7 +24162,8 @@ msgid "Gramps online manual"
 msgstr "Grampsov spletni priročnik"
 
 #: ../gramps/plugins/gramplet/welcomegramplet.py:112
-msgid "locale_suffix|"
+msgctxt "locale_suffix"
+msgid ""
 msgstr "sl"
 
 #: ../gramps/plugins/gramplet/welcomegramplet.py:113
@@ -24181,10 +24491,9 @@ msgstr ""
 "Moški bodo prikazani modro, ženske pa rdeče, če zgoraj ni drugače navedeno. "
 "Pri neznanem spolu posamezne osebe, bo ta prikazana v sivi barvi."
 
-#: ../gramps/plugins/graph/gvfamilylines.py:159
-#, fuzzy
+#: ../gramps/plugins/graph/gvfamilylines.py:160
 msgid "Rounded corners"
-msgstr "Uporabi zaobljene robove"
+msgstr "Zaobljena oglišča"
 
 #: ../gramps/plugins/graph/gvfamilylines.py:162
 #, fuzzy
@@ -24472,28 +24781,30 @@ msgstr "Za razlikovanje med moškimi in ženskami uporabi zaobljene robove."
 msgid "Graph Style"
 msgstr "Slog grafičnega prikaza"
 
-#: ../gramps/plugins/graph/gvhourglass.py:436
-#, fuzzy
-msgid "Force Ahnentafel order"
-msgstr "Poročilo o prednikih (Ahnentafel)"
-
 #: ../gramps/plugins/graph/gvhourglass.py:438
+msgid "Force Ahnentafel order"
+msgstr "Vsili vrstni red Ahnentafel"
+
+#: ../gramps/plugins/graph/gvhourglass.py:440
 msgid ""
 "Force Sosa / Sosa-Stradonitz / Ahnentafel layout order for all ancestors, so "
 "that fathers are always on the left branch and mothers are on the right "
 "branch."
 msgstr ""
-
-#: ../gramps/plugins/graph/gvhourglass.py:441
-#, fuzzy
-msgid "Ahnentafel number visible"
-msgstr "Poročilo o prednikih (Ahnentafel)"
+"Vsili Sosa / Sosa-Stradonitz / Ahnentafel vrstni red za vse prednike, tako "
+"da bodo očetje vedno na levi strani in matere na desni."
 
 #: ../gramps/plugins/graph/gvhourglass.py:443
+msgid "Ahnentafel number visible"
+msgstr "Vidne številke Ahnentafel"
+
+#: ../gramps/plugins/graph/gvhourglass.py:445
 msgid ""
 "Show Sosa / Sosa-Stradonitz / Ahnentafel number under all others "
 "informations."
 msgstr ""
+"Prikaži Sosa / Sosa-Stradonitz / Ahnentafel številke pod vsemi ostalimi "
+"podatki."
 
 #: ../gramps/plugins/graph/gvrelgraph.py:208
 #: ../gramps/plugins/textreport/indivcomplete.py:834
@@ -24507,15 +24818,13 @@ msgid "Determines what people are included in the graph"
 msgstr "Določa, katere osebe naj bodo vključene v prikaz"
 
 #. see bug report #11112
-#: ../gramps/plugins/graph/gvrelgraph.py:833
-#, fuzzy
+#: ../gramps/plugins/graph/gvrelgraph.py:836
 msgid "Use hexagons"
-msgstr "Uporabi senčenje"
+msgstr "Uporabi šestkotnike"
 
-#: ../gramps/plugins/graph/gvrelgraph.py:834
-#, fuzzy
+#: ../gramps/plugins/graph/gvrelgraph.py:837
 msgid "Use hexagons to differentiate those of unknown gender."
-msgstr "Za razlikovanje med moškimi in ženskami uporabi zaobljene robove."
+msgstr "Za razlikovanje oseb neznanega spola uporabi zaobljene šestkotnike."
 
 #. ###############################
 #: ../gramps/plugins/graph/gvrelgraph.py:862
@@ -24558,15 +24867,14 @@ msgstr "Vključi datume rojstev, porok in smrti ter kraje v isti vrstici"
 msgid "Whether to include dates and/or places"
 msgstr "Ali naj bodo vključeni datumi in kraji"
 
-#: ../gramps/plugins/graph/gvrelgraph.py:882
-#, fuzzy
+#: ../gramps/plugins/graph/gvrelgraph.py:885
 msgid "Show all family nodes"
-msgstr "Prikaži vozlišča družin"
+msgstr "Prikaži vsa vozlišča družin"
 
-#: ../gramps/plugins/graph/gvrelgraph.py:883
+#: ../gramps/plugins/graph/gvrelgraph.py:886
 msgid ""
 "Show family nodes even if the output contains only one member of the family."
-msgstr ""
+msgstr "Prikaži vozlišča družin, čeprav izpis vsebuje le enega člana družine."
 
 #: ../gramps/plugins/graph/gvrelgraph.py:887
 msgid "Include URLs"
@@ -24740,7 +25048,8 @@ msgid "call"
 msgstr "vzdevek"
 
 #: ../gramps/plugins/importer/importcsv.py:166
-msgid "Person or Place|title"
+msgctxt "Person or Place"
+msgid "title"
 msgstr "naziv"
 
 #: ../gramps/plugins/importer/importcsv.py:166
@@ -24824,124 +25133,100 @@ msgid "person"
 msgstr "oseba"
 
 #: ../gramps/plugins/importer/importcsv.py:210
-#, fuzzy
 msgid "Occupation description"
-msgstr "Opis različice"
+msgstr "Opis poklica"
 
 #: ../gramps/plugins/importer/importcsv.py:210
-#, fuzzy
 msgid "occupationdescr"
-msgstr "Poklic"
+msgstr "occupationdescr"
 
 #: ../gramps/plugins/importer/importcsv.py:211
-#, fuzzy
 msgid "Occupation date"
-msgstr "Poklic"
+msgstr "Datum poklica"
 
 #: ../gramps/plugins/importer/importcsv.py:211
-#, fuzzy
 msgid "occupationdate"
-msgstr "Poklic"
+msgstr "occupationdate"
 
 #: ../gramps/plugins/importer/importcsv.py:212
-#, fuzzy
 msgid "Occupation place"
-msgstr "Poklic"
+msgstr "Kraj poklica"
 
 #: ../gramps/plugins/importer/importcsv.py:212
-#, fuzzy
 msgid "occupationplace"
-msgstr "Poklic"
+msgstr "occupationplace"
 
 #: ../gramps/plugins/importer/importcsv.py:213
-#, fuzzy
 msgid "Occupation place id"
-msgstr "Poklic"
+msgstr "id. kraja poklica"
 
 #: ../gramps/plugins/importer/importcsv.py:213
-#, fuzzy
 msgid "occupationplace_id"
-msgstr "Poklic"
+msgstr "occupationplace_id"
 
 #: ../gramps/plugins/importer/importcsv.py:214
-#, fuzzy
 msgid "Occupation source"
-msgstr "Poklic"
+msgstr "Vir poklica"
 
 #: ../gramps/plugins/importer/importcsv.py:214
-#, fuzzy
 msgid "occupationsource"
-msgstr "Poklic"
+msgstr "occupationsource"
 
 #: ../gramps/plugins/importer/importcsv.py:216
-#, fuzzy
 msgid "residence date"
-msgstr "Domovanje"
+msgstr "datum domovanja"
 
 #: ../gramps/plugins/importer/importcsv.py:216
-#, fuzzy
 msgid "residencedate"
-msgstr "Domovanje"
+msgstr "residencedate"
 
 #: ../gramps/plugins/importer/importcsv.py:217
-#, fuzzy
 msgid "residence place"
-msgstr "Domovanje"
+msgstr "kraj domovanja"
 
 #: ../gramps/plugins/importer/importcsv.py:217
-#, fuzzy
 msgid "residenceplace"
-msgstr "Domovanje"
+msgstr "residenceplace"
 
 #: ../gramps/plugins/importer/importcsv.py:218
-#, fuzzy
 msgid "residence place id"
-msgstr "id. kraja smrti"
+msgstr "id. kraja domovanja"
 
 #: ../gramps/plugins/importer/importcsv.py:218
-#, fuzzy
 msgid "residenceplace_id"
-msgstr "Domovanje"
+msgstr "residenceplace_id"
 
 #: ../gramps/plugins/importer/importcsv.py:219
-#, fuzzy
 msgid "residence source"
-msgstr "Vključi vire"
+msgstr "vir domovanja"
 
 #: ../gramps/plugins/importer/importcsv.py:219
-#, fuzzy
 msgid "residencesource"
-msgstr "Domovanje"
+msgstr "residencesource"
 
 #: ../gramps/plugins/importer/importcsv.py:221
-#, fuzzy
 msgid "attribute type"
-msgstr "Opomba za atribut"
+msgstr "vrsta atributa"
 
 #: ../gramps/plugins/importer/importcsv.py:221
-#, fuzzy
 msgid "attributetype"
-msgstr "Opomba za atribut"
+msgstr "attributetype"
 
 #: ../gramps/plugins/importer/importcsv.py:222
-#, fuzzy
 msgid "attribute value"
-msgstr "Opomba za atribut"
+msgstr "vrednost atributa"
 
 #: ../gramps/plugins/importer/importcsv.py:222
-#, fuzzy
 msgid "attributevalue"
-msgstr "Atribut"
+msgstr "attributevalue"
 
 #: ../gramps/plugins/importer/importcsv.py:223
-#, fuzzy
 msgid "attribute source"
-msgstr "Opomba za atribut"
+msgstr "vir atributa"
 
 #: ../gramps/plugins/importer/importcsv.py:223
-#, fuzzy
 msgid "attributesource"
-msgstr "Atributi"
+msgstr "attributesource"
 
 #. ----------------------------------
 #: ../gramps/plugins/importer/importcsv.py:226
@@ -25288,17 +25573,20 @@ msgstr ""
 
 #: ../gramps/plugins/importer/importprogen.glade:49
 #: ../gramps/plugins/importer/importprogen.glade:70
-#, fuzzy
 msgid ""
 "Source reference\n"
 "(out of Settings)"
-msgstr "Opomba za navedbo vira"
+msgstr ""
+"Navedba vira\n"
+"(iz nastavitev)"
 
 #: ../gramps/plugins/importer/importprogen.glade:124
 msgid ""
 "Source reference text\n"
 "(Text & import Filename)."
 msgstr ""
+"Besedilo navedbe vira\n"
+"(Besedilo in ime datoteka uvoza)."
 
 #: ../gramps/plugins/importer/importprogen.glade:155
 #: ../gramps/plugins/importer/importprogen.glade:325
@@ -25311,50 +25599,57 @@ msgid ""
 "Source attribute text\n"
 "(Text, import Filename & (System-)Date)."
 msgstr ""
+"Besedilo atributa vira\n"
+"(Besedilo, uvozna datoteka & (Sistemski )Datum)."
 
 #: ../gramps/plugins/importer/importprogen.glade:190
 #: ../gramps/plugins/importer/importprogen.glade:207
-#, fuzzy
 msgid "Citation reference."
-msgstr "Navedbe navedkov"
+msgstr "Navedba navedka."
 
 #: ../gramps/plugins/importer/importprogen.glade:274
 msgid ""
 "Citation confidence level\n"
 "(Very low - very high)."
 msgstr ""
+"Stopnja zanesljivosti navedka\n"
+"(Zelo nizka - zelo visoka)."
 
 #: ../gramps/plugins/importer/importprogen.glade:308
 msgid ""
 "Citation volume/page text\n"
 "(Text & (System-)Date)."
 msgstr ""
+"Besedilo dela / strani navedka\n"
+"(Besedilo & (Sistemski )Datum)."
 
 #: ../gramps/plugins/importer/importprogen.glade:341
 msgid ""
 "Citation attribute text\n"
 "(Text, import Filename & (System-)Date)."
 msgstr ""
+"Besedilo atributa navedka\n"
+"(Besedilo, uvozna datoteka & (Sistemski )Datum)."
 
 #: ../gramps/plugins/importer/importprogen.glade:362
-#, fuzzy
 msgid "Import Text"
-msgstr "Orodje uvoza"
+msgstr "Uvozi besedilo"
 
 #: ../gramps/plugins/importer/importprogen.glade:415
 msgid ""
 "Default Tagtext\n"
 "(out of Settings)."
 msgstr ""
+"Privzeto besedilo oznake\n"
+"(iz nastavitev)"
 
 #: ../gramps/plugins/importer/importprogen.glade:443
-#, fuzzy
 msgid "Import Filename."
-msgstr "Uvozi rodovnik"
+msgstr "Uvozi ime datoteke."
 
 #: ../gramps/plugins/importer/importprogen.glade:492
 msgid "Default (System-)Date."
-msgstr ""
+msgstr "Privzet (Sistemski )Datum."
 
 #: ../gramps/plugins/importer/importprogen.glade:766
 #: ../gramps/plugins/importer/importprogen.glade:781
@@ -25364,86 +25659,99 @@ msgstr ""
 #: ../gramps/plugins/importer/importprogen.glade:841
 #: ../gramps/plugins/importer/importprogen.glade:856
 msgid "Combined default text + filename + date."
-msgstr ""
+msgstr "Kombinirano privzeto besedilo + ime datoteke + datum."
 
 #: ../gramps/plugins/importer/importprogen.glade:1111
 msgid ""
 "Copy Default Text\n"
 "to all Tag Text'."
 msgstr ""
+"Kopiraj privezto besedilo\n"
+"na vse oznake."
 
 #: ../gramps/plugins/importer/importprogen.glade:1130
 msgid ""
 "Copy Default Filename\n"
 "to all sensitive Tag Text'."
 msgstr ""
+"Kopiraj privzeto ime datoteke\n"
+"na vse oznake občutljivo."
 
 #: ../gramps/plugins/importer/importprogen.glade:1149
 msgid ""
 "Copy Default Date\n"
 "to all sensitive Tag Text'."
 msgstr ""
+"Kopiraj privzet datum\n"
+"na vse oznake občutljivo."
 
 #: ../gramps/plugins/importer/importprogen.glade:1164
-#, fuzzy
 msgid "  Objects"
-msgstr "Predmet"
+msgstr "  Predmeti"
 
 #: ../gramps/plugins/importer/importprogen.glade:1168
 msgid ""
 "Enable/Disable\n"
 "all object tags."
 msgstr ""
+"Omogoči / onemogoči\n"
+"vse oznake predmetov."
 
 #: ../gramps/plugins/importer/importprogen.glade:1198
-#, fuzzy
 msgid "Tag Text"
-msgstr "Neoblikovano besedilo"
+msgstr "Besedilo oznake"
 
 #: ../gramps/plugins/importer/importprogen.glade:1217
-#, fuzzy
 msgid "Import Objects"
-msgstr "_Odstrani predmet"
+msgstr "Uvozi predmete"
 
 #: ../gramps/plugins/importer/importprogen.glade:1241
 msgid ""
 "Enable/Disable\n"
 "Person import."
 msgstr ""
+"Omogoči / onemoogoči\n"
+"uvoz oseb."
 
 #: ../gramps/plugins/importer/importprogen.glade:1260
 msgid ""
 "Enable/Disable\n"
 "Family import."
 msgstr ""
+"Omogoči / onemogoči\n"
+"uvoz družin."
 
 #: ../gramps/plugins/importer/importprogen.glade:1279
 msgid ""
 "Enable/Disable\n"
 "Child import."
 msgstr ""
+"Omogoči / onemogoči\n"
+"uvoz otrok."
 
 #: ../gramps/plugins/importer/importprogen.glade:1330
 msgid ""
 "Use original Person\n"
 "Identifier as Gramps ID."
 msgstr ""
+"Uporabi izvirno oznako\n"
+"osebe za ID."
 
 #: ../gramps/plugins/importer/importprogen.glade:1349
 msgid ""
 "Use original Family\n"
 "Identifier as Gramps ID."
 msgstr ""
+"Uporabi izvirno oznako\n"
+"družine za ID."
 
 #: ../gramps/plugins/importer/importprogen.glade:1369
-#, fuzzy
 msgid "Identifier"
-msgstr "Predlog"
+msgstr "Označevalec"
 
 #: ../gramps/plugins/importer/importprogen.glade:1400
-#, fuzzy
 msgid "Name change"
-msgstr "Zadnjič spremenjeno"
+msgstr "Sprememba imena"
 
 #: ../gramps/plugins/importer/importprogen.glade:1461
 #, fuzzy
@@ -25451,32 +25759,36 @@ msgid "Event date"
 msgstr "Datum dogodka"
 
 #: ../gramps/plugins/importer/importprogen.glade:1476
-#, fuzzy
 msgid ""
 "Store birth date in\n"
 "event description."
-msgstr "Izlušči opis dogodka"
+msgstr ""
+"Shrani datum rojstva\n"
+"v opisu dogodka."
 
 #: ../gramps/plugins/importer/importprogen.glade:1495
-#, fuzzy
 msgid ""
 "Store death date in\n"
 "event description."
-msgstr "Izlušči opis dogodka"
+msgstr ""
+"Shrani datum smrti\n"
+"v opisu dogodka"
 
 #: ../gramps/plugins/importer/importprogen.glade:1515
 msgid "Diverse"
-msgstr ""
+msgstr "Razno"
 
 #: ../gramps/plugins/importer/importprogen.glade:1526
 msgid "REFN"
-msgstr ""
+msgstr "REFN"
 
 #: ../gramps/plugins/importer/importprogen.glade:1530
 msgid ""
 "Store REFN number\n"
 "in event description."
 msgstr ""
+"Shrani število REFN\n"
+"v opisu dogodka."
 
 #: ../gramps/plugins/importer/importprogen.glade:1548
 #: ../gramps/plugins/importer/importprogen.glade:1595
@@ -25484,47 +25796,49 @@ msgid ""
 "Use death information\n"
 "as death cause event."
 msgstr ""
+"Uporabi podatke o smrti\n"
+"za dogodek vzroka smrti."
 
 #: ../gramps/plugins/importer/importprogen.glade:1598
-#, fuzzy
 msgid "(-cause)"
-msgstr "Vzrok"
+msgstr "(-vzrok)"
 
 #: ../gramps/plugins/importer/importprogen.glade:1610
-#, fuzzy
 msgid "Male surname"
-msgstr "Izberi priimek"
+msgstr "Moški priimek"
 
 #: ../gramps/plugins/importer/importprogen.glade:1614
 msgid ""
 "Change name of male\n"
 "to e.g. wifes name."
 msgstr ""
+"Spremeni ime moškega\n"
+"v npr. ime žene."
 
 #: ../gramps/plugins/importer/importprogen.glade:1629
-#, fuzzy
 msgid "Female surname"
-msgstr "Izberi priimek"
+msgstr "Ženski priimek"
 
 #: ../gramps/plugins/importer/importprogen.glade:1633
 msgid ""
 "Change name of female\n"
 "to e.g. husbands name."
 msgstr ""
+"Spremeni ime ženske\n"
+"v npr. ime moža."
 
 #: ../gramps/plugins/importer/importprogen.glade:1692
-#, fuzzy
 msgid "Option"
-msgstr "Možnosti"
+msgstr "Možnost"
 
 #: ../gramps/plugins/importer/importprogen.glade:1731
-#, fuzzy
 msgid "_Ok"
-msgstr "V redu"
+msgstr "V _redu"
 
 #: ../gramps/plugins/importer/importprogen.py:62
-msgid "manual|Import_from_another_genealogy_program"
-msgstr ""
+msgctxt "manual"
+msgid "Import_from_another_genealogy_program"
+msgstr "Uvoz_iz_drugih_rodoslovnih_programov"
 
 #: ../gramps/plugins/importer/importprogen.py:121
 #, python-format
@@ -25537,11 +25851,10 @@ msgstr "Uvozi iz Pro-Gen (%s)"
 msgid "Pro-Gen data error"
 msgstr "Napaka v podatkih Pro-Gen"
 
-#: ../gramps/plugins/importer/importprogen.py:457
-#: ../gramps/plugins/importer/importprogen.py:465
-#, fuzzy
+#: ../gramps/plugins/importer/importprogen.py:458
+#: ../gramps/plugins/importer/importprogen.py:466
 msgid "Import Pro-Gen"
-msgstr "Uvozi iz Pro-Gen (%s)"
+msgstr "Uvozi iz Pro-Gen"
 
 #: ../gramps/plugins/importer/importvcard.py:228
 #, python-format
@@ -29984,7 +30297,8 @@ msgstr "_Združi ..."
 #: ../gramps/plugins/view/repoview.py:329
 #: ../gramps/plugins/view/sourceview.py:186
 #: ../gramps/plugins/view/sourceview.py:315
-msgid "action|_Edit..."
+msgctxt "action"
+msgid "_Edit..."
 msgstr "_Uredi ..."
 
 #: ../gramps/plugins/lib/libpersonview.py:246
@@ -29998,6 +30312,17 @@ msgstr "Urejevalnik filtrov za osebe"
 #: ../gramps/plugins/view/pedigreeview.py:1657
 msgid "Set _Home Person"
 msgstr "Nastavi _izhodiščno osebo"
+
+#: ../gramps/plugins/lib/libpersonview.py:260
+#: ../gramps/plugins/view/fanchartview.py:184
+#: ../gramps/plugins/view/geoclose.py:111
+#: ../gramps/plugins/view/geofamclose.py:109
+#: ../gramps/plugins/view/geomoves.py:108
+#: ../gramps/plugins/view/geoperson.py:109
+#: ../gramps/plugins/view/pedigreeview.py:693
+#: ../gramps/plugins/view/relview.py:436
+msgid "Go to the home person"
+msgstr "Pojdi na izhodiščno osebo"
 
 #: ../gramps/plugins/lib/libpersonview.py:260
 #: ../gramps/plugins/view/fanchartview.py:184
@@ -30077,9 +30402,8 @@ msgstr "Uredi ..."
 #: ../gramps/plugins/view/noteview.py:279
 #: ../gramps/plugins/view/repoview.py:292
 #: ../gramps/plugins/view/sourceview.py:278
-#, fuzzy
 msgid "Forward"
-msgstr "_Naprej"
+msgstr "Naprej"
 
 #: ../gramps/plugins/lib/libpersonview.py:454
 msgid "_Delete Person"
@@ -30235,9 +30559,8 @@ msgid "Provides the Base needed for the List People views."
 msgstr "Zagotavlja zbirko podatkov, potrebno za poglede seznama oseb."
 
 #: ../gramps/plugins/lib/libplugins.gpr.py:247
-#, fuzzy
 msgid "Provides common functionality for Pro-Gen import"
-msgstr "Zagotavlja splošne storitve pri uvozu in izvozu Gramps XML."
+msgstr "Zagotavlja splošne storitve pri uvozu Pro-Gen"
 
 #: ../gramps/plugins/lib/libplugins.gpr.py:265
 msgid "Provides the Base needed for the List Place views."
@@ -30259,21 +30582,19 @@ msgid "Field '%(fldname)s' not found"
 msgstr "Polja '%(fldname)s' ni bilo mogoče najti"
 
 #: ../gramps/plugins/lib/libprogen.py:491
-#, fuzzy, python-format
+#, python-format
 msgid "Not a (right) DEF file: %(dname)s"
-msgstr "Ni bilo mogoče najti datoteke DEF: %(dname)s"
+msgstr "Napačna (ali sploh ni) datoteka DEF: %(dname)s"
 
 #: ../gramps/plugins/lib/libprogen.py:498
 #: ../gramps/plugins/lib/libprogen.py:732
-#, fuzzy
 msgid "Import from Pro-Gen"
-msgstr "Uvozi iz Pro-Gen (%s)"
+msgstr "Uvozi iz Pro-Gen"
 
 #. start feedback about import progress (GUI / TXT)
 #: ../gramps/plugins/lib/libprogen.py:498
-#, fuzzy
 msgid "Initializing."
-msgstr "Nameščanje ..."
+msgstr "Pripravljanje."
 
 #. Raise a error message
 #: ../gramps/plugins/lib/libprogen.py:515
@@ -30285,9 +30606,8 @@ msgid "Pro-Gen import"
 msgstr "Uvoz iz Pro-Gen"
 
 #: ../gramps/plugins/lib/libprogen.py:539
-#, fuzzy
 msgid "Saving."
-msgstr "Iskanje ..."
+msgstr "Shranjevanje."
 
 #: ../gramps/plugins/lib/libprogen.py:928
 #, fuzzy
@@ -30300,70 +30620,61 @@ msgstr "Uvoz iz Pro-Gen"
 msgid "Date did not match: '%(text)s' (%(msg)s)"
 msgstr "Datum se ne ujema: '%(text)s' (%(msg)s)"
 
-#: ../gramps/plugins/lib/libprogen.py:1152
-#, fuzzy, python-format
+#: ../gramps/plugins/lib/libprogen.py:1153
+#, python-format
 msgid "Time: %s"
-msgstr "Živi: %s"
+msgstr "Čas: %s"
 
 #. start feedback about import progress (GUI/TXT)
-#: ../gramps/plugins/lib/libprogen.py:1206
-#, fuzzy
+#: ../gramps/plugins/lib/libprogen.py:1207
 msgid "Importing persons."
-msgstr "Razvrščanje osebnih dogodkov ..."
+msgstr "Uvažanje oseb."
 
-#: ../gramps/plugins/lib/libprogen.py:1412
-#, fuzzy
+#: ../gramps/plugins/lib/libprogen.py:1414
 msgid "see address on "
-msgstr "_Spletni naslov:"
+msgstr "poglej naslov pri"
 
-#: ../gramps/plugins/lib/libprogen.py:1415
-#, fuzzy
+#: ../gramps/plugins/lib/libprogen.py:1417
 msgid "see also address"
-msgstr "_Spletni naslov:"
+msgstr "poglej tudi naslov"
 
-#: ../gramps/plugins/lib/libprogen.py:1515
-#, fuzzy
+#: ../gramps/plugins/lib/libprogen.py:1517
 msgid "Death cause"
-msgstr "vzrok smrti"
+msgstr "Vzrok smrti"
 
 #. start feedback about import progress (GUI/TXT)
-#: ../gramps/plugins/lib/libprogen.py:1584
-#, fuzzy
+#: ../gramps/plugins/lib/libprogen.py:1586
 msgid "Importing families."
-msgstr "Zapisovanje družin"
+msgstr "Uvažanje družin."
 
 #: ../gramps/plugins/lib/libprogen.py:1689
 #, fuzzy
 msgid "Civil union"
 msgstr "Civilna zveza"
 
-#: ../gramps/plugins/lib/libprogen.py:1794
-#, fuzzy
+#: ../gramps/plugins/lib/libprogen.py:1796
 msgid "Wedding"
-msgstr "Polnjenje:"
+msgstr "Poroka"
 
-#: ../gramps/plugins/lib/libprogen.py:1829
+#: ../gramps/plugins/lib/libprogen.py:1831
 msgid "future"
-msgstr ""
+msgstr "prihodnost"
 
 #. We have seen some case insensitivity in DEF files ...
 #. F13: Father
 #. F14: Mother
 #. start feedback about import progress (GUI/TXT)
-#: ../gramps/plugins/lib/libprogen.py:1901
-#, fuzzy
+#: ../gramps/plugins/lib/libprogen.py:1903
 msgid "Adding children."
-msgstr " (brez otrok)"
+msgstr "Dodajanje otrok."
 
-#: ../gramps/plugins/lib/libprogen.py:1927
-#, fuzzy
+#: ../gramps/plugins/lib/libprogen.py:1929
 msgid "Cannot find father for I%(person)s (Father=%(father))"
-msgstr "Ni mogoče najti očeta za I%(person)s (Oče=%(id)d)"
+msgstr "Ni mogoče najti očeta za I%(person)s (Oče=%(father))"
 
-#: ../gramps/plugins/lib/libprogen.py:1930
-#, fuzzy
+#: ../gramps/plugins/lib/libprogen.py:1932
 msgid "Cannot find mother for I%(person)s (Mother=%(mother))"
-msgstr "Ni mogoče najti matere za I%(person)s (Mati=%(mother)d)"
+msgstr "Ni mogoče najti matere za I%(person)s (Mati=%(mother))"
 
 #: ../gramps/plugins/lib/librecords.py:55
 msgid "Youngest living person"
@@ -30628,6 +30939,23 @@ msgstr "Kje naj bodo shranjene datoteke za način brez povezave"
 msgid "Can't create tiles cache directory %s"
 msgstr "Ni mogoče ustvariti mape za predpomnilnik sličic: %s"
 
+#: ../gramps/plugins/lib/maps/osmgps.py:143
+#, python-format
+msgid ""
+"You must verify and change the tiles cache\n"
+"...\n"
+"[geography]\n"
+"...\n"
+"path='bad/path'\n"
+"...\n"
+"in the gramps.ini file :\n"
+"%s\n"
+"\n"
+"Before to change the gramps.ini file, you need to close gramps\n"
+"\n"
+"The next errors will be normal"
+msgstr ""
+
 #: ../gramps/plugins/lib/maps/osmgps.py:161
 #: ../gramps/plugins/lib/maps/osmgps.py:226
 #, python-format
@@ -30653,12 +30981,17 @@ msgid ""
 "In the following table you may have :\n"
 " - a green row related to a selected place."
 msgstr ""
+"\n"
+"V naslednji tabeli imate lahko:\n"
+" - zeleno vrstico, ki se nanaša na izbrani kraj."
 
 #: ../gramps/plugins/lib/maps/placeselection.py:128
 msgid ""
 "\n"
 " - a red row related to a geocoding result."
 msgstr ""
+"\n"
+" - rdečo vrstico, ki se nanaša na rezultat geokodiranja."
 
 #: ../gramps/plugins/lib/maps/placeselection.py:165
 msgid "The green values in the row correspond to the current place values."
@@ -30914,123 +31247,153 @@ msgstr "Število ljudi z izbranim imenom atributa: %d.\n"
 
 #. else "nearby" comments are ignored
 #: ../gramps/plugins/quickview/filterbyname.py:41
-msgid "Filtering_on|all"
+msgctxt "Filtering_on"
+msgid "all"
 msgstr "vseh"
 
 #: ../gramps/plugins/quickview/filterbyname.py:42
-msgid "Filtering_on|Inverse Person"
+msgctxt "Filtering_on"
+msgid "Inverse Person"
 msgstr "osebi obrnjeno"
 
 #: ../gramps/plugins/quickview/filterbyname.py:43
-msgid "Filtering_on|Inverse Family"
+msgctxt "Filtering_on"
+msgid "Inverse Family"
 msgstr "družini obrnjeno"
 
 #: ../gramps/plugins/quickview/filterbyname.py:44
-msgid "Filtering_on|Inverse Event"
+msgctxt "Filtering_on"
+msgid "Inverse Event"
 msgstr "dogodku obrnjeno"
 
 #: ../gramps/plugins/quickview/filterbyname.py:45
-msgid "Filtering_on|Inverse Place"
+msgctxt "Filtering_on"
+msgid "Inverse Place"
 msgstr "kraju obrnjeno"
 
 #: ../gramps/plugins/quickview/filterbyname.py:46
-msgid "Filtering_on|Inverse Source"
+msgctxt "Filtering_on"
+msgid "Inverse Source"
 msgstr "viru obrnjeno"
 
 #: ../gramps/plugins/quickview/filterbyname.py:47
-msgid "Filtering_on|Inverse Repository"
+msgctxt "Filtering_on"
+msgid "Inverse Repository"
 msgstr "nahajališču obrnjeno"
 
 #: ../gramps/plugins/quickview/filterbyname.py:48
-msgid "Filtering_on|Inverse Media"
+msgctxt "Filtering_on"
+msgid "Inverse Media"
 msgstr "predmetu obrnjeno"
 
 #: ../gramps/plugins/quickview/filterbyname.py:49
-msgid "Filtering_on|Inverse Note"
+msgctxt "Filtering_on"
+msgid "Inverse Note"
 msgstr "opombi obrnjeno"
 
 #: ../gramps/plugins/quickview/filterbyname.py:50
-msgid "Filtering_on|all people"
+msgctxt "Filtering_on"
+msgid "all people"
 msgstr "vseh osebah"
 
 #: ../gramps/plugins/quickview/filterbyname.py:51
-msgid "Filtering_on|all families"
+msgctxt "Filtering_on"
+msgid "all families"
 msgstr "vseh družinah"
 
 #: ../gramps/plugins/quickview/filterbyname.py:52
-msgid "Filtering_on|all events"
+msgctxt "Filtering_on"
+msgid "all events"
 msgstr "vseh dogodkih"
 
 #: ../gramps/plugins/quickview/filterbyname.py:53
-msgid "Filtering_on|all places"
+msgctxt "Filtering_on"
+msgid "all places"
 msgstr "vseh krajih"
 
 #: ../gramps/plugins/quickview/filterbyname.py:54
-msgid "Filtering_on|all sources"
+msgctxt "Filtering_on"
+msgid "all sources"
 msgstr "vseh virih"
 
 #: ../gramps/plugins/quickview/filterbyname.py:55
-msgid "Filtering_on|all repositories"
+msgctxt "Filtering_on"
+msgid "all repositories"
 msgstr "vseh nahajališčih"
 
 #: ../gramps/plugins/quickview/filterbyname.py:56
-msgid "Filtering_on|all media"
+msgctxt "Filtering_on"
+msgid "all media"
 msgstr "vseh predmetih"
 
 #: ../gramps/plugins/quickview/filterbyname.py:57
-msgid "Filtering_on|all notes"
+msgctxt "Filtering_on"
+msgid "all notes"
 msgstr "vseh opombah"
 
 #: ../gramps/plugins/quickview/filterbyname.py:58
-msgid "Filtering_on|males"
+msgctxt "Filtering_on"
+msgid "males"
 msgstr "moških"
 
 #: ../gramps/plugins/quickview/filterbyname.py:59
-msgid "Filtering_on|females"
+msgctxt "Filtering_on"
+msgid "females"
 msgstr "ženskah"
 
 #: ../gramps/plugins/quickview/filterbyname.py:61
-msgid "Filtering_on|people with unknown gender"
+msgctxt "Filtering_on"
+msgid "people with unknown gender"
 msgstr "osebah neznanega spola"
 
 #: ../gramps/plugins/quickview/filterbyname.py:63
-msgid "Filtering_on|incomplete names"
+msgctxt "Filtering_on"
+msgid "incomplete names"
 msgstr "nepopolnih imenih"
 
 #: ../gramps/plugins/quickview/filterbyname.py:65
-msgid "Filtering_on|people with missing birth dates"
+msgctxt "Filtering_on"
+msgid "people with missing birth dates"
 msgstr "osebah brez datuma rojstva"
 
 #: ../gramps/plugins/quickview/filterbyname.py:66
-msgid "Filtering_on|disconnected people"
+msgctxt "Filtering_on"
+msgid "disconnected people"
 msgstr "nepovezanih osebah"
 
 #: ../gramps/plugins/quickview/filterbyname.py:67
-msgid "Filtering_on|unique surnames"
+msgctxt "Filtering_on"
+msgid "unique surnames"
 msgstr "različnih priimkih"
 
 #: ../gramps/plugins/quickview/filterbyname.py:68
-msgid "Filtering_on|people with media"
+msgctxt "Filtering_on"
+msgid "people with media"
 msgstr "osebah z zunanjimi predmeti"
 
 #: ../gramps/plugins/quickview/filterbyname.py:69
-msgid "Filtering_on|media references"
+msgctxt "Filtering_on"
+msgid "media references"
 msgstr "navedbah na zunanje predmete"
 
 #: ../gramps/plugins/quickview/filterbyname.py:70
-msgid "Filtering_on|unique media"
+msgctxt "Filtering_on"
+msgid "unique media"
 msgstr "različnih zunanjih predmetih"
 
 #: ../gramps/plugins/quickview/filterbyname.py:71
-msgid "Filtering_on|missing media"
+msgctxt "Filtering_on"
+msgid "missing media"
 msgstr "manjkajočih zunanjih predmetih"
 
 #: ../gramps/plugins/quickview/filterbyname.py:72
-msgid "Filtering_on|media by size"
+msgctxt "Filtering_on"
+msgid "media by size"
 msgstr "velikosti zunanjih predmetov"
 
 #: ../gramps/plugins/quickview/filterbyname.py:73
-msgid "Filtering_on|list of people"
+msgctxt "Filtering_on"
+msgid "list of people"
 msgstr "seznamu oseb"
 
 #: ../gramps/plugins/quickview/filterbyname.py:85
@@ -31675,7 +32038,7 @@ msgstr "Moje poročilo o rojstnih dnevih"
 
 #: ../gramps/plugins/textreport/birthdayreport.py:68
 msgid "✝"
-msgstr ""
+msgstr "✝"
 
 #. feature request 2356: avoid genitive form
 #: ../gramps/plugins/textreport/birthdayreport.py:221
@@ -31684,32 +32047,32 @@ msgid "Relationships shown are to %s"
 msgstr "Prikazano je sorodstvo glede na osebo %s"
 
 #: ../gramps/plugins/textreport/birthdayreport.py:333
-#, fuzzy, python-format
+#, python-format
 msgid "* %(person)s, birth%(relation)s"
-msgstr "%(person)s, rojstvo%(relation)s"
+msgstr "* %(person)s, rojstvo%(relation)s"
 
 #. translators: leave all/any {...} untranslated
 #: ../gramps/plugins/textreport/birthdayreport.py:338
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "* {year}{person}{dead}, {age}{relation}"
 msgid_plural "* {year}{person}{dead}, {age}{relation}"
-msgstr[0] "{person}, {age}{relation}"
-msgstr[1] "{person}, {age}{relation}"
-msgstr[2] "{person}, {age}{relation}"
-msgstr[3] "{person}, {age}{relation}"
+msgstr[0] "* {year}{person}{dead}, {age}{relation}"
+msgstr[1] "* {year}{person}{dead}, {age}{relation}"
+msgstr[2] "* {year}{person}{dead}, {age}{relation}"
+msgstr[3] "* {year}{person}{dead}, {age}{relation}"
 
 #: ../gramps/plugins/textreport/birthdayreport.py:402
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "⚭ %(spouse)s and\n"
 " %(person)s, wedding"
 msgstr ""
-"%(spouse)s in\n"
+"⚭ %(spouse)s in\n"
 " %(person)s, poroka"
 
 #. translators: leave all/any {...} untranslated
 #: ../gramps/plugins/textreport/birthdayreport.py:407
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "⚭ {year}{spouse}{deadtxt2} and\n"
 " {person}{deadtxt1}, {nyears}"
@@ -31717,31 +32080,31 @@ msgid_plural ""
 "⚭ {year}{spouse}{deadtxt2} and\n"
 " {person}{deadtxt1}, {nyears}"
 msgstr[0] ""
-"{spouse} in\n"
-" {person}, {nyears}"
+"⚭ {year}{spouse}{deadtxt2} in\n"
+" {person}{deadtxt1}, {nyears}"
 msgstr[1] ""
-"{spouse} in\n"
-" {person}, {nyears}"
+"⚭ {year}{spouse}{deadtxt2} in\n"
+" {person}{deadtxt1}, {nyears}"
 msgstr[2] ""
-"{spouse} in\n"
-" {person}, {nyears}"
+"⚭ {year}{spouse}{deadtxt2} in\n"
+" {person}{deadtxt1}, {nyears}"
 msgstr[3] ""
-"{spouse} in\n"
-" {person}, {nyears}"
+"⚭ {year}{spouse}{deadtxt2} in\n"
+" {person}{deadtxt1}, {nyears}"
 
 #: ../gramps/plugins/textreport/birthdayreport.py:442
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "✝ {person}, death {relation}"
-msgstr "{person}, {age}{relation}"
+msgstr "✝ {person}, smrt {relation}"
 
 #: ../gramps/plugins/textreport/birthdayreport.py:444
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "✝ {year}{person}, {age}{relation}"
 msgid_plural "✝ {year}{person}, {age}{relation}"
-msgstr[0] "{person}, {age}{relation}"
-msgstr[1] "{person}, {age}{relation}"
-msgstr[2] "{person}, {age}{relation}"
-msgstr[3] "{person}, {age}{relation}"
+msgstr[0] "✝ {year}{person}, {age}{relation}"
+msgstr[1] "✝ {year}{person}, {age}{relation}"
+msgstr[2] "✝ {year}{person}, {age}{relation}"
+msgstr[3] "✝ {year}{person}, {age}{relation}"
 
 #: ../gramps/plugins/textreport/birthdayreport.py:475
 #: ../gramps/plugins/textreport/familygroup.py:716
@@ -31774,24 +32137,20 @@ msgid "Include only living people in the report"
 msgstr "V poročilo vključi samo žive osebe"
 
 #: ../gramps/plugins/textreport/birthdayreport.py:511
-#, fuzzy
 msgid "Dead Symbol"
-msgstr "Mrtva mati"
+msgstr "Simbol za smrt"
 
 #: ../gramps/plugins/textreport/birthdayreport.py:512
-#, fuzzy
 msgid "This will show after name to indicate that person is dead"
-msgstr "Označite, da so podatki o osebi zaključeni"
+msgstr "Simbol po sledil imenu kot oznaka, da je oseba umrla"
 
 #: ../gramps/plugins/textreport/birthdayreport.py:519
-#, fuzzy
 msgid "Show event year"
-msgstr "Nova vrsta dogodka:"
+msgstr "Pokaži leto dogodka"
 
 #: ../gramps/plugins/textreport/birthdayreport.py:520
-#, fuzzy
 msgid "Prints the year the event took place in the report"
-msgstr "Določi, katere osebe so vključene v poročilo"
+msgstr "V poročilu natisne letnico dogodka"
 
 #: ../gramps/plugins/textreport/birthdayreport.py:525
 #: ../gramps/plugins/textreport/birthdayreport.py:527
@@ -31799,14 +32158,12 @@ msgid "Year of report"
 msgstr "Leto poročila"
 
 #: ../gramps/plugins/textreport/birthdayreport.py:563
-#, fuzzy
 msgid "Include death anniversaries"
-msgstr "Vključi obletnice"
+msgstr "Vključi obletnice smrti"
 
 #: ../gramps/plugins/textreport/birthdayreport.py:564
-#, fuzzy
 msgid "Whether to include anniversaries of death"
-msgstr "Ali naj bodo vključene obletnice"
+msgstr "Ali naj bodo vključene obletnice smrti"
 
 #: ../gramps/plugins/textreport/birthdayreport.py:570
 #: ../gramps/plugins/textreport/indivcomplete.py:1147
@@ -32398,16 +32755,19 @@ msgid "The style used for the subtitle."
 msgstr "Slog za podnaslov."
 
 #: ../gramps/plugins/textreport/familygroup.py:507
-msgid "acronym for male|M"
+msgctxt "acronym for male"
+msgid "M"
 msgstr "M"
 
 #: ../gramps/plugins/textreport/familygroup.py:509
-msgid "acronym for female|F"
+msgctxt "acronym for female"
+msgid "F"
 msgstr "Ž"
 
 #: ../gramps/plugins/textreport/familygroup.py:511
 #, python-format
-msgid "acronym for unknown|%dU"
+msgctxt "acronym for unknown"
+msgid "%dU"
 msgstr "%d?"
 
 #: ../gramps/plugins/textreport/familygroup.py:618
@@ -32737,7 +33097,8 @@ msgstr "Grampsova št. ID: %s "
 
 #: ../gramps/plugins/textreport/placereport.py:199
 #, python-format
-msgid "places|All Names: %s"
+msgctxt "places"
+msgid "All Names: %s"
 msgstr "Vsa krajevna imena: %s"
 
 #: ../gramps/plugins/textreport/placereport.py:221
@@ -32826,7 +33187,8 @@ msgid "Title of the Book"
 msgstr "Naslov knjige"
 
 #: ../gramps/plugins/textreport/simplebooktitle.py:136
-msgid "book|Title"
+msgctxt "book"
+msgid "Title"
 msgstr "Naslov"
 
 #: ../gramps/plugins/textreport/simplebooktitle.py:137
@@ -33113,7 +33475,8 @@ msgid "_Accept changes and close"
 msgstr "_Uveljavi spremembe in zapri"
 
 #: ../gramps/plugins/tool/changenames.py:64
-msgid "manual|Fix_Capitalization_of_Family_Names"
+msgctxt "manual"
+msgid "Fix_Capitalization_of_Family_Names"
 msgstr "Popravi_verzalke_priimkov"
 
 #: ../gramps/plugins/tool/changenames.py:75
@@ -33847,7 +34210,8 @@ msgid "Custom filter _editor"
 msgstr "_Urejevalnik prikrojenih filtrov"
 
 #: ../gramps/plugins/tool/eventcmp.py:70
-msgid "manual|Compare_Individual_Events"
+msgctxt "manual"
+msgid "Compare_Individual_Events"
 msgstr "Primerjaj_dogodke_oseb"
 
 #: ../gramps/plugins/tool/eventcmp.py:138
@@ -33943,7 +34307,8 @@ msgid "Co_mpare"
 msgstr "_Primerjaj"
 
 #: ../gramps/plugins/tool/finddupes.py:66
-msgid "manual|Find_Possible_Duplicate_People"
+msgctxt "manual"
+msgid "Find_Possible_Duplicate_People"
 msgstr "Najdi_morebitne_podvojene_osebe"
 
 #: ../gramps/plugins/tool/finddupes.py:126
@@ -34010,7 +34375,8 @@ msgid "Merge persons"
 msgstr "Združi osebe"
 
 #: ../gramps/plugins/tool/findloop.py:58
-msgid "manual|Find_database_loop"
+msgctxt "manual"
+msgid "Find_database_loop"
 msgstr "Najdi_zanko_podatkovne_zbirke"
 
 #: ../gramps/plugins/tool/findloop.py:73
@@ -34031,7 +34397,8 @@ msgid "Looking for possible loop for each person"
 msgstr "Iskanje morebitne zanke pri vsaki osebi"
 
 #: ../gramps/plugins/tool/mediamanager.py:68
-msgid "manual|Media_Manager"
+msgctxt "manual"
+msgid "Media_Manager"
 msgstr "Upravljalnik_zunanjih_predmetov"
 
 #: ../gramps/plugins/tool/mediamanager.py:88
@@ -34248,7 +34615,8 @@ msgid "Ignore Date and Confidence"
 msgstr "Ne upoštevaj datuma in zanesljivosti"
 
 #: ../gramps/plugins/tool/mergecitations.py:83
-msgid "manual|Merge_citations"
+msgctxt "manual"
+msgid "Merge_citations"
 msgstr "Združi_navedke"
 
 #: ../gramps/plugins/tool/mergecitations.py:133
@@ -34289,7 +34657,8 @@ msgid "_Tag"
 msgstr "_Oznaka"
 
 #: ../gramps/plugins/tool/notrelated.py:60
-msgid "manual|Not_Related"
+msgctxt "manual"
+msgid "Not_Related"
 msgstr "Ni_v_sorodu"
 
 #: ../gramps/plugins/tool/notrelated.py:80
@@ -34387,7 +34756,8 @@ msgstr ""
 "Desno kliknite za kopiranje iz ali v podatke o raziskovalcu v Možnostih"
 
 #: ../gramps/plugins/tool/ownereditor.py:56
-msgid "manual|Edit_Database_Owner_Information"
+msgctxt "manual"
+msgid "Edit_Database_Owner_Information"
 msgstr "Urejanje_podatkov_o_lastniku_zbirke"
 
 #: ../gramps/plugins/tool/ownereditor.py:102
@@ -34431,7 +34801,8 @@ msgstr ""
 "priimkov."
 
 #: ../gramps/plugins/tool/patchnames.py:63
-msgid "manual|Extract_Information_from_Names"
+msgctxt "manual"
+msgid "Extract_Information_from_Names"
 msgstr "Pridobivanje_podatkov_iz_imen"
 
 #: ../gramps/plugins/tool/patchnames.py:105
@@ -34552,13 +34923,14 @@ msgid "Their common ancestors are: "
 msgstr "Njuni skupni predniki so: "
 
 #: ../gramps/plugins/tool/removespaces.py:54
-msgid "manual|Remove_leading_and_trailing_spaces"
-msgstr ""
+msgctxt "manual"
+msgid "Remove_leading_and_trailing_spaces"
+msgstr "Odstrani_presledke_na_začetku_in_koncu"
 
 #: ../gramps/plugins/tool/removespaces.py:87
 #: ../gramps/plugins/tool/tools.gpr.py:489
 msgid "Clean input data"
-msgstr ""
+msgstr "Počisti podatke uvoza"
 
 #: ../gramps/plugins/tool/removespaces.py:104
 msgid ""
@@ -34566,35 +34938,33 @@ msgid ""
 "in coordinates fields.\n"
 "Double click on a row to edit its content."
 msgstr ""
+"Poišči presledke na začetku ali koncu pri osebah in krajih. Poišči vejice v "
+"poljih za koordinate.\n"
+"Za urejanje dvakrat kliknite na vrstico."
 
 #: ../gramps/plugins/tool/removespaces.py:113
-#, fuzzy
 msgid "Looking for possible fields with leading or trailing spaces"
-msgstr "Iskanje morebitne zanke pri vsaki osebi"
+msgstr "Iskanje morebitnih polj s presledki na začetku ali koncu"
 
 #: ../gramps/plugins/tool/removespaces.py:130
 #: ../gramps/plugins/tool/removespaces.py:179
-#, fuzzy
 msgid "handle"
-msgstr "Ročica"
+msgstr "ročica"
 
 #. 2=double underline
 #: ../gramps/plugins/tool/removespaces.py:135
-#, fuzzy
 msgid "firstname"
-msgstr "neznano ime"
+msgstr "ime"
 
 #. 2=double underline
 #: ../gramps/plugins/tool/removespaces.py:143
-#, fuzzy
 msgid "alternate name"
-msgstr "Druga imena"
+msgstr "drugo ime"
 
 #. 2=double underline
 #: ../gramps/plugins/tool/removespaces.py:147
-#, fuzzy
 msgid "group as"
-msgstr "Združi kot"
+msgstr "združi kot"
 
 #: ../gramps/plugins/tool/removeunused.glade:92
 msgid "Search for events"
@@ -34728,7 +35098,8 @@ msgstr ""
 "nespremenjenimi predponami."
 
 #: ../gramps/plugins/tool/reorderids.py:64
-msgid "manual|Reorder_Gramps_ID"
+msgctxt "manual"
+msgid "Reorder_Gramps_ID"
 msgstr "Preuredi_številke_Gramps_ID"
 
 #. self.top.set_icon(ICON)
@@ -35082,13 +35453,12 @@ msgid "Searches the entire database, looking for a possible loop."
 msgstr "Celotna zbirka podatkov se preišče za morebitnimi povratnimi zankami."
 
 #: ../gramps/plugins/tool/tools.gpr.py:490
-#, fuzzy
 msgid ""
 "Searches the entire database, looking for trailing or leading spaces for "
 "places and people. Search comma in coordinates fields in places."
 msgstr ""
-"Celotna zbirka podatkov se preišče za navedki z enakimi deli/stranmi, datumi "
-"in zaupnostjo."
+"Celotna zbirka podatkov se preišče za presledke na začetku ali koncu krajev "
+"ali oseb. Poiščite vejice v poljih koordinat krajev."
 
 #: ../gramps/plugins/tool/toolsdebug.gpr.py:64
 msgid "Dump Gender Statistics"
@@ -35168,7 +35538,8 @@ msgid "_Hide marked"
 msgstr "_Skrij označeno"
 
 #: ../gramps/plugins/tool/verify.py:83
-msgid "manual|Verify_the_Data"
+msgctxt "manual"
+msgid "Verify_the_Data"
 msgstr "Preveri_podatke"
 
 #: ../gramps/plugins/tool/verify.py:295
@@ -35329,20 +35700,17 @@ msgstr "Datum poroke brez poroke"
 msgid "Old age but no death"
 msgstr "Visoka starost brez smrti"
 
-#: ../gramps/plugins/tool/verify.py:1802
-#, fuzzy
+#: ../gramps/plugins/tool/verify.py:1806
 msgid "Birth equals death"
-msgstr "Datum rojstva"
+msgstr "Rojstvo enako smrti"
 
-#: ../gramps/plugins/tool/verify.py:1820
-#, fuzzy
+#: ../gramps/plugins/tool/verify.py:1824
 msgid "Birth equals marriage"
-msgstr "Najkrajši zakon"
+msgstr "Rojstvo enako poroki"
 
-#: ../gramps/plugins/tool/verify.py:1838
-#, fuzzy
+#: ../gramps/plugins/tool/verify.py:1842
 msgid "Death equals marriage"
-msgstr "Pozna poroka"
+msgstr "Smrt enaka poroki"
 
 #: ../gramps/plugins/view/citationlistview.py:105
 msgid "Source: Title"
@@ -35532,14 +35900,13 @@ msgid "Event Filter Editor"
 msgstr "Urejevalnik filtrov za dogodke"
 
 #: ../gramps/plugins/view/eventview.py:385
-#, fuzzy
 msgid "_Delete Event"
-msgstr "Zbriši dogodek (%s)"
+msgstr "_Zbriši dogodek"
 
 #: ../gramps/plugins/view/eventview.py:400
 #, python-brace-format
 msgid "Delete {type} [{gid}]?"
-msgstr ""
+msgstr "Naj se izbriše {type} [{gid}]?"
 
 #: ../gramps/plugins/view/eventview.py:443
 msgid "Cannot merge event objects."
@@ -35711,9 +36078,8 @@ msgstr "Enotna porazdelitev po otrocih"
 
 #: ../gramps/plugins/view/fanchart2wayview.py:329
 #: ../gramps/plugins/view/fanchartdescview.py:328
-#, fuzzy
 msgid "Size proportional to number of descendants"
-msgstr "Porazdelitev glede na število potomcev"
+msgstr "Velikost sorazmerna s številom potomcev"
 
 #. show names one two line
 #: ../gramps/plugins/view/fanchart2wayview.py:335
@@ -35731,9 +36097,8 @@ msgstr "Zrcali ime na levi grafikona"
 
 #. Show gramps id
 #: ../gramps/plugins/view/fanchart2wayview.py:343
-#, fuzzy
 msgid "Show the gramps id"
-msgstr "Prikaže zadnjo stran"
+msgstr "Pokaži ID"
 
 #. options we don't show on the dialog
 #. #configdialog.add_checkbox(table,
@@ -35778,9 +36143,8 @@ msgstr "Četrinski"
 #. Show the gramps_id
 #: ../gramps/plugins/view/fanchartdescview.py:342
 #: ../gramps/plugins/view/fanchartview.py:430
-#, fuzzy
 msgid "Show gramps id"
-msgstr "Pokaži oznake"
+msgstr "Pokaži ID"
 
 #: ../gramps/plugins/view/fanchartview.py:227
 msgid "Print or save the Fan Chart View"
@@ -35900,15 +36264,14 @@ msgid "Selecting all events"
 msgstr "Izbor vseh dogodkov"
 
 #: ../gramps/plugins/view/geoevents.py:368
-#, fuzzy
 msgid ""
 "Right click on the map and select 'show all events' to show all known events "
 "with coordinates. You can use the history to navigate on the map. You can "
 "use filtering."
 msgstr ""
-"Desno kliknite na zemljevid in izberite 'prikaži vse kraje' za prikaz vseh "
-"znanih krajev s koordinatami. Barve označevalnikov lahko spreminjate glede "
-"na vrsto kraja. Uporabljate lahko tudi filtre."
+"Desno kliknite na zemljevid in izberite 'prikaži vse dogodke' za prikaz vseh "
+"znanih dogodkov s koordinatami. Barve označevalnikov lahko spreminjate glede "
+"na vrsto dogodka. Uporabljate lahko tudi filtre."
 
 #: ../gramps/plugins/view/geoevents.py:408
 #: ../gramps/plugins/view/geoevents.py:440
@@ -36045,6 +36408,14 @@ msgid ""
 "To build it for Gramps see the Wiki (<F1>)\n"
 " and search for 'build from source'"
 msgstr ""
+"Zmožnost zemljevidov ne bo na voljo.\n"
+"Poizkusite namestiti:\n"
+" gir1.2-osmgpsmap-1.0 (debian, ubuntu, ...)\n"
+" osm-gps-map-gobject-1.0.1 pri distrbuciji fedora, ...\n"
+" typelib-1_0-OsmGpsMap-1_0 pri distribuciji openSuse\n"
+" ...\n"
+"Če jo želite sami prevesti za Gramps, poglejte Wiki (<F1>)\n"
+" in poiščite 'prevedi iz vira'"
 
 #: ../gramps/plugins/view/geography.gpr.py:87
 msgid "All known places for one Person"
@@ -36258,9 +36629,8 @@ msgid "Show all places"
 msgstr "Pokaži vse kraje"
 
 #: ../gramps/plugins/view/geoplaces.py:659
-#, fuzzy
 msgid "Custom places name"
-msgstr "Celotni naziv kraja"
+msgstr "Prilagojeno ime krajev"
 
 #: ../gramps/plugins/view/geoplaces.py:668
 msgid "The places marker color"
@@ -36325,27 +36695,33 @@ msgstr ""
 "izberete tako, da pridržite tipko ctrl in kliknete na želeno opombo."
 
 #: ../gramps/plugins/view/pedigreeview.py:80
-msgid "short for born|b."
+msgctxt "short for born"
+msgid "b."
 msgstr "r."
 
 #: ../gramps/plugins/view/pedigreeview.py:81
-msgid "short for died|d."
+msgctxt "short for died"
+msgid "d."
 msgstr "u."
 
 #: ../gramps/plugins/view/pedigreeview.py:82
-msgid "short for baptized|bap."
+msgctxt "short for baptized"
+msgid "bap."
 msgstr "kr."
 
 #: ../gramps/plugins/view/pedigreeview.py:83
-msgid "short for christened|chr."
+msgctxt "short for christened"
+msgid "chr."
 msgstr "krš."
 
 #: ../gramps/plugins/view/pedigreeview.py:84
-msgid "short for buried|bur."
+msgctxt "short for buried"
+msgid "bur."
 msgstr "pok."
 
 #: ../gramps/plugins/view/pedigreeview.py:85
-msgid "short for cremated|crem."
+msgctxt "short for cremated"
+msgid "crem."
 msgstr "upep."
 
 #: ../gramps/plugins/view/pedigreeview.py:1205
@@ -36455,9 +36831,8 @@ msgid "Expand this Entire Group"
 msgstr "Razveji celotno skupino"
 
 #: ../gramps/plugins/view/relview.py:372
-#, fuzzy
 msgid "Organize Bookmarks..."
-msgstr "Uredi zaznamke"
+msgstr "Uredi zaznamke ..."
 
 #: ../gramps/plugins/view/relview.py:393
 msgid "Add Existing Parents..."
@@ -36493,9 +36868,9 @@ msgstr "Uredi aktivno osebo"
 
 #: ../gramps/plugins/view/relview.py:746 ../gramps/plugins/view/relview.py:772
 #: ../gramps/plugins/view/relview.py:789 ../gramps/plugins/view/relview.py:796
-#, fuzzy, python-format
+#, python-format
 msgid "%s"
-msgstr "%s:"
+msgstr "%s"
 
 #: ../gramps/plugins/view/relview.py:784
 msgid "Alive"
@@ -36580,19 +36955,19 @@ msgid "Relationship type: %s"
 msgstr "Vrsta zveze: %s"
 
 #: ../gramps/plugins/view/relview.py:1520
-#, fuzzy, python-format
+#, python-format
 msgid "%(event_type)s %(date)s in %(place)s"
-msgstr "%(event_type)s: %(date)s v kraju %(place)s"
+msgstr "%(event_type)s %(date)s v kraju %(place)s"
 
 #: ../gramps/plugins/view/relview.py:1524
-#, fuzzy, python-format
+#, python-format
 msgid "%(event_type)s %(date)s"
-msgstr "%(event_type)s: %(date)s"
+msgstr "%(event_type)s %(date)s"
 
 #: ../gramps/plugins/view/relview.py:1528
-#, fuzzy, python-format
+#, python-format
 msgid "%(event_type)s %(place)s"
-msgstr "%(event_type)s: %(place)s"
+msgstr "%(event_type)s %(place)s"
 
 #: ../gramps/plugins/view/relview.py:1539
 msgid "Broken family detected"
@@ -36880,7 +37255,8 @@ msgstr "Za lažje branje"
 
 #: ../gramps/plugins/webreport/basepage.py:1521
 #: ../gramps/plugins/webreport/basepage.py:1692
-msgid "Html|Home"
+msgctxt "Html"
+msgid "Home"
 msgstr "Izhodišče"
 
 #: ../gramps/plugins/webreport/basepage.py:1534
@@ -36942,6 +37318,14 @@ msgstr "Župnija"
 #: ../gramps/plugins/webreport/basepage.py:2611
 msgid "Locations"
 msgstr "Lokacije"
+
+#: ../gramps/plugins/webreport/basepage.py:2893
+msgid "circa"
+msgstr "cca"
+
+#: ../gramps/plugins/webreport/basepage.py:2895
+msgid "around"
+msgstr "okoli"
 
 #: ../gramps/plugins/webreport/download.py:101
 msgid ""
@@ -37050,7 +37434,8 @@ msgstr ""
 "se slika pokaže v svoji polni velikosti.  "
 
 #: ../gramps/plugins/webreport/media.py:228
-msgid "Media | Name"
+msgctxt "Media "
+msgid " Name"
 msgstr "Ime"
 
 #: ../gramps/plugins/webreport/media.py:231
@@ -37184,17 +37569,15 @@ msgid "Select filter to restrict people that appear on web site"
 msgstr ""
 "Izberite filter, s katerim naj se omeji na spletni strani prikazane osebe"
 
-#: ../gramps/plugins/webreport/narrativeweb.py:1650
-#, fuzzy
+#: ../gramps/plugins/webreport/narrativeweb.py:1654
 msgid "Show the relationship between the current person and the active person"
-msgstr "Prikaže vse povezave osebe z izhodiščno osebo."
+msgstr "Pokaži povezavo trenutne osebe z aktivno osebo"
 
-#: ../gramps/plugins/webreport/narrativeweb.py:1653
-#, fuzzy
+#: ../gramps/plugins/webreport/narrativeweb.py:1657
 msgid ""
 "For each person page, show the relationship between this person and the "
 "active person."
-msgstr "Prikaže vse povezave osebe z izhodiščno osebo."
+msgstr "Pri vsaki strani osebe prikaže povezavo osebe z izhodiščno osebo."
 
 #: ../gramps/plugins/webreport/narrativeweb.py:1671
 msgid "Html options"
@@ -37271,13 +37654,13 @@ msgstr "Vključi drevo prednikov"
 msgid "Whether to include an ancestor graph on each individual page"
 msgstr "Ali naj bo na vsaki strani vključen tudi prikaz prednikov"
 
-#: ../gramps/plugins/webreport/narrativeweb.py:1731
+#: ../gramps/plugins/webreport/narrativeweb.py:1735
 msgid "Add previous/next"
-msgstr ""
+msgstr "Dodaj predhodnji / naslednji"
 
-#: ../gramps/plugins/webreport/narrativeweb.py:1732
+#: ../gramps/plugins/webreport/narrativeweb.py:1736
 msgid "Add previous/next to the navigation bar."
-msgstr ""
+msgstr "Dodaj predhodnji / naslednji na navigacijsko vrstico."
 
 #: ../gramps/plugins/webreport/narrativeweb.py:1735
 msgid "This is a secure site (https)"
@@ -37287,27 +37670,25 @@ msgstr "Ta stran je varna (https)"
 msgid "Whether to use http:// or https://"
 msgstr "Ali naj bo uporabljen http:// ali https://"
 
-#: ../gramps/plugins/webreport/narrativeweb.py:1744
-#, fuzzy
+#: ../gramps/plugins/webreport/narrativeweb.py:1748
 msgid "Extra pages"
-msgstr "Izjemno veliko"
+msgstr "Dodatne strani"
 
-#: ../gramps/plugins/webreport/narrativeweb.py:1747
-#, fuzzy
+#: ../gramps/plugins/webreport/narrativeweb.py:1751
 msgid "Extra page name"
-msgstr "Izjemno veliko"
+msgstr "Naziv dodatne strani"
 
-#: ../gramps/plugins/webreport/narrativeweb.py:1750
+#: ../gramps/plugins/webreport/narrativeweb.py:1754
 msgid "Your extra page name like it is shown in the menubar"
-msgstr ""
+msgstr "Naziv dodatne strani, kakor je prikazan v menijski vrstici"
 
-#: ../gramps/plugins/webreport/narrativeweb.py:1755
+#: ../gramps/plugins/webreport/narrativeweb.py:1759
 msgid "Your extra page path"
-msgstr ""
+msgstr "Pot dodatne strani"
 
-#: ../gramps/plugins/webreport/narrativeweb.py:1758
+#: ../gramps/plugins/webreport/narrativeweb.py:1762
 msgid "Your extra page path without extension"
-msgstr ""
+msgstr "Pot dodatne strani brez pripone"
 
 #: ../gramps/plugins/webreport/narrativeweb.py:1778
 msgid "Sort all children in birth order"
@@ -37319,21 +37700,24 @@ msgstr ""
 "Ali naj bodo otroci prikazani po vrstnem redu rojstev ali po vrstnem redu "
 "vnosa?"
 
-#: ../gramps/plugins/webreport/narrativeweb.py:1784
+#: ../gramps/plugins/webreport/narrativeweb.py:1788
 msgid "Do we display coordinates in the places list?"
-msgstr ""
-
-#: ../gramps/plugins/webreport/narrativeweb.py:1786
-msgid "Whether to display latitude/longitude in the places list?"
-msgstr ""
+msgstr "Ali naj bodo v seznamu krajev prikazane koordinate?"
 
 #: ../gramps/plugins/webreport/narrativeweb.py:1790
-msgid "Sort places references either by date or by name"
+msgid "Whether to display latitude/longitude in the places list?"
 msgstr ""
+"Ali naj bosta v seznamu krajev prikazani zemljepisna širina in dolžina?"
 
-#: ../gramps/plugins/webreport/narrativeweb.py:1792
+#: ../gramps/plugins/webreport/narrativeweb.py:1794
+msgid "Sort places references either by date or by name"
+msgstr "Navedbe krajev naj bodo razvrščene po datumu ali po imenu"
+
+#: ../gramps/plugins/webreport/narrativeweb.py:1796
 msgid "Sort the places references by date or by name. Not set means by date."
 msgstr ""
+"Navedbe krajev naj bodo razvrščene po datumu ali po imenu. Če ni "
+"nastavljeno, bodo po datumu."
 
 #: ../gramps/plugins/webreport/narrativeweb.py:1796
 msgid "Graph generations"
@@ -37343,15 +37727,17 @@ msgstr "Število rodov v prikazu prednikov"
 msgid "The number of generations to include in the ancestor graph"
 msgstr "Število rodov, ki naj bodo vključeni v prikaz prednikov"
 
-#: ../gramps/plugins/webreport/narrativeweb.py:1803
+#: ../gramps/plugins/webreport/narrativeweb.py:1807
 msgid "Include narrative notes just after name, gender"
-msgstr ""
+msgstr "Vključi pripovedne opombe takoj za imenom in spolom"
 
-#: ../gramps/plugins/webreport/narrativeweb.py:1805
+#: ../gramps/plugins/webreport/narrativeweb.py:1809
 msgid ""
 "Include narrative notes just after name, gender and age at death (default) "
 "or include them just before attributes."
 msgstr ""
+"Vključi pripovedne opombe takoj za imenom, spolom in starostjo ob smrti "
+"(privzeto), ali pa tik pred atributi."
 
 #: ../gramps/plugins/webreport/narrativeweb.py:1814
 msgid "Page Generation"
@@ -37470,6 +37856,15 @@ msgstr ""
 #: ../gramps/plugins/webreport/narrativeweb.py:1887
 msgid "Max width of initial image"
 msgstr "Največja širina začetne slike"
+
+#: ../gramps/plugins/webreport/narrativeweb.py:1893
+#, fuzzy
+msgid ""
+"This allows you to set the maximum width of the image shown on the media "
+"page."
+msgstr ""
+"S tem lahko nastavite največjo širino slike, ki je prikazana na strani s "
+"slikami. Če nastavite 0, ni omejitve."
 
 #: ../gramps/plugins/webreport/narrativeweb.py:1889
 msgid ""
@@ -37608,25 +38003,21 @@ msgid "Add a complete events list and relevant pages or not"
 msgstr ""
 "Ali naj bo vključen celoten seznam dogodkov s pripadajočimi stranmi ali ne"
 
-#: ../gramps/plugins/webreport/narrativeweb.py:2005
-#, fuzzy
+#: ../gramps/plugins/webreport/narrativeweb.py:2009
 msgid "Include places pages"
-msgstr "Vključi kraje"
+msgstr "Vključi strani krajev"
 
-#: ../gramps/plugins/webreport/narrativeweb.py:2007
-#, fuzzy
+#: ../gramps/plugins/webreport/narrativeweb.py:2011
 msgid "Whether or not to include the places Pages."
-msgstr "Ali naj bodo vključene strani z nahajališči."
+msgstr "Ali naj bodo vključene strani s kraji."
 
-#: ../gramps/plugins/webreport/narrativeweb.py:2010
-#, fuzzy
+#: ../gramps/plugins/webreport/narrativeweb.py:2014
 msgid "Include sources pages"
-msgstr "Vključi opombe virov"
+msgstr "Vključi strani virov"
 
-#: ../gramps/plugins/webreport/narrativeweb.py:2012
-#, fuzzy
+#: ../gramps/plugins/webreport/narrativeweb.py:2016
 msgid "Whether or not to include the sources Pages."
-msgstr "Ali naj bodo vključene strani z nahajališči."
+msgstr "Ali naj bodo vključene strani z viri."
 
 #: ../gramps/plugins/webreport/narrativeweb.py:2015
 msgid "Include repository pages"
@@ -37870,7 +38261,8 @@ msgstr ""
 
 #: ../gramps/plugins/webreport/place.py:181
 #: ../gramps/plugins/webreport/place.py:193
-msgid "Place Name | Name"
+msgctxt "Place Name "
+msgid " Name"
 msgstr "Ime"
 
 #: ../gramps/plugins/webreport/place.py:233
@@ -37899,7 +38291,8 @@ msgstr ""
 "najhajališče."
 
 #: ../gramps/plugins/webreport/repository.py:165
-msgid "Repository |Name"
+msgctxt "Repository "
+msgid "Name"
 msgstr "Ime"
 
 #: ../gramps/plugins/webreport/source.py:102
@@ -37916,7 +38309,8 @@ msgstr ""
 "abecedi. S klikom na naziv vira se odpre stran za ta vir."
 
 #: ../gramps/plugins/webreport/source.py:166
-msgid "Source Name|Name"
+msgctxt "Source Name"
+msgid "Name"
 msgstr "Ime"
 
 #: ../gramps/plugins/webreport/source.py:265
@@ -38237,15 +38631,13 @@ msgstr "Vključi rojstne dneve"
 msgid "Include anniversaries in the calendar"
 msgstr "Vključi obletnice"
 
-#: ../gramps/plugins/webreport/webcal.py:1890
-#, fuzzy
-msgid "Include death dates"
-msgstr "Vključi datume"
-
 #: ../gramps/plugins/webreport/webcal.py:1891
-#, fuzzy
+msgid "Include death dates"
+msgstr "Vključi datume smrti"
+
+#: ../gramps/plugins/webreport/webcal.py:1892
 msgid "Include death anniversaries in the calendar"
-msgstr "Vključi obletnice"
+msgstr "Vključi obletnice smrti"
 
 #: ../gramps/plugins/webreport/webcal.py:1894
 msgid "Link to Narrated Web Report"
@@ -38255,15 +38647,17 @@ msgstr "Povezava do pripovedne spletne strani"
 msgid "Whether to link data to web report or not"
 msgstr "Ali naj bodo vključene povezave do spletnega poročila"
 
-#: ../gramps/plugins/webreport/webcal.py:1901
+#: ../gramps/plugins/webreport/webcal.py:1902
 msgid "Show data only after year"
-msgstr ""
+msgstr "Pokaži podatke samo za letom"
 
-#: ../gramps/plugins/webreport/webcal.py:1904
+#: ../gramps/plugins/webreport/webcal.py:1905
 msgid ""
 "Show data only after this year. Default is current year -  'maximum age "
 "probably alive' which is defined in the dates preference tab."
 msgstr ""
+"Pokaži podatke samo po tem letu. Privezto je trenutno leto - 'največja "
+"starost za verjetno živ' je določena v zavihku za možnosti datumov."
 
 #: ../gramps/plugins/webreport/webcal.py:1912
 msgid "Link prefix"
@@ -38278,15 +38672,14 @@ msgstr "Predpona povezav, ki vodijo do pripovedne spletne strani"
 msgid "%s old"
 msgstr "%s"
 
-#: ../gramps/plugins/webreport/webcal.py:2102
+#: ../gramps/plugins/webreport/webcal.py:2103
 #, python-format
 msgid "%s since death"
-msgstr ""
+msgstr "%s od smrti"
 
-#: ../gramps/plugins/webreport/webcal.py:2103
-#, fuzzy
+#: ../gramps/plugins/webreport/webcal.py:2104
 msgid "death"
-msgstr "Smrt"
+msgstr "smrt"
 
 #: ../gramps/plugins/webreport/webcal.py:2110
 #, python-format
@@ -38432,8 +38825,13 @@ msgstr "Brez lista slogov"
 #~ msgid "Family Divorced"
 #~ msgstr "Ločena družina"
 
-#~ msgid "Home Person"
-#~ msgstr "Izhodiščna oseba"
+#: ../gramps/gen/filters/rules/person/_isdefaultperson.py:44
+msgid "Home Person"
+msgstr "Privzeta oseba"
+
+#: ../gramps/gen/filters/rules/person/_isdefaultperson.py:46
+msgid "Matches the Home Person"
+msgstr "Najde privzeto osebo"
 
 #~ msgid "Border Female Alive"
 #~ msgstr "Okvir za žive ženske"
@@ -38483,6 +38881,15 @@ msgstr "Brez lista slogov"
 #, python-format
 #~ msgid "%(title)s..."
 #~ msgstr "%(title)s ..."
+
+#~ msgid ""
+#~ "You need to set a 'Home Person' to go to. Select the People View, select "
+#~ "the person you want as 'Home Person', then confirm your choice via the "
+#~ "menu Edit ->Set Home Person."
+#~ msgstr ""
+#~ "Nastaviti morate 'privzeto osebo'. Izberite pogled Osebe, izberite osebo, "
+#~ "ki bi jo radi nastavili za 'Izhodiščno osebo' in izbiro potrdite v meniju "
+#~ "Uredi -> Nastavi izhodiščno osebo."
 
 #~ msgid ""
 #~ "You need to set a 'default person' to go to. Select the People View, "
@@ -38762,3 +39169,4 @@ msgstr "Brez lista slogov"
 
 #~ msgid "Alphabet Menu: %s"
 #~ msgstr "Abecedni meni: %s"
+
