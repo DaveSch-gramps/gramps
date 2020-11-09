@@ -265,7 +265,9 @@ class PeopleBaseModel(BaseModel):
             event = self.db.get_event_from_handle(er.ref)
             etype = event.get_type()
             date_str = get_date(event)
-            if (etype in [EventType.BAPTISM, EventType.CHRISTEN]
+            if (etype in [EventType.STILLBORN,
+                          EventType.BAPTISM,
+                          EventType.CHRISTEN]
                 and er.get_role() == EventRoleType.PRIMARY
                 and date_str != ""):
                 if sort_mode:
@@ -322,7 +324,8 @@ class PeopleBaseModel(BaseModel):
             event = self.db.get_event_from_handle(er.ref)
             etype = event.get_type()
             date_str = get_date(event)
-            if (etype in [EventType.BURIAL,
+            if (etype in [EventType.STILLBORN,
+                          EventType.BURIAL,
                           EventType.CREMATION,
                           EventType.CAUSE_DEATH]
                 and er.get_role() == EventRoleType.PRIMARY
@@ -366,7 +369,9 @@ class PeopleBaseModel(BaseModel):
                 er.unserialize(event_ref)
                 event = self.db.get_event_from_handle(er.ref)
                 etype = event.get_type()
-                if (etype in [EventType.BAPTISM, EventType.CHRISTEN] and
+                if (etype in [EventType.STILLBORN,
+                              EventType.BAPTISM,
+                              EventType.CHRISTEN] and
                     er.get_role() == EventRoleType.PRIMARY):
                         place_title = place_displayer.display_event(self.db, event)
                         if place_title:
@@ -406,7 +411,9 @@ class PeopleBaseModel(BaseModel):
                 er.unserialize(event_ref)
                 event = self.db.get_event_from_handle(er.ref)
                 etype = event.get_type()
-                if (etype in [EventType.BURIAL, EventType.CREMATION,
+                if (etype in [EventType.STILLBORN,
+                              EventType.BURIAL,
+                              EventType.CREMATION,
                               EventType.CAUSE_DEATH]
                     and er.get_role() == EventRoleType.PRIMARY):
 

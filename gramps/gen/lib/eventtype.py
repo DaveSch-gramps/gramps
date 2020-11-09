@@ -82,6 +82,7 @@ class EventType(GrampsType):
     .. attribute DIV_FILING:     Divorce Filing
     .. attribute ANNULMENT:      Annulment
     .. attribute MARR_ALT:        Alternate Marriage
+    .. attribute STILLBORN:      Stillborn
     """
     UNKNOWN = -1
     CUSTOM = 0
@@ -129,13 +130,14 @@ class EventType(GrampsType):
     RESIDENCE = 42
     RETIREMENT = 43
     WILL = 44
+    STILLBORN = 45
 
     # _T_ is a gramps-defined keyword -- see po/update_po.py and po/genpot.sh
     def _T_(value, context=''): # enable deferred translations
         return "%s\x04%s" % (context, value) if context else value
 
     _MENU = [[_T_('Life Events'),
-              [BIRTH, BAPTISM, DEATH, BURIAL, CREMATION, ADOPT]],
+              [BIRTH, BAPTISM, DEATH, STILLBORN, BURIAL, CREMATION, ADOPT]],
              [_T_('Family'),
               [ENGAGEMENT, MARRIAGE, DIVORCE, ANNULMENT, MARR_SETTL, MARR_LIC,
                MARR_CONTR, MARR_BANNS, DIV_FILING, MARR_ALT]],
@@ -205,6 +207,7 @@ class EventType(GrampsType):
         (DIV_FILING, _("Divorce Filing"), "Divorce Filing"),
         (ANNULMENT, _("Annulment"), "Annulment"),
         (MARR_ALT, _("Alternate Marriage"), "Alternate Marriage"),
+        (STILLBORN, _("Stillborn"), "Stillborn"),
         ]
 
     _ABBREVIATIONS = {
@@ -253,7 +256,8 @@ class EventType(GrampsType):
         ENGAGEMENT: _T_("engd.", "Engagement abbreviation"),
         DIVORCE: _T_("div.", "Divorce abbreviation"),
         DIV_FILING: _T_("div.f.", "Divorce Filing abbreviation"),
-        ANNULMENT: _T_("annul.", "Annulment abbreviation")
+        ANNULMENT: _T_("annul.", "Annulment abbreviation"),
+        STILLBORN: _T_("Stillborn abbreviation|still.")
         }
 
     def __init__(self, value=None):
@@ -280,6 +284,13 @@ class EventType(GrampsType):
         """
         return self.value == self.DEATH
 
+    def is_stillborn(self):
+        """
+        Returns True if EventType is STILLBORN, False
+        otherwise.
+        """
+        return self.value == self.STILLBORN
+
     def is_burial(self):
         """
         Returns True if EventType is BURIAL, False
@@ -292,17 +303,20 @@ class EventType(GrampsType):
         Returns True if EventType is a birth fallback, False
         otherwise.
         """
-        return self.value in [self.CHRISTEN,
-                              self.BAPTISM]
+        return self.value in [self.STILLBORN,
+                              self.BAPTISM,
+                              self.CHRISTEN]
 
     def is_death_fallback(self):
         """
         Returns True if EventType is a death fallback, False
         otherwise.
         """
-        return self.value in [self.BURIAL,
+        return self.value in [self.STILLBORN,
+                              self.BURIAL,
                               self.CREMATION,
                               self.CAUSE_DEATH]
+
     def is_marriage(self):
         """
         Returns True if EventType is MARRIAGE, False otherwise.
