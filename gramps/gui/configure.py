@@ -366,7 +366,8 @@ class ConfigureDialog(ManagedWindow):
         grid.attach(text, start, index, stop - start, 1)
         return text
 
-    def add_button(self, grid, label, index, constant, extra_callback=None, config=None):
+    def add_button(self, grid, label, index, constant, extra_callback=None,
+                   config=None):
         if not config:
             config = self.__config
         button = Gtk.Button(label=label)
@@ -558,16 +559,18 @@ class GrampsPreferences(ConfigureDialog):
 
     def __init__(self, uistate, dbstate):
         page_funcs = (
-            self.add_behavior_panel,
+            self.add_display_panel,
+            self.add_general_panel,
+            self.add_addons_panel,
             self.add_famtree_panel,
-            self.add_formats_panel,
-            self.add_text_panel,
-            self.add_prefix_panel,
-            self.add_date_panel,
-            self.add_researcher_panel,
-            self.add_advanced_panel,
+            self.add_import_panel,
+            self.add_limits_panel,
             self.add_color_panel,
-            self.add_symbols_panel
+            self.add_symbols_panel,
+            self.add_idformats_panel,
+            self.add_text_panel,
+            self.add_warnings_panel,
+            self.add_researcher_panel,
             )
         ConfigureDialog.__init__(self, uistate, dbstate, page_funcs,
                                  GrampsPreferences, config,
@@ -592,6 +595,7 @@ class GrampsPreferences(ConfigureDialog):
         Add the Researcher tab to the preferences.
         """
         grid = self.create_grid()
+
         row = 0
         self.add_text(
             grid, _('Researcher information'), row,
@@ -628,14 +632,14 @@ class GrampsPreferences(ConfigureDialog):
         self.add_entry(grid, _('Email'), row, 'researcher.researcher-email')
         return _('Researcher'), grid
 
-    def add_prefix_panel(self, configdialog):
+    def add_idformats_panel(self, configdialog):
         """
         Add the ID prefix tab to the preferences.
         """
         grid = self.create_grid()
 
         self.add_text(
-            grid, _('Gramps ID format settings'), 0,
+            grid, _('Gramps ID formats'), 0,
             line_wrap=True, start=0, stop=2, justify=Gtk.Justification.CENTER,
             align=Gtk.Align.CENTER, bold=True)
 
@@ -666,6 +670,7 @@ class GrampsPreferences(ConfigureDialog):
         row += 1
         self.add_entry(grid, _('Note'), row, 'preferences.nprefix',
                        self.update_idformat_entry)
+
         return _('ID Formats'), grid
 
     def add_color_panel(self, configdialog):
@@ -673,6 +678,7 @@ class GrampsPreferences(ConfigureDialog):
         Add the tab to set defaults colors for graph boxes.
         """
         grid = self.create_grid()
+
         self.add_text(
             grid, _('Colors used for boxes in the graphical views'),
             0, line_wrap=True, start=0, stop=7, bold=True,
@@ -784,7 +790,7 @@ class GrampsPreferences(ConfigureDialog):
             Gdk.RGBA.parse(color, hexval)
             widget.set_rgba(color)
 
-    def add_advanced_panel(self, configdialog):
+    def add_warnings_panel(self, configdialog):
         """
         Config tab for Warnings and Error dialogs.
         """
@@ -1143,14 +1149,14 @@ class GrampsPreferences(ConfigureDialog):
         """
         self.uistate.emit('grampletbar-close-changed')
 
-    def add_formats_panel(self, configdialog):
+    def add_display_panel(self, configdialog):
         """
-        Config tab with Appearance and format settings.
+        Config tab with user Appearance and format settings.
         """
         grid = self.create_grid()
 
         self.add_text(
-            grid, _('Appearance and format settings'), 0,
+            grid, _('User Display'), 0,
             line_wrap=True, start=0, stop=3, justify=Gtk.Justification.CENTER,
             align=Gtk.Align.CENTER, bold=True)
 
@@ -1210,20 +1216,6 @@ class GrampsPreferences(ConfigureDialog):
             extra_callback=self.cb_pa_sur_changed)
 
         row += 1
-        # Date format:
-        obox = Gtk.ComboBoxText()
-        formats = get_date_formats()
-        list(map(obox.append_text, formats))
-        active = config.get('preferences.date-format')
-        if active >= len(formats):
-            active = 0
-        obox.set_active(active)
-        obox.connect('changed', self.date_format_changed)
-        lwidget = BasicLabel(_("%s: ") % _('Date format'))
-        grid.attach(lwidget, 0, row, 1, 1)
-        grid.attach(obox, 1, row, 2, 1)
-
-        row += 1
         # Place format:
         self.pformat = Gtk.ComboBox()
         renderer = Gtk.CellRendererText()
@@ -1237,7 +1229,7 @@ class GrampsPreferences(ConfigureDialog):
         self.fmt_btn = Gtk.Button(label=("%s..." % _('Edit')))
         self.fmt_btn.connect('clicked', self.cb_place_fmt_dialog)
         cb_widget = self.add_checkbox(
-            grid, _("%s: ") % _('Place format (auto place title)'),
+            grid, _("%s: ") % _('Automate Place format'),
             row, 'preferences.place-auto', start=0, stop=1,
             extra_callback=self.auto_title_changed,
             tooltip=_("Enables automatic place title generation "
@@ -1246,6 +1238,20 @@ class GrampsPreferences(ConfigureDialog):
         hbox.pack_start(self.pformat, True, True, 0)
         hbox.pack_start(self.fmt_btn, False, False, 0)
         grid.attach(hbox, 1, row, 2, 1)
+
+        row += 1
+        # Date format:
+        obox = Gtk.ComboBoxText()
+        formats = get_date_formats()
+        list(map(obox.append_text, formats))
+        active = config.get('preferences.date-format')
+        if active >= len(formats):
+            active = 0
+        obox.set_active(active)
+        obox.connect('changed', self.date_format_changed)
+        lwidget = BasicLabel(_("%s: ") % _('Date format *'))
+        grid.attach(lwidget, 0, row, 1, 1)
+        grid.attach(obox, 1, row, 2, 1)
 
         row += 1
         # Age precision:
@@ -1266,7 +1272,7 @@ class GrampsPreferences(ConfigureDialog):
             lambda obj: config.set('preferences.age-display-precision',
                                    obj.get_active() + 1))
         lwidget = BasicLabel(_("%s: ")
-                             % _('Age display precision (requires restart)'))
+                             % _('Age display precision *'))
         grid.attach(lwidget, 0, row, 1, 1)
         grid.attach(obox, 1, row, 2, 1)
 
@@ -1310,13 +1316,6 @@ class GrampsPreferences(ConfigureDialog):
         grid.attach(obox, 1, row, 2, 1)
 
         row += 1
-        # height multiple surname table
-        self.add_pos_int_entry(
-            grid, _('Height multiple surname box (pixels)'),
-            row, 'interface.surname-box-height', self.update_surn_height,
-            col_attach=0)
-
-        row += 1
         # Status bar:
         obox = Gtk.ComboBoxText()
         formats = [_("Active person's name and ID"),
@@ -1335,22 +1334,34 @@ class GrampsPreferences(ConfigureDialog):
         grid.attach(obox, 1, row, 2, 1)
 
         row += 1
-        # Text in sidebar:
-        self.add_checkbox(
-            grid, _("Show text label beside Navigator buttons "
-                    "(requires restart)"),
-            row, 'interface.sidebar-text', start=0, stop=2,
-            tooltip=_("Show or hide text beside Navigator buttons "
-                      "(People, Families, Events...).\n"
-                      "Requires Gramps restart to apply."))
+        # Markup for invalid date format
+        self.add_pos_int_entry(
+            grid, _('Markup for invalid date format'),
+            row, 'preferences.invalid-date-format',
+            self.update_markup_entry,
+			col_attach=0,
+            helptext=_(
+                'Convenience markups are:\n'
+                '<b>&lt;b&gt;Bold&lt;/b&gt;</b>\n'
+                '<big>&lt;big&gt;'
+                'Makes font relatively larger&lt;/big&gt;</big>\n'
+                '<i>&lt;i&gt;Italic&lt;/i&gt;</i>\n'
+                '<s>&lt;s&gt;Strikethrough&lt;/s&gt;</s>\n'
+                '<sub>&lt;sub&gt;Subscript&lt;/sub&gt;</sub>\n'
+                '<sup>&lt;sup&gt;Superscript&lt;/sup&gt;</sup>\n'
+                '<small>&lt;small&gt;'
+                'Makes font relatively smaller&lt;/small&gt;</small>\n'
+                '<tt>&lt;tt&gt;Monospace font&lt;/tt&gt;</tt>\n'
+                '<u>&lt;u&gt;Underline&lt;/u&gt;</u>\n\n'
+                'For example: &lt;u&gt;&lt;b&gt;%s&lt;/b&gt;&lt;/u&gt;\n'
+                'will display <u><b>Underlined bold date</b></u>.\n'))
+
         row += 1
-        # Gramplet bar close buttons:
-        self.add_checkbox(
-            grid, _("Show close button in gramplet bar tabs"),
-            row, 'interface.grampletbar-close', start=0, stop=2,
-            extra_callback=self.cb_grampletbar_close,
-            tooltip=_("Show close button to simplify removing gramplets "
-                      "from bars."))
+        label = self.add_text(
+            grid, _("* Requires Restart"), row,
+            line_wrap=True, start=0, stop=3)
+        label.set_margin_top(10)
+
         return _('Display'), grid
 
     def auto_title_changed(self, obj):
@@ -1478,48 +1489,28 @@ class GrampsPreferences(ConfigureDialog):
         config.set('database.autobackup', active)
         self.uistate.set_backup_timer()
 
-    def add_date_panel(self, configdialog):
+    def add_limits_panel(self, configdialog):
         """
-        Config tab with Dates settings.
+        Config tab with 'about, before, after' limitation settings.
         """
         grid = self.create_grid()
 
         self.add_text(
-            grid, _('Dates settings used for calculation operations'), 0,
+            grid, _('Settings used for Gramps\'s calculation operations'), 0,
             line_wrap=True, start=1, stop=3, justify=Gtk.Justification.CENTER,
             align=Gtk.Align.CENTER, bold=True)
 
         row = 1
-        self.add_pos_int_entry(
-            grid, _('Markup for invalid date format'),
-            row, 'preferences.invalid-date-format',
-            self.update_markup_entry,
-            helptext=_(
-                'Convenience markups are:\n'
-                '<b>&lt;b&gt;Bold&lt;/b&gt;</b>\n'
-                '<big>&lt;big&gt;'
-                'Makes font relatively larger&lt;/big&gt;</big>\n'
-                '<i>&lt;i&gt;Italic&lt;/i&gt;</i>\n'
-                '<s>&lt;s&gt;Strikethrough&lt;/s&gt;</s>\n'
-                '<sub>&lt;sub&gt;Subscript&lt;/sub&gt;</sub>\n'
-                '<sup>&lt;sup&gt;Superscript&lt;/sup&gt;</sup>\n'
-                '<small>&lt;small&gt;'
-                'Makes font relatively smaller&lt;/small&gt;</small>\n'
-                '<tt>&lt;tt&gt;Monospace font&lt;/tt&gt;</tt>\n'
-                '<u>&lt;u&gt;Underline&lt;/u&gt;</u>\n\n'
-                'For example: &lt;u&gt;&lt;b&gt;%s&lt;/b&gt;&lt;/u&gt;\n'
-                'will display <u><b>Underlined bold date</b></u>.\n'))
-        row += 1
         self.add_spinner(
-            grid, _('Date about range'),
+            grid, _("Date 'about' year range: (date ± #)"),
             row, 'behavior.date-about-range', (1, 9999))
         row += 1
         self.add_spinner(
-            grid, _('Date after range'),
+            grid, _("Date 'after' year range:  (date + #)"),
             row, 'behavior.date-after-range', (1, 9999))
         row += 1
         self.add_spinner(
-            grid, _('Date before range'),
+            grid, _("Date 'before' year range: (date - #)"),
             row, 'behavior.date-before-range', (1, 9999))
         row += 1
         self.add_spinner(
@@ -1537,49 +1528,44 @@ class GrampsPreferences(ConfigureDialog):
         self.add_spinner(
             grid, _('Average years between generations'),
             row, 'behavior.avg-generation-gap', (10, 30))
+        row += 1
+        self.add_spinner(
+            grid, _('Max generations for relationships'),
+            row, 'behavior.generation-depth', (5, 50),
+            self.update_gendepth)
 
-        return _('Dates'), grid
+        return _('Limits'), grid
 
-    def add_behavior_panel(self, configdialog):
+    def add_general_panel(self, configdialog):
         """
-        Config tab with 'General' settings.
+        Config tab with 'General' Gramps settings.
         """
         grid = self.create_grid()
 
-        self.add_text(grid, _("General Gramps settings"), 0,
-                      line_wrap=True, start=1, stop=3, bold=True,
+        self.add_text(grid, _("Startup Display"), 0,
+                      line_wrap=True, start=0, stop=3, bold=True,
                       justify=Gtk.Justification.CENTER, align=Gtk.Align.CENTER)
-        current_line = 1
-
-        self.add_checkbox(grid, _('Add default source on GEDCOM import'),
-                          current_line, 'preferences.default-source', stop=3)
-
-        current_line += 1
-        cb_const = 'preferences.tag-on-import'
-        # tag Entry
-        self.tag_format_entry = Gtk.Entry()
-        tag_const = 'preferences.tag-on-import-format'
-        tag_data = _(config.get(tag_const))
-        if not tag_data:
-            # set default value if Entry is empty
-            tag_data = config.get_default(tag_const)
-            config.set(cb_const, False)
-            config.set(tag_const, tag_data)
-        self.tag_format_entry.set_text(tag_data)
-        self.tag_format_entry.connect('changed', self.update_entry, tag_const)
-        self.tag_format_entry.set_hexpand(True)
-        self.tag_format_entry.set_sensitive(config.get(cb_const))
-
-        self.add_checkbox(grid, _('Add tag on import'), current_line,
-                          cb_const, stop=2,
-                          extra_callback=self.toggle_tag_on_import,
-                          tooltip=_("Specified tag will be added on import.\n"
-                                    "Clear to set default value."))
-        grid.attach(self.tag_format_entry, 2, current_line, 1, 1)
-
-        current_line += 1
-        obj = self.add_checkbox(grid, _('Enable spelling checker'),
-                                current_line, 'behavior.spellcheck', stop=3)
+        row = 1
+        self.add_checkbox(grid, _('Display Tip of the Day'),
+                          row, 'behavior.use-tips', start=0, stop=3,
+                          tooltip=_("Show useful information about using "
+                                    "Gramps on startup."))
+        row += 1
+        self.add_checkbox(grid, _('Remember last Family Tree'),
+                          row, 'behavior.autoload', start=0, stop=3,
+                          tooltip=_("Don't open dialog to choose family "
+                                    "tree to load on startup, "
+                                    "just load last used."))
+        row += 1
+        self.add_checkbox(grid, _('Remember last view displayed'),
+                          row, 'preferences.use-last-view', start=0, stop=3,
+                          tooltip=_("Remember last view displayed "
+                                    "and open it next time."))
+        row += 1
+        obj = self.add_checkbox(grid, _('Enable spell checker'),
+                                row, 'behavior.spellcheck', start=0, stop=3,
+                                tooltip=_("Enable the spelling checker"
+                                          " for notes."))
         if not HAVE_GTKSPELL:
             obj.set_sensitive(False)
             spell_dict = {'gramps_wiki_build_spell_url':
@@ -1592,35 +1578,63 @@ class GrampsPreferences(ConfigureDialog):
                   "To build it for Gramps see "
                   "%(gramps_wiki_build_spell_url)s") % spell_dict)
 
-        current_line += 1
-        self.add_checkbox(grid, _('Display Tip of the Day'),
-                          current_line, 'behavior.use-tips', stop=3,
-                          tooltip=_("Show useful information about using "
-                                    "Gramps on startup."))
-        current_line += 1
-        self.add_checkbox(grid, _('Remember last view displayed'),
-                          current_line, 'preferences.use-last-view', stop=3,
-                          tooltip=_("Remember last view displayed "
-                                    "and open it next time."))
-        current_line += 1
-        self.add_spinner(grid, _('Max generations for relationships'),
-                         current_line, 'behavior.generation-depth', (5, 50),
-                         self.update_gendepth)
-        current_line += 1
-        self.path_entry = Gtk.Entry()
-        self.add_path_box(
-            grid, _('Base path for relative media paths'),
-            current_line, self.path_entry, self.dbstate.db.get_mediapath(),
-            self.set_mediapath, self.select_mediapath)
+        row += 1
+        # Text in sidebar:
+        self.add_checkbox(
+            grid, _("Show text label beside Navigator buttons *"),
+            row, 'interface.sidebar-text', start=0, stop=3,
+            tooltip=_("Show or hide text beside Navigator buttons "
+                      "(People, Families, Events...).\n"
+                      "Requires Gramps restart to apply."))
 
-        current_line += 1
+        row += 1
+        # Gramplet bar close buttons:
+        self.add_checkbox(
+            grid, _("Show close button in gramplet bar tabs"),
+            row, 'interface.grampletbar-close', start=0, stop=3,
+            extra_callback=self.cb_grampletbar_close,
+            tooltip=_("Show close button to simplify removing gramplets "
+                      "from bars."))
+
+        row += 1
+        # height multiple surname table
+        self.add_pos_int_entry(
+            grid, _('Multiple surname box height'),
+            row, 'interface.surname-box-height', self.update_surn_height,
+            col_attach=0,
+            helptext=_(
+                'Enter height in pixels. When multiple surnames are'
+				' entered, these names display in a box. This'
+				' setting sets the size of this box.'))
+
+        row += 1
         label = self.add_text(
-            grid, _("Third party addons management"), current_line,
-            line_wrap=True, start=1, stop=3, bold=True,
-            justify=Gtk.Justification.CENTER, align=Gtk.Align.CENTER)
+            grid, _("* Requires Restart"), row,
+            line_wrap=True, start=0, stop=3)
         label.set_margin_top(10)
 
-        current_line += 1
+        return _('General'), grid
+
+    def add_addons_panel(self, configdialog):
+        """
+        Config tab with 'Addons' install settings.
+        """
+        grid = self.create_grid()
+
+        self.add_text(grid, _("Third party Addon Installation"), 0,
+                      line_wrap=True, start=1, stop=3, bold=True,
+                      justify=Gtk.Justification.CENTER, align=Gtk.Align.CENTER)
+
+        row = 1
+        label = self.add_text(
+            grid, _('Configuration settings to have Gramps check for'
+			        ' new or updated third party Addons and Plugins.'
+                    ' The Plugin Manager has the complete list of installed'
+			        ' Addons and Plugins and their activation status.\n'), row,
+            line_wrap=True, start=1, stop=3)
+        label.set_margin_top(10)
+
+        row += 1
         # Check for addon updates:
         obox = Gtk.ComboBoxText()
         formats = [_("Never"),
@@ -1633,10 +1647,10 @@ class GrampsPreferences(ConfigureDialog):
         obox.set_active(active)
         obox.connect('changed', self.check_for_updates_changed)
         lwidget = BasicLabel(_("%s: ") % _('Check for addon updates'))
-        grid.attach(lwidget, 1, current_line, 1, 1)
-        grid.attach(obox, 2, current_line, 1, 1)
+        grid.attach(lwidget, 1, row, 1, 1)
+        grid.attach(obox, 2, row, 1, 1)
 
-        current_line += 1
+        row += 1
         self.whattype_box = Gtk.ComboBoxText()
         formats = [_("Updated addons only"),
                    _("New addons only"),
@@ -1651,27 +1665,27 @@ class GrampsPreferences(ConfigureDialog):
             self.whattype_box.set_active(0)
         self.whattype_box.connect('changed', self.check_for_type_changed)
         lwidget = BasicLabel(_("%s: ") % _('What to check'))
-        grid.attach(lwidget, 1, current_line, 1, 1)
-        grid.attach(self.whattype_box, 2, current_line, 1, 1)
+        grid.attach(lwidget, 1, row, 1, 1)
+        grid.attach(self.whattype_box, 2, row, 1, 1)
 
-        current_line += 1
-        self.add_entry(grid, _('Where to check'), current_line,
+        row += 1
+        self.add_entry(grid, _('Where to check'), row,
                        'behavior.addons-url', col_attach=1)
 
-        current_line += 1
+        row += 1
         self.add_checkbox(
             grid, _('Do not ask about previously notified addons'),
-            current_line, 'behavior.do-not-show-previously-seen-addon-updates',
+            row, 'behavior.do-not-show-previously-seen-addon-updates',
             stop=3)
 
-        current_line += 1
+        row += 1
         button = Gtk.Button(label=_("Check for updated addons now"))
         button.connect("clicked", self.check_for_updates)
         button.set_hexpand(False)
         button.set_halign(Gtk.Align.CENTER)
-        grid.attach(button, 1, current_line, 3, 1)
+        grid.attach(button, 1, row, 3, 1)
 
-        return _('General'), grid
+        return _('Addons'), grid
 
     def check_for_updates(self, button):
         try:
@@ -1722,58 +1736,60 @@ class GrampsPreferences(ConfigureDialog):
 
     def add_famtree_panel(self, configdialog):
         """
-        Config tab for family tree and backup settings.
+        Config tab for family tree, backup and Media path settings.
         """
         grid = self.create_grid()
 
         self.add_text(
-            grid, _("Family tree database settings and Backup "
-                    "management"), 0, line_wrap=True, start=1, stop=3,
+            grid, _("Database settings and Location"
+                    ), 0, line_wrap=True, start=1, stop=3,
             justify=Gtk.Justification.CENTER, align=Gtk.Align.CENTER,
             bold=True)
 
-        current_line = 1
+        row = 1
         lwidget = BasicLabel(_("%s: ") % _('Database backend'))
-        grid.attach(lwidget, 1, current_line, 1, 1)
+        grid.attach(lwidget, 1, row, 1, 1)
         obox = self.__create_backend_combo()
-        grid.attach(obox, 2, current_line, 1, 1)
+        grid.attach(obox, 2, row, 1, 1)
 
-        current_line += 1
+        row += 1
         self.connection_widgets = []
-        entry = self.add_entry(grid, _('Host'), current_line,
+        entry = self.add_entry(grid, _('Host'), row,
                                'database.host', col_attach=1)
         self.connection_widgets.append(entry)
 
-        current_line += 1
-        entry = self.add_entry(grid, _('Port'), current_line,
+        row += 1
+        entry = self.add_entry(grid, _('Port'), row,
                                'database.port', col_attach=1)
         self.connection_widgets.append(entry)
 
-        current_line += 1
+        row += 1
         self.set_connection_widgets(config.get('database.backend'))
 
         self.dbpath_entry = Gtk.Entry()
-        self.add_path_box(grid, _('Family Tree Database path'), current_line,
+        self.add_path_box(grid, _('Family Tree Database path'), row,
                           self.dbpath_entry, config.get('database.path'),
                           self.set_dbpath, self.select_dbpath)
-        current_line += 1
-        self.add_checkbox(grid, _('Automatically load last Family Tree'),
-                          current_line, 'behavior.autoload', stop=3,
-                          tooltip=_("Don't open dialog to choose family "
-                                    "tree to load on startup, "
-                                    "just load last used."))
-        current_line += 1
+
+        row += 1
+        label = self.add_text(
+            grid, _("\nBackup Management"), row,
+            line_wrap=True, start=1, stop=3, bold=True,
+            justify=Gtk.Justification.CENTER, align=Gtk.Align.CENTER)
+        label.set_margin_top(10)
+
+        row += 1
         self.backup_path_entry = Gtk.Entry()
         self.add_path_box(grid, _('Backup path'),
-                          current_line, self.backup_path_entry,
+                          row, self.backup_path_entry,
                           config.get('database.backup-path'),
                           self.set_backup_path, self.select_backup_path)
-        current_line += 1
-        self.add_checkbox(grid, _('Backup on exit'), current_line,
+        row += 1
+        self.add_checkbox(grid, _('Backup on exit'), row,
                           'database.backup-on-exit', stop=3,
                           tooltip=_("Backup Your family tree on exit "
                                     "to Backup path specified above."))
-        current_line += 1
+        row += 1
         # Check for updates:
         obox = Gtk.ComboBoxText()
         formats = [_("Never"),
@@ -1787,10 +1803,65 @@ class GrampsPreferences(ConfigureDialog):
         obox.set_active(active)
         obox.connect('changed', self.autobackup_changed)
         lwidget = BasicLabel(_("%s: ") % _('Autobackup'))
-        grid.attach(lwidget, 1, current_line, 1, 1)
-        grid.attach(obox, 2, current_line, 1, 1)
+        grid.attach(lwidget, 1, row, 1, 1)
+        grid.attach(obox, 2, row, 1, 1)
+
+        row += 1
+        label = self.add_text(
+            grid, _("\nThe Family Tree\'s Media path"), row,
+            line_wrap=True, start=1, stop=3, bold=True,
+            justify=Gtk.Justification.CENTER, align=Gtk.Align.CENTER)
+        label.set_margin_top(10)
+
+        row += 1
+        self.path_entry = Gtk.Entry()
+        self.add_path_box(
+            grid, _('Base relative media path'),
+            row, self.path_entry, self.dbstate.db.get_mediapath(),
+            self.set_mediapath, self.select_mediapath)
 
         return _('Family Tree'), grid
+
+    def add_import_panel(self, configdialog):
+        """
+        Config tab for Import settings.
+        """
+        grid = self.create_grid()
+
+        self.add_text(
+            grid, _("Tagging or Sourcing Imported Family Trees"
+                    ), 0, line_wrap=True, start=1, stop=3,
+            justify=Gtk.Justification.CENTER, align=Gtk.Align.CENTER,
+            bold=True)
+
+        row = 1
+        cb_const = 'preferences.tag-on-import'
+        # tag Entry
+        self.tag_format_entry = Gtk.Entry()
+        tag_const = 'preferences.tag-on-import-format'
+        tag_data = _(config.get(tag_const))
+        if not tag_data:
+            # set default value if Entry is empty
+            tag_data = config.get_default(tag_const)
+            config.set(cb_const, False)
+            config.set(tag_const, tag_data)
+        self.tag_format_entry.set_text(tag_data)
+        self.tag_format_entry.connect('changed', self.update_entry, tag_const)
+        self.tag_format_entry.set_hexpand(True)
+        self.tag_format_entry.set_sensitive(config.get(cb_const))
+
+        self.add_checkbox(grid, _('Add tag on import'), row,
+                          cb_const, stop=2,
+                          extra_callback=self.toggle_tag_on_import,
+                          tooltip=_("Specified tag will be added on import.\n"
+                                    "Clear to set default value."))
+        grid.attach(self.tag_format_entry, 2, row, 1, 1)
+
+        row += 1
+        self.add_checkbox(grid, _('Add default source on GEDCOM import'),
+                          row, 'preferences.default-source', stop=3)
+
+        return _('Import'), grid
 
     def __create_backend_combo(self):
         """
@@ -2010,7 +2081,7 @@ class GrampsPreferences(ConfigureDialog):
             if config.get('utf8.selected-font') != "":
                 self.utf8_show_example()
 
-        return _('Genealogical Symbols'), self.grid
+        return _('Symbols'), self.grid  #DES_MOD
 
     def can_we_use_genealogical_fonts(self, obj):
         try:
@@ -2193,4 +2264,3 @@ class GrampsPreferences(ConfigureDialog):
         entry = obj.get_active()
         config.set(constant, entry)
         self.utf8_show_example()
-
