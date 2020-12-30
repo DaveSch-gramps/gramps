@@ -559,7 +559,7 @@ class GrampsPreferences(ConfigureDialog):
 
     def __init__(self, uistate, dbstate):
         page_funcs = (
-            self.add_display_panel,
+            self.add_data_panel,
             self.add_general_panel,
             self.add_addons_panel,
             self.add_famtree_panel,
@@ -1149,7 +1149,7 @@ class GrampsPreferences(ConfigureDialog):
         """
         self.uistate.emit('grampletbar-close-changed')
 
-    def add_display_panel(self, configdialog):
+    def add_data_panel(self, configdialog):
         """
         Config tab with user Appearance and format settings.
         """
@@ -1290,32 +1290,6 @@ class GrampsPreferences(ConfigureDialog):
         grid.attach(obox, 1, row, 2, 1)
 
         row += 1
-        # Surname guessing:
-        obox = Gtk.ComboBoxText()
-        formats = _surname_styles
-        list(map(obox.append_text, formats))
-        obox.set_active(config.get('behavior.surname-guessing'))
-        obox.connect('changed',
-                     lambda obj: config.set('behavior.surname-guessing',
-                                            obj.get_active()))
-        lwidget = BasicLabel(_("%s: ") % _('Surname guessing'))
-        grid.attach(lwidget, 0, row, 1, 1)
-        grid.attach(obox, 1, row, 2, 1)
-
-        row += 1
-        # Default Family Relationship
-        obox = Gtk.ComboBoxText()
-        formats = FamilyRelType().get_standard_names()
-        list(map(obox.append_text, formats))
-        obox.set_active(config.get('preferences.family-relation-type'))
-        obox.connect('changed',
-                     lambda obj: config.set('preferences.family-relation-type',
-                                            obj.get_active()))
-        lwidget = BasicLabel(_("%s: ") % _('Default family relationship'))
-        grid.attach(lwidget, 0, row, 1, 1)
-        grid.attach(obox, 1, row, 2, 1)
-
-        row += 1
         # Status bar:
         obox = Gtk.ComboBoxText()
         formats = [_("Active person's name and ID"),
@@ -1358,11 +1332,57 @@ class GrampsPreferences(ConfigureDialog):
 
         row += 1
         label = self.add_text(
-            grid, _("* Requires Restart"), row,
-            line_wrap=True, start=0, stop=3)
+            grid, _("\nUser Input"), row,
+            line_wrap=True, start=0, stop=3, bold=True,
+            justify=Gtk.Justification.CENTER, align=Gtk.Align.CENTER)
         label.set_margin_top(10)
 
-        return _('Display'), grid
+        row += 1
+        # Calendar format on input:
+        obox = Gtk.ComboBoxText()
+        list(map(obox.append_text, Date.ui_calendar_names))
+        active = config.get('preferences.calendar-format-input')
+        if active >= len(formats):
+            active = 0
+        obox.set_active(active)
+        obox.connect('changed', self.date_calendar_for_input_changed)
+        lwidget = BasicLabel(_("%s: ") % _('Calendar on input'))
+        grid.attach(lwidget, 0, row, 1, 1)
+        grid.attach(obox, 1, row, 2, 1)
+
+        row += 1
+        # Surname guessing:
+        obox = Gtk.ComboBoxText()
+        formats = _surname_styles
+        list(map(obox.append_text, formats))
+        obox.set_active(config.get('behavior.surname-guessing'))
+        obox.connect('changed',
+                     lambda obj: config.set('behavior.surname-guessing',
+                                            obj.get_active()))
+        lwidget = BasicLabel(_("%s: ") % _('Surname guessing'))
+        grid.attach(lwidget, 0, row, 1, 1)
+        grid.attach(obox, 1, row, 2, 1)
+
+        row += 1
+        # Default Family Relationship
+        obox = Gtk.ComboBoxText()
+        formats = FamilyRelType().get_standard_names()
+        list(map(obox.append_text, formats))
+        obox.set_active(config.get('preferences.family-relation-type'))
+        obox.connect('changed',
+                     lambda obj: config.set('preferences.family-relation-type',
+                                            obj.get_active()))
+        lwidget = BasicLabel(_("%s: ") % _('Default family relationship'))
+        grid.attach(lwidget, 0, row, 1, 1)
+        grid.attach(obox, 1, row, 2, 1)
+
+        row += 1
+        label = self.add_text(
+            grid, _("* Requires Restart"), row,
+            line_wrap=True, bold=True, start=0, stop=3)
+        label.set_margin_top(10)
+
+        return _('Data'), grid
 
     def auto_title_changed(self, obj):
         """
@@ -1481,6 +1501,12 @@ class GrampsPreferences(ConfigureDialog):
         """
         config.set('preferences.calendar-format-report', obj.get_active())
 
+    def date_calendar_for_input_changed(self, obj):
+        """
+        Save "Date calendar for input" option.
+        """
+        config.set('preferences.calendar-format-input', obj.get_active())
+
     def autobackup_changed(self, obj):
         """
         Save "Autobackup" option on change.
@@ -1542,7 +1568,7 @@ class GrampsPreferences(ConfigureDialog):
         """
         grid = self.create_grid()
 
-        self.add_text(grid, _("Startup Display"), 0,
+        self.add_text(grid, _("Gramps\'s Environment Display"), 0,
                       line_wrap=True, start=0, stop=3, bold=True,
                       justify=Gtk.Justification.CENTER, align=Gtk.Align.CENTER)
         row = 1
@@ -1610,7 +1636,7 @@ class GrampsPreferences(ConfigureDialog):
         row += 1
         label = self.add_text(
             grid, _("* Requires Restart"), row,
-            line_wrap=True, start=0, stop=3)
+            line_wrap=True, bold=True, start=0, stop=3)
         label.set_margin_top(10)
 
         return _('General'), grid
